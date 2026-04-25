@@ -21,13 +21,15 @@ const searchInputRef = ref(null)
 const DIET_OPTIONS = ['', 'herbivore', 'carnivore', 'omnivore']
 const PERIOD_OPTIONS = ['', 'triassic', 'jurassic', 'cretaceous']
 
-const results = computed(() =>
-  dinoStore.searchDinos({
-    query: query.value,
-    diet: dietFilter.value,
-    period: periodFilter.value,
+const results = computed(() => {
+  const q = query.value.trim().toLowerCase()
+  return dinoStore.dinos.filter((d) => {
+    const matchesQuery = !q || d.name.includes(q)
+    const matchesDiet = !dietFilter.value || d.diet === dietFilter.value
+    const matchesPeriod = !periodFilter.value || d.period === periodFilter.value
+    return matchesQuery && matchesDiet && matchesPeriod
   })
-)
+})
 
 function selectDino(dino) {
   emit('update:modelValue', dino.name)

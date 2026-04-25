@@ -50,6 +50,7 @@ export const useDinoStore = defineStore('dinos', {
 
     periodOptions: (state) =>
       [...new Set(state.dinos.map((d) => d.period).filter(Boolean))].sort(),
+
   },
 
   actions: {
@@ -63,7 +64,11 @@ export const useDinoStore = defineStore('dinos', {
         const json = await res.json()
         // RESTasaurus wraps results in { data: [...], nextPage, ... }
         const raw = Array.isArray(json) ? json : (json.data ?? [])
-        this.dinos = raw.map(normalizeDino)
+        const apiDinos = raw.map(normalizeDino)
+        // Supplement with fallback entries not covered by the API page
+        const apiNames = new Set(apiDinos.map((d) => d.name))
+        const extra = DINO_FALLBACK.filter((d) => !apiNames.has(d.name))
+        this.dinos = [...apiDinos, ...extra]
       } catch (err) {
         this.error = err.message ?? 'Unknown error'
         if (this.dinos.length === 0) this.dinos = DINO_FALLBACK
@@ -79,14 +84,5 @@ export const useDinoStore = defineStore('dinos', {
       )
     },
 
-    searchDinos({ query = '', diet = '', period = '' } = {}) {
-      const q = query.toLowerCase()
-      return this.dinos.filter((d) => {
-        const matchesQuery = !q || d.name.toLowerCase().includes(q)
-        const matchesDiet = !diet || d.diet?.toLowerCase() === diet.toLowerCase()
-        const matchesPeriod = !period || d.period?.toLowerCase() === period.toLowerCase()
-        return matchesQuery && matchesDiet && matchesPeriod
-      })
-    },
   },
 })
