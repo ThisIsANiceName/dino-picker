@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($env:PATH)",
+      "WebFetch(domain:dinoapi.brunosouzadev.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:vikiru.github.io)",
+      "WebFetch(domain:restasaurus.onrender.com)"
+    ]
+  }
+}
