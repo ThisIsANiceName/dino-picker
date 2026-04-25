@@ -129,6 +129,9 @@ function removePerson() {
             {{ selectedDino ? 'Change Dino' : '🦕 Pick a Dinosaur…' }}
           </button>
         </div>
+        <p v-if="selectedDino?.description" class="text-xs text-earth-500 leading-relaxed line-clamp-3 pt-1">
+          {{ selectedDino.description }}
+        </p>
       </div>
 
       <!-- Actions -->

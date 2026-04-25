@@ -62,22 +62,27 @@ const DIET_CONFIG = {
       </h3>
 
       <!-- Dino assignment -->
-      <div v-if="dino" class="flex items-center gap-2 min-w-0">
-        <img
-          v-if="dino.image"
-          :src="dino.image"
-          :alt="dino.name"
-          class="w-8 h-8 rounded-full object-cover border border-earth-600 shrink-0"
-        />
-        <div class="min-w-0">
-          <p class="text-xs text-fossil-200 capitalize truncate">{{ dino.name }}</p>
-          <span
-            v-if="dino.diet"
-            :class="['text-xs px-1.5 py-0.5 rounded font-medium', (DIET_CONFIG[dino.diet?.toLowerCase()] ?? {}).classes]"
-          >
-            {{ DIET_CONFIG[dino.diet?.toLowerCase()]?.emoji ?? '' }} {{ dino.diet }}
-          </span>
+      <div v-if="dino" class="w-full space-y-2">
+        <div class="flex items-center gap-2 justify-center min-w-0">
+          <img
+            v-if="dino.image"
+            :src="dino.image"
+            :alt="dino.name"
+            class="w-8 h-8 rounded-full object-cover border border-earth-600 shrink-0"
+          />
+          <div class="min-w-0">
+            <p class="text-xs text-fossil-200 capitalize truncate">{{ dino.name }}</p>
+            <span
+              v-if="dino.diet"
+              :class="['text-xs px-1.5 py-0.5 rounded font-medium', (DIET_CONFIG[dino.diet?.toLowerCase()] ?? {}).classes]"
+            >
+              {{ DIET_CONFIG[dino.diet?.toLowerCase()]?.emoji ?? '' }} {{ dino.diet }}
+            </span>
+          </div>
         </div>
+        <p v-if="dino.description" class="text-xs text-earth-500 leading-relaxed line-clamp-2 text-left">
+          {{ dino.description }}
+        </p>
       </div>
       <p v-else class="text-xs text-earth-600 italic">No dino yet</p>
     </div>

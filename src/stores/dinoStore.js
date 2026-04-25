@@ -24,6 +24,7 @@ function normalizeDino(raw) {
     type: raw.locomotionType ?? '',
     description: raw.description ?? '',
     image: raw.image?.imageURL ?? '',
+    wikipediaUrl: raw.source?.wikipediaURL ?? null,
     isPopular: false,
   }
 }

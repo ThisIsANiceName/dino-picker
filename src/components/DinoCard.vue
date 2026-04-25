@@ -62,9 +62,24 @@ const FALLBACK_SVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 
     <!-- Info -->
     <div class="p-3 space-y-2">
-      <h3 class="font-display text-fossil-50 capitalize truncate text-sm font-semibold leading-tight">
-        {{ dino.name }}
-      </h3>
+      <div class="flex items-start justify-between gap-1">
+        <h3 class="font-display text-fossil-50 capitalize truncate text-sm font-semibold leading-tight">
+          {{ dino.name }}
+        </h3>
+        <a
+          v-if="dino.wikipediaUrl"
+          :href="dino.wikipediaUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="shrink-0 text-earth-600 hover:text-amber-400 transition-colors"
+          :aria-label="`${dino.name} on Wikipedia`"
+          @click.stop
+        >
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-11h2v6h-2zm0-3h2v2h-2z"/>
+          </svg>
+        </a>
+      </div>
 
       <div class="flex flex-wrap gap-1">
         <span
@@ -80,6 +95,7 @@ const FALLBACK_SVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
           {{ dino.period }}
         </span>
       </div>
+
     </div>
 
     <!-- Selected checkmark -->

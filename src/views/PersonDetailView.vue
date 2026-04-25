@@ -105,6 +105,19 @@ const FALLBACK_SVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
         <!-- Name + badges -->
         <div class="flex flex-wrap items-center gap-2">
           <h2 class="font-display text-2xl text-fossil-50 capitalize">{{ dino.name }}</h2>
+          <a
+            v-if="dino.wikipediaUrl"
+            :href="dino.wikipediaUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1 text-xs text-earth-500 hover:text-amber-400 transition-colors border border-earth-600 hover:border-amber-600 rounded px-1.5 py-0.5"
+            :aria-label="`Read about ${dino.name} on Wikipedia`"
+          >
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-11h2v6h-2zm0-3h2v2h-2z"/>
+            </svg>
+            Wikipedia
+          </a>
           <span
             v-if="dino.diet"
             :class="['text-xs px-2 py-0.5 rounded font-medium', (DIET_CONFIG[dino.diet?.toLowerCase()] ?? {}).classes]"
