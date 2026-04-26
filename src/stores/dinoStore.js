@@ -62,19 +62,44 @@ export const useDinoStore = defineStore('dinos', {
         const res = await fetch(`${API_BASE}/dinosaurs`)
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const json = await res.json()
-        // RESTasaurus wraps results in { data: [...], nextPage, ... }
         const raw = Array.isArray(json) ? json : (json.data ?? [])
-        const apiDinos = raw.map(normalizeDino)
-        // Supplement with fallback entries not covered by the API page
-        const apiNames = new Set(apiDinos.map((d) => d.name))
-        const extra = DINO_FALLBACK.filter((d) => !apiNames.has(d.name))
-        this.dinos = [...apiDinos, ...extra]
+        const page1 = raw.map(normalizeDino)
+        const page1Names = new Set(page1.map((d) => d.name))
+        // Show app immediately with page 1 + fallback for the rest
+        this.dinos = [...page1, ...DINO_FALLBACK.filter((d) => !page1Names.has(d.name))]
+        // Fetch remaining pages in background — replaces fallback entries as they load
+        if (json.nextPage) this._fetchRemainingPages(json.nextPage)
       } catch (err) {
         this.error = err.message ?? 'Unknown error'
-        if (this.dinos.length === 0) this.dinos = DINO_FALLBACK
+        if (this.dinos.length === 0) this.dinos = [...DINO_FALLBACK]
       } finally {
         this.loading = false
       }
+    },
+
+    async _fetchRemainingPages(firstNextPath) {
+      // nextPage from RESTasaurus is a relative path ("/api/v1/dinosaurs?page=2")
+      // which routes through our existing Vite/Express proxy — no origin needed.
+      let path = firstNextPath
+      const laterPages = []
+      while (path) {
+        try {
+          const res = await fetch(path)
+          if (!res.ok) break
+          const json = await res.json()
+          laterPages.push(...(Array.isArray(json) ? json : (json.data ?? [])).map(normalizeDino))
+          path = json.nextPage ?? null
+        } catch {
+          break
+        }
+      }
+      if (!laterPages.length) return
+      // Rebuild: all API dinos (page 1 already in store + later pages),
+      // fallback only for names the API never returned.
+      const page1Api = this.dinos.filter((d) => !d._id.startsWith('fallback-'))
+      const allApi = [...page1Api, ...laterPages]
+      const allApiNames = new Set(allApi.map((d) => d.name))
+      this.dinos = [...allApi, ...DINO_FALLBACK.filter((d) => !allApiNames.has(d.name))]
     },
 
     getDinoByName(name) {

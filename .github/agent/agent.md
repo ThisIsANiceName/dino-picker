@@ -51,9 +51,10 @@ No API key required. No auth.
 ```
 
 **Important quirks:**
-- Page 1 only returns ~50 dinos, all starting with "A". Well-known dinos (T. rex, Velociraptor, etc.) are NOT on page 1.
+- Results are alphabetical. Page 1 = A-names only. T. rex / Velociraptor appear around page 21–22.
+- `nextPage` is a **relative path** (`/api/v1/dinosaurs?page=2`) — use it directly with `fetch(nextPath)`; the Vite/Express proxy handles routing.
 - The API runs on Render's free tier — expect a cold-start delay of 10–30 s on first load.
-- Fetching multiple pages is not currently implemented; instead, page 1 is merged with `src/data/dinoFallback.js`.
+- The original DinoAPI S3 bucket (`brunosouzadev-dinoapi.s3.sa-east-1.amazonaws.com`) returns **403** — those image URLs are dead. Do not use them.
 
 **Normalization (`dinoStore.js`):**
 
@@ -74,10 +75,11 @@ function normalizeDino(raw) {
 **Fallback dataset (`src/data/dinoFallback.js`):**
 
 18 well-known dinos (T. rex, Velociraptor, Triceratops, Brachiosaurus, Pterodactyl, Spinosaurus, etc.) covering all diet types, eras, and locomotion types. Used two ways:
-1. Merged into the API results for names not returned by page 1.
+1. Shown immediately while background pages are still loading (bridges the gap until pages 21–22 arrive).
 2. Full fallback if the API is completely unreachable.
 
 The fallback dinos use the **DinoAPI shape** (weight, height, length, region, type, isPopular all populated) — not the RESTasaurus shape.
+> **Note:** The fallback image URLs (`brunosouzadev-dinoapi.s3…`) are dead (403). They are only ever shown briefly until the background page fetch replaces them with valid RESTasaurus images.
 
 **Caching:** fetch once on app boot in `dinoStore.fetchDinos()`. Never re-fetch on navigation.
 
@@ -289,9 +291,12 @@ Each answer maps to a `traits` object. Scores are accumulated across 4 dimension
 state: { dinos: [], loading: false, error: null }
 
 actions:
-  fetchDinos()          // GET /api/v1/dinosaurs, merge with fallback, only if dinos.length === 0
-  getDinoByName(name)   // case-insensitive find from cached list
+  fetchDinos()              // Fetches page 1, shows app; fires _fetchRemainingPages() in background
+  _fetchRemainingPages(path) // Follows nextPage links until exhausted, then rebuilds this.dinos
+  getDinoByName(name)        // case-insensitive find from cached list
 ```
+
+**Loading strategy:** page 1 (50 A-names) + fallback dinos are shown immediately. Background fetch streams pages 2–N; when complete it replaces fallback entries with real API entries (valid images). The store is reactive so the UI updates automatically.
 
 ### `personStore`
 
@@ -332,8 +337,9 @@ All actions do **optimistic UI updates** and roll back on network failure.
 
 | Issue | Decision |
 |---|---|
-| DinoAPI offline | Replaced with RESTasaurus; fallback dataset covers popular dinos |
-| RESTasaurus page 1 is A-names only | Merge API page 1 + `dinoFallback.js`; do not paginate |
+| DinoAPI offline | Replaced with RESTasaurus; fallback dataset bridges startup gap |
+| DinoAPI S3 image bucket returns 403 | All `brunosouzadev-dinoapi.s3…` image URLs are dead — don't add new ones |
+| RESTasaurus page 1 is A-names only (pages 1–20 are A–S) | Fetch page 1 immediately; stream pages 2–N in background via `_fetchRemainingPages` |
 | RESTasaurus cold start (Render free tier) | Show loading state; app retries via user-visible error banner |
 | `better-sqlite3` fails on Node 24 | Use built-in `node:sqlite` (`DatabaseSync`) — no compilation |
 | Pinia getter-factory stale reactivity | Move filter logic into component `computed()`, read `dinoStore.dinos` directly |
