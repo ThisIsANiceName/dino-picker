@@ -14,6 +14,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev
 COPY server/ ./server/
+COPY src/data/dinoFallback.js ./src/data/dinoFallback.js
 COPY --from=build /app/dist ./dist
 
 ENV NODE_ENV=production
