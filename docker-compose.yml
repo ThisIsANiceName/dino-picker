@@ -4,12 +4,9 @@ services:
     ports:
       - "8091:8091"
     volumes:
-      - dino_data:/data
+      - ./data:/data
     environment:
       NODE_ENV: production
       PORT: 8091
       DATA_DIR: /data
     restart: unless-stopped
-
-volumes:
-  dino_data:
