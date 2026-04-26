@@ -1,72 +1,128 @@
 import { useDinoStore } from '../stores/dinoStore.js'
 
 const QUESTIONS = [
+  // ── Nutrition ────────────────────────────────────────────────────────────────
   {
-    text: 'At a party, you are most likely to…',
+    text: 'Your perfect meal is…',
     options: [
-      { label: 'Hunt for the best snacks alone',              traits: { diet: 'carnivore', style: 'solitary' } },
-      { label: 'Graze the buffet with your whole squad',      traits: { diet: 'herbivore', style: 'pack' } },
-      { label: 'Do whatever everyone else is doing',          traits: { diet: 'omnivore',  style: 'pack' } },
-      { label: 'Leave early and find a quiet corner',         traits: { style: 'solitary', size: 'small' } },
+      { label: 'A massive protein feast — nothing beats fresh meat',    traits: { diet: 'carnivore', energy: 'high' } },
+      { label: 'A long, leisurely graze through fields and forests',    traits: { diet: 'herbivore', energy: 'low'  } },
+      { label: 'A bit of everything — variety is the spice of life',    traits: { diet: 'omnivore'                  } },
+      { label: 'Freshly caught fish, straight from the water',          traits: { diet: 'carnivore', mobility: 'swimmer' } },
     ],
   },
+  // ── Activity ─────────────────────────────────────────────────────────────────
   {
-    text: 'Your ideal weekend looks like…',
+    text: 'Your favourite way to get moving is…',
     options: [
-      { label: 'Sprinting through a forest trail',            traits: { diet: 'carnivore', size: 'medium' } },
-      { label: 'A long, peaceful countryside walk',           traits: { diet: 'herbivore', size: 'large' } },
-      { label: 'Staying home with snacks and a movie',        traits: { diet: 'herbivore', style: 'slow-and-steady' } },
-      { label: 'An underground cave adventure',               traits: { diet: 'omnivore',  style: 'ambush' } },
+      { label: 'Sprinting — the faster the better',                     traits: { mobility: 'runner', energy: 'high' } },
+      { label: 'A steady long-distance walk or hike',                   traits: { mobility: 'walker', energy: 'low'  } },
+      { label: 'Swimming laps — smooth and powerful',                   traits: { mobility: 'swimmer', energy: 'high' } },
+      { label: 'Soaring — hang-gliding or paragliding above it all',    traits: { mobility: 'flyer',  energy: 'high' } },
     ],
   },
+  // ── Nutrition ────────────────────────────────────────────────────────────────
   {
-    text: 'When something goes wrong at work, you…',
+    text: 'When you\'re really hungry you…',
     options: [
-      { label: 'Charge straight at the problem',              traits: { diet: 'carnivore', style: 'ambush' } },
-      { label: 'Rally the team and tackle it together',       traits: { style: 'pack',     diet: 'omnivore' } },
-      { label: 'Take your time and plan carefully',           traits: { style: 'slow-and-steady', size: 'large' } },
-      { label: 'Adapt on the fly',                            traits: { diet: 'omnivore',  size: 'medium' } },
+      { label: 'Chase down whatever\'s available, no matter the effort', traits: { diet: 'carnivore', energy: 'high' } },
+      { label: 'Patiently graze — there\'s always something nearby',    traits: { diet: 'herbivore', energy: 'low'  } },
+      { label: 'Raid the fridge for whatever looks good',               traits: { diet: 'omnivore',  energy: 'high' } },
+      { label: 'Wait it out — you can go ages without eating',          traits: { energy: 'low',     size: 'large'  } },
     ],
   },
+  // ── Activity ─────────────────────────────────────────────────────────────────
   {
-    text: 'Your fashion sense is best described as…',
+    text: 'Your dream trip looks like…',
     options: [
-      { label: 'Bold and spiky',                              traits: { diet: 'carnivore', style: 'solitary' } },
-      { label: 'Armored and dependable',                      traits: { diet: 'herbivore', size: 'large' } },
-      { label: 'Long, elegant, understated',                  traits: { diet: 'herbivore', style: 'slow-and-steady' } },
-      { label: 'Compact and agile',                           traits: { diet: 'carnivore', size: 'medium' } },
+      { label: 'Trekking through dense jungle on foot',                 traits: { mobility: 'walker',  energy: 'high' } },
+      { label: 'A leisurely coastal road trip',                         traits: { mobility: 'walker',  energy: 'low'  } },
+      { label: 'A sailing or diving expedition',                        traits: { mobility: 'swimmer'                 } },
+      { label: 'Skydiving or a scenic flight over mountain ranges',     traits: { mobility: 'flyer',   energy: 'high' } },
     ],
   },
+  // ── Nutrition ────────────────────────────────────────────────────────────────
   {
-    text: 'Favorite movie genre?',
+    text: 'At a buffet you head straight for…',
     options: [
-      { label: 'Thriller / Action',                           traits: { diet: 'carnivore', style: 'ambush' } },
-      { label: 'Documentary / Nature',                        traits: { diet: 'herbivore', style: 'slow-and-steady' } },
-      { label: 'Comedy with friends',                         traits: { style: 'pack',     diet: 'omnivore' } },
-      { label: 'Sci-Fi from a forgotten era',                 traits: { era: 'triassic',   style: 'solitary' } },
+      { label: 'The meat and protein station',                          traits: { diet: 'carnivore'                  } },
+      { label: 'The salad bar and vegetable spreads',                   traits: { diet: 'herbivore'                  } },
+      { label: 'A heaped plate mixing absolutely everything',           traits: { diet: 'omnivore'                   } },
+      { label: 'The seafood and fish section',                          traits: { diet: 'carnivore', mobility: 'swimmer' } },
     ],
   },
+  // ── Activity ─────────────────────────────────────────────────────────────────
   {
-    text: 'Pick your superpower:',
+    text: 'Your energy levels through the day are…',
     options: [
-      { label: 'Super speed',                                 traits: { size: 'small',     diet: 'carnivore' } },
-      { label: 'Invincible armor',                            traits: { size: 'large',     diet: 'herbivore' } },
-      { label: 'Mind control',                                traits: { style: 'solitary', style2: 'ambush' } },
-      { label: 'Healing factor',                              traits: { diet: 'omnivore',  style: 'pack' } },
+      { label: 'Always high — I have to keep moving',                   traits: { energy: 'high', mobility: 'runner' } },
+      { label: 'Steady and consistent — slow but sure',                 traits: { energy: 'low',  mobility: 'walker' } },
+      { label: 'Saved up for one explosive burst of effort',            traits: { energy: 'high', size: 'large'      } },
+      { label: 'Minimal — I\'m a master of conserving energy',         traits: { energy: 'low',  size: 'small'      } },
     ],
   },
+  // ── Nutrition ────────────────────────────────────────────────────────────────
   {
-    text: 'How do you handle a long queue?',
+    text: 'Your portion sizes are…',
     options: [
-      { label: 'Push to the front — time is prey',           traits: { diet: 'carnivore', style: 'ambush' } },
-      { label: 'Queue patiently; good things take time',     traits: { diet: 'herbivore', style: 'slow-and-steady' } },
-      { label: 'Chat with everyone around you',              traits: { diet: 'omnivore',  style: 'pack' } },
-      { label: 'Go find a different route entirely',         traits: { style: 'solitary', size: 'medium' } },
+      { label: 'Small and frequent — I graze all day',                  traits: { diet: 'herbivore', size: 'small'   } },
+      { label: 'Huge, infrequent feasts',                               traits: { diet: 'carnivore', size: 'large'   } },
+      { label: 'Moderate and balanced, three times a day',              traits: { diet: 'omnivore',  size: 'medium'  } },
+      { label: 'Absolutely enormous — I have a truly vast appetite',    traits: { diet: 'herbivore', size: 'massive' } },
+    ],
+  },
+  // ── Activity ─────────────────────────────────────────────────────────────────
+  {
+    text: 'You prefer to exercise…',
+    options: [
+      { label: 'Solo and at full intensity',                            traits: { energy: 'high', mobility: 'runner' } },
+      { label: 'With a group — team energy keeps you going',           traits: { energy: 'high', mobility: 'walker' } },
+      { label: 'In water — easy on the joints, hard on the core',      traits: { mobility: 'swimmer', energy: 'high' } },
+      { label: 'Honestly, as little as possible',                       traits: { energy: 'low'                      } },
+    ],
+  },
+  // ── Nutrition ────────────────────────────────────────────────────────────────
+  {
+    text: 'Your approach to diet is…',
+    options: [
+      { label: 'Strictly protein-focused — no carbs, no compromise',   traits: { diet: 'carnivore'                  } },
+      { label: 'Plant-based all the way',                               traits: { diet: 'herbivore'                  } },
+      { label: 'Flexible and adventurous — I\'ll try anything',        traits: { diet: 'omnivore',  energy: 'high'  } },
+      { label: 'Bulk calories — I need serious fuel for my size',       traits: { diet: 'herbivore', size: 'massive' } },
+    ],
+  },
+  // ── Activity ─────────────────────────────────────────────────────────────────
+  {
+    text: 'On a rest day you…',
+    options: [
+      { label: 'Can\'t sit still — you end up going for a run anyway', traits: { energy: 'high', mobility: 'runner'  } },
+      { label: 'Take a long, slow walk to clear your head',            traits: { energy: 'low',  mobility: 'walker'  } },
+      { label: 'Float in water for hours — total bliss',               traits: { mobility: 'swimmer', energy: 'low'  } },
+      { label: 'Don\'t move unless absolutely necessary',              traits: { energy: 'low',  size: 'large'       } },
+    ],
+  },
+  // ── Nutrition ────────────────────────────────────────────────────────────────
+  {
+    text: 'Your go-to snack is…',
+    options: [
+      { label: 'High-protein: meat, eggs, or jerky',                   traits: { diet: 'carnivore'                  } },
+      { label: 'Fruit, veg, seeds, or nuts',                           traits: { diet: 'herbivore'                  } },
+      { label: 'Whatever\'s nearest — you\'re not picky',             traits: { diet: 'omnivore'                   } },
+      { label: 'Nothing — saving room for the next big meal',          traits: { diet: 'carnivore', size: 'large'   } },
+    ],
+  },
+  // ── Activity ─────────────────────────────────────────────────────────────────
+  {
+    text: 'Your friends describe your energy as…',
+    options: [
+      { label: 'Like a cheetah — fast, intense, explosive bursts',     traits: { mobility: 'runner',  energy: 'high', size: 'small'   } },
+      { label: 'Like a river — slow, steady, and utterly unstoppable', traits: { mobility: 'walker',  energy: 'low',  size: 'large'   } },
+      { label: 'Like a dolphin — playful and always in motion',        traits: { mobility: 'swimmer', energy: 'high'                  } },
+      { label: 'Like a mountain — unmovable and perfectly content',    traits: { energy: 'low',                       size: 'massive' } },
     ],
   },
 ]
 
-// Maps the dominant diet/size/style score to a dino that best matches
 function sizeCategory(dino) {
   const len = parseFloat(dino.length)
   if (isNaN(len)) return 'medium'
@@ -79,52 +135,62 @@ function sizeCategory(dino) {
 function computeResult(answers) {
   const dinoStore = useDinoStore()
 
-  // Accumulate trait counts
   const scores = {
-    diet:  { herbivore: 0, carnivore: 0, omnivore: 0 },
-    size:  { small: 0, medium: 0, large: 0, massive: 0 },
-    era:   { triassic: 0, jurassic: 0, cretaceous: 0 },
-    style: { solitary: 0, pack: 0, ambush: 0, 'slow-and-steady': 0 },
+    diet:     { herbivore: 0, carnivore: 0, omnivore: 0 },
+    size:     { small: 0, medium: 0, large: 0, massive: 0 },
+    mobility: { runner: 0, flyer: 0, swimmer: 0, walker: 0 },
+    energy:   { high: 0, low: 0 },
   }
 
   for (const answer of answers) {
-    const { traits } = answer
-    if (traits.diet  && scores.diet[traits.diet]  !== undefined) scores.diet[traits.diet]++
-    if (traits.size  && scores.size[traits.size]  !== undefined) scores.size[traits.size]++
-    if (traits.era   && scores.era[traits.era]    !== undefined) scores.era[traits.era]++
-    if (traits.style && scores.style[traits.style] !== undefined) scores.style[traits.style]++
+    for (const [key, val] of Object.entries(answer.traits)) {
+      if (scores[key]?.[val] !== undefined) scores[key][val]++
+    }
   }
 
   const dominant = (obj) => Object.entries(obj).sort((a, b) => b[1] - a[1])[0][0]
 
-  const dominantDiet  = dominant(scores.diet)
-  const dominantSize  = dominant(scores.size)
-  const dominantEra   = dominant(scores.era)
+  const dominantDiet     = dominant(scores.diet)
+  const dominantSize     = dominant(scores.size)
+  const dominantMobility = dominant(scores.mobility)
+  const dominantEnergy   = dominant(scores.energy)
 
   const dinos = dinoStore.dinos
   if (!dinos.length) return null
 
-  // Filter by diet first, then era
+  // 1. Filter by dominant diet
   let candidates = dinos.filter((d) => d.diet?.toLowerCase() === dominantDiet)
-  if (candidates.length === 0) candidates = dinos
+  if (candidates.length === 0) candidates = [...dinos]
 
-  // Filter by era if we have a strong era signal
-  const eraMax = Math.max(...Object.values(scores.era))
-  if (eraMax > 0) {
-    const byEra = candidates.filter((d) => d.period?.toLowerCase() === dominantEra)
-    if (byEra.length > 0) candidates = byEra
+  // 2. Apply mobility filter using dino's type field
+  const mobilityTotal = Object.values(scores.mobility).reduce((a, b) => a + b, 0)
+  if (mobilityTotal > 0) {
+    const byMobility = candidates.filter((d) => {
+      const t = (d.type ?? '').toLowerCase()
+      if (dominantMobility === 'flyer')   return t.includes('fly') || t.includes('aerial') || t.includes('ptero')
+      if (dominantMobility === 'swimmer') return t.includes('aquatic') || t.includes('swim') || t.includes('marine') || t.includes('semi')
+      if (dominantMobility === 'runner')  return t.includes('terrestrial') && ['small', 'medium'].includes(sizeCategory(d))
+      if (dominantMobility === 'walker')  return t.includes('terrestrial') && ['large', 'massive'].includes(sizeCategory(d))
+      return false
+    })
+    if (byMobility.length > 0) candidates = byMobility
   }
 
-  // Sort by closest size match
+  // 3. Sort by size (if no explicit size votes, infer from energy)
   const SIZE_ORDER = ['small', 'medium', 'large', 'massive']
-  const targetIdx = SIZE_ORDER.indexOf(dominantSize)
+  const hasExplicitSize = Object.values(scores.size).some((v) => v > 0)
+  const targetSize = hasExplicitSize
+    ? dominantSize
+    : dominantEnergy === 'high' ? 'small' : 'large'
+  const targetIdx = SIZE_ORDER.indexOf(targetSize)
+
   candidates.sort((a, b) => {
     const aIdx = SIZE_ORDER.indexOf(sizeCategory(a))
     const bIdx = SIZE_ORDER.indexOf(sizeCategory(b))
     return Math.abs(aIdx - targetIdx) - Math.abs(bIdx - targetIdx)
   })
 
-  // Return top result (prefer popular if tied in size)
+  // Prefer a popular dino in the top 3 if available
   const top3 = candidates.slice(0, 3)
   return top3.find((d) => d.isPopular) ?? top3[0]
 }
