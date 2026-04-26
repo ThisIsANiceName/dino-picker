@@ -27,6 +27,11 @@ dist-ssr/
 .DS_Store
 Thumbs.db
 
+# SQLite database (volume-mounted in production)
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
 # Logs
 *.log
 npm-debug.log*

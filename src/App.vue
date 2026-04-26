@@ -2,12 +2,15 @@
 import { onMounted } from 'vue'
 import { RouterView, RouterLink, useRoute } from 'vue-router'
 import { useDinoStore } from './stores/dinoStore.js'
+import { usePersonStore } from './stores/personStore.js'
 
 const dinoStore = useDinoStore()
+const personStore = usePersonStore()
 const route = useRoute()
 
 onMounted(() => {
   dinoStore.fetchDinos()
+  personStore.fetchPersons()
 })
 </script>
 
