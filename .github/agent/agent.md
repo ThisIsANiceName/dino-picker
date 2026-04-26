@@ -52,9 +52,11 @@ No API key required. No auth.
 
 **Important quirks:**
 - Results are alphabetical. Page 1 = A-names only. T. rex / Velociraptor appear around page 21–22.
-- `nextPage` is a **relative path** (`/api/v1/dinosaurs?page=2`) — use it directly with `fetch(nextPath)`; the Vite/Express proxy handles routing.
-- The API runs on Render's free tier — expect a cold-start delay of 10–30 s on first load.
+- `nextPage` is a **relative path** (`/api/v1/dinosaurs?page=2`) — the server prepends the origin when following it.
+- The API runs on Render's free tier — expect a cold-start delay of 10–30 s on first seed.
 - The original DinoAPI S3 bucket (`brunosouzadev-dinoapi.s3.sa-east-1.amazonaws.com`) returns **403** — those image URLs are dead. Do not use them.
+
+**The client never calls RESTasaurus directly.** The server fetches and caches all dinos in SQLite on first startup; the client only calls `GET /dinos` on the local Express server.
 
 **Normalization (`dinoStore.js`):**
 
@@ -296,7 +298,7 @@ actions:
   getDinoByName(name)        // case-insensitive find from cached list
 ```
 
-**Loading strategy:** page 1 (50 A-names) + fallback dinos are shown immediately. Background fetch streams pages 2–N; when complete it replaces fallback entries with real API entries (valid images). The store is reactive so the UI updates automatically.
+**Loading strategy:** on first ever startup the server seeds all RESTasaurus pages into SQLite (fire-and-forget, ~1 min on Render free tier). The client calls `GET /dinos` and gets everything in one fast local query. The response includes `X-Dinos-Seeding: 1` while seeding is in progress so the UI can show a first-run banner instead of an error.
 
 ### `personStore`
 
@@ -339,8 +341,8 @@ All actions do **optimistic UI updates** and roll back on network failure.
 |---|---|
 | DinoAPI offline | Replaced with RESTasaurus; fallback dataset bridges startup gap |
 | DinoAPI S3 image bucket returns 403 | All `brunosouzadev-dinoapi.s3…` image URLs are dead — don't add new ones |
-| RESTasaurus page 1 is A-names only (pages 1–20 are A–S) | Fetch page 1 immediately; stream pages 2–N in background via `_fetchRemainingPages` |
-| RESTasaurus cold start (Render free tier) | Show loading state; app retries via user-visible error banner |
+| RESTasaurus page 1 is A-names only (pages 1–20 are A–S, T. rex ~page 21) | Server fetches all pages once at startup and caches in SQLite — client never paginates |
+| RESTasaurus cold start (Render free tier) | Only affects first-ever seed; subsequent restarts read from SQLite instantly |
 | `better-sqlite3` fails on Node 24 | Use built-in `node:sqlite` (`DatabaseSync`) — no compilation |
 | Pinia getter-factory stale reactivity | Move filter logic into component `computed()`, read `dinoStore.dinos` directly |
 | Search case-sensitivity | All dino names stored lowercase; queries lowercased before compare |

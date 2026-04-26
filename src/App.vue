@@ -55,13 +55,22 @@ onMounted(() => {
       </nav>
     </header>
 
+    <!-- First-run seeding banner -->
+    <div
+      v-if="dinoStore.seeding && dinoStore.dinos.length === 0"
+      role="status"
+      class="bg-amber-950 border-b border-amber-800 px-4 py-3 text-center text-sm text-amber-300"
+    >
+      🦕 Building dinosaur database for the first time — this takes about a minute. Refresh when ready.
+    </div>
+
     <!-- Error banner for API failure -->
     <div
-      v-if="dinoStore.error"
+      v-else-if="dinoStore.error"
       role="alert"
       class="bg-red-950 border-b border-red-800 px-4 py-3 text-center text-sm text-red-300"
     >
-      🦴 The dinosaurs are hiding — API unavailable. Try again later.
+      🦴 The dinosaurs are hiding — API unavailable.
       <button
         class="ml-3 underline hover:text-red-100 transition-colors"
         aria-label="Retry loading dinosaurs"
