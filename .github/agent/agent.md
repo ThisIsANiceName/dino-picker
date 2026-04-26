@@ -1,8 +1,8 @@
-# 🦕 Dino Selector — Agent Instructions
+# Dino Selector — Agent Instructions
 
 ## Project Overview
 
-Build a **Vue 3** single-page application called **Dino Selector** where users add people (with a name and a linked photo), pick a dinosaur for each person, and later take a personality quiz to find their perfect dino match.
+A **Vue 3** single-page application where users add people (with a name and linked photo), pick a dinosaur for each person, and take a personality quiz to find their spirit dino match. People and their dino assignments are stored server-side in SQLite so the data is shared across browsers and survives container restarts.
 
 ---
 
@@ -12,83 +12,183 @@ Build a **Vue 3** single-page application called **Dino Selector** where users a
 |---|---|---|
 | Framework | Vue 3 (Composition API + `<script setup>`) | No Options API |
 | Build Tool | Vite | Standard Vue 3 scaffold |
-| State | Pinia | Persist persons & their dinos to `localStorage` |
-| Styling | Tailwind CSS | Use Tailwind v3; add a custom palette |
+| State | Pinia | No persistence plugin — persons are server-backed |
+| Styling | Tailwind CSS v3 | Custom dark earthy palette |
 | Routing | Vue Router 4 | Hash-mode is fine |
-| HTTP | Native `fetch` | No Axios; keep it lean |
+| HTTP | Native `fetch` | No Axios |
+| Backend | Express.js (`server/index.js`) | REST API for person CRUD + dino proxy |
+| Database | `node:sqlite` (built-in Node 22+) | `DatabaseSync` — no native compilation needed |
+
+> **Do NOT use `better-sqlite3`** — it requires native C++ compilation and fails on Node 24 due to C++20/C++17 standard conflicts. Use the built-in `node:sqlite` module (`import { DatabaseSync } from 'node:sqlite'`).
 
 ---
 
-## External API — DinoAPI
+## External API — RESTasaurus
 
-**Base URL:** `https://dinoapi.brunosouzadev.com/api`
+> **The original DinoAPI (`dinoapi.brunosouzadev.com`) is offline.** The replacement is RESTasaurus.
 
-Key endpoints used:
+**Base URL:** `https://restasaurus.onrender.com/api/v1`
 
+Key endpoint used:
 ```
-GET /dinosaurs            → full list (name, image, diet, period, weight, length, description, isPopular)
-GET /dinosaurs/popular    → only popular dinos (good for the quiz shortlist)
-GET /dinosaurs/:name      → single dino detail
+GET /dinosaurs    → paginated list (50 per page, page 1 returns A-named dinos only)
 ```
 
-No API key required. No auth. CORS is open.
+No API key required. No auth.
 
-**Data shape (per dino):**
+**RESTasaurus data shape (raw):**
 ```json
 {
-  "_id": "65ab56b3978ff91b1c9eb074",
-  "name": "aardonyx",
-  "weight": "1700kg",
-  "height": "2m",
-  "length": "8.0m",
-  "diet": "herbivore",
-  "period": "jurassic",
-  "existed": "201.3 - 190.8 million years ago",
-  "region": "south africa",
-  "type": "terrestrial",
+  "id": 1,
+  "name": "Aardonyx",
+  "diet": "Herbivore",
+  "temporalRange": "Early Jurassic",
+  "locomotionType": "terrestrial",
   "description": "...",
-  "image": "https://brunosouzadev-dinoapi.s3.sa-east-1.amazonaws.com/images/aardonyx.jpg",
-  "isPopular": false
+  "image": { "imageURL": "https://..." },
+  "source": { "wikipediaURL": "https://en.wikipedia.org/wiki/Aardonyx" }
 }
 ```
 
-**Caching:** fetch all dinos once on app boot, store in Pinia (`dinoStore`). Don't re-fetch on every navigation.
+**Important quirks:**
+- Page 1 only returns ~50 dinos, all starting with "A". Well-known dinos (T. rex, Velociraptor, etc.) are NOT on page 1.
+- The API runs on Render's free tier — expect a cold-start delay of 10–30 s on first load.
+- Fetching multiple pages is not currently implemented; instead, page 1 is merged with `src/data/dinoFallback.js`.
+
+**Normalization (`dinoStore.js`):**
+
+RESTasaurus' shape differs from the original DinoAPI. A `normalizeDino()` function converts it:
+
+```js
+function normalizeDino(raw) {
+  // temporalRange → period ('cretaceous' | 'jurassic' | 'triassic')
+  // raw.image.imageURL → image
+  // raw.source.wikipediaURL → wikipediaUrl
+  // raw.locomotionType → type
+  return { _id, name, weight: null, height: null, length: null,
+           diet, period, existed, region: '', type,
+           description, image, wikipediaUrl, isPopular: false }
+}
+```
+
+**Fallback dataset (`src/data/dinoFallback.js`):**
+
+18 well-known dinos (T. rex, Velociraptor, Triceratops, Brachiosaurus, Pterodactyl, Spinosaurus, etc.) covering all diet types, eras, and locomotion types. Used two ways:
+1. Merged into the API results for names not returned by page 1.
+2. Full fallback if the API is completely unreachable.
+
+The fallback dinos use the **DinoAPI shape** (weight, height, length, region, type, isPopular all populated) — not the RESTasaurus shape.
+
+**Caching:** fetch once on app boot in `dinoStore.fetchDinos()`. Never re-fetch on navigation.
 
 ---
 
-## Person Photo
+## CORS & Dev Proxy
 
-Persons link to a **photo URL** (not an upload). The UI should:
-1. Show a text input for the URL.
-2. Instantly preview the image with a graceful fallback (initials avatar) if the URL is broken or empty.
-3. Display the photo as a circle avatar everywhere a person appears.
+RESTasaurus doesn't send CORS headers that satisfy browser restrictions. In dev, Vite proxies both the dino API and the local Express server:
+
+```js
+// vite.config.js
+server: {
+  proxy: {
+    '/persons': { target: 'http://localhost:3001', changeOrigin: false },
+    '/api':     { target: 'https://restasaurus.onrender.com', changeOrigin: true, secure: true },
+  },
+}
+```
+
+In production, Express itself proxies `/api/*` to RESTasaurus and serves the Vite dist.
+
+---
+
+## Backend — Express + SQLite
+
+**Entry point:** `server/index.js`
+
+- Uses `node:sqlite` (`DatabaseSync`) — synchronous, no async wrappers needed.
+- Database file: `$DATA_DIR/persons.db` (default `./data/persons.db` in dev).
+- WAL mode enabled: `db.exec('PRAGMA journal_mode = WAL')`.
+
+**Person REST API:**
+
+| Method | Path | Action |
+|---|---|---|
+| GET | `/persons` | List all persons |
+| POST | `/persons` | Create person `{ id, name, photoUrl, dinoName }` |
+| PATCH | `/persons/:id` | Update any subset of `{ name, photoUrl, dinoName }` |
+| DELETE | `/persons/:id` | Delete person |
+
+**Production mode** (`NODE_ENV=production`): Express also proxies `/api/*` to RESTasaurus and serves the Vite `dist/` as static files.
+
+**Dev:** run Vite and Express concurrently:
+```
+npm run dev   →  concurrently "vite" "node server/index.js"
+```
+
+---
+
+## Deployment — Docker
+
+Multi-stage Dockerfile (Node 22 Alpine):
+- Stage 1 (`build`): installs all deps, runs `npm run build` → produces `dist/`
+- Stage 2 (`runtime`): prod deps only, copies `server/` + `dist/`, runs `node server/index.js`
+
+No native build tools needed (no `python3 make g++`) because `node:sqlite` is built-in.
+
+**Environment variables:**
+| Variable | Default | Purpose |
+|---|---|---|
+| `NODE_ENV` | `production` | Enables static serving + API proxy in Express |
+| `PORT` | `3001` | Express listen port |
+| `DATA_DIR` | `/data` | SQLite database directory |
+
+**Persistence:** mount a named volume at `/data` so the SQLite file survives container restarts:
+```yaml
+# docker-compose.yml
+services:
+  app:
+    build: .
+    ports: ["3001:3001"]
+    volumes: ["dino_data:/data"]
+volumes:
+  dino_data:
+```
 
 ---
 
 ## App Structure
 
 ```
-src/
-├── main.js
-├── App.vue                  # shell: nav + router-view
-├── router/index.js
-├── stores/
-│   ├── dinoStore.js         # dino list from API, loading/error state
-│   └── personStore.js       # persons array, persisted to localStorage
-├── components/
-│   ├── PersonCard.vue        # card: avatar, name, assigned dino chip + edit button
-│   ├── DinoCard.vue          # dino tile: image, name, diet badge, period badge
-│   ├── DinoSearch.vue        # searchable + filterable dino picker modal/drawer
-│   ├── AvatarFallback.vue    # initials circle when photo URL is missing/broken
-│   └── QuizQuestion.vue      # single quiz step component
-├── views/
-│   ├── HomeView.vue          # roster grid
-│   ├── AddPersonView.vue     # form: name + photo URL
-│   ├── EditPersonView.vue    # same form, pre-filled
-│   ├── PersonDetailView.vue  # full detail: person + their dino info card
-│   └── QuizView.vue          # multi-step personality quiz
-└── composables/
-    └── useDinoQuiz.js        # quiz logic (questions, scoring, result mapping)
+dino_selector/
+├── server/
+│   └── index.js              # Express API + production static server
+├── src/
+│   ├── main.js
+│   ├── App.vue               # shell: nav + router-view
+│   ├── router/index.js
+│   ├── stores/
+│   │   ├── dinoStore.js      # dino list from RESTasaurus + fallback, loading/error state
+│   │   └── personStore.js    # persons array, backed by Express REST API
+│   ├── data/
+│   │   └── dinoFallback.js   # 18 well-known dinos (DinoAPI shape)
+│   ├── components/
+│   │   ├── PersonCard.vue    # card: avatar, name, dino chip, description, edit button
+│   │   ├── DinoCard.vue      # dino tile: image, name, diet badge, Wikipedia link
+│   │   ├── DinoSearch.vue    # searchable + filterable dino picker modal
+│   │   ├── AvatarFallback.vue
+│   │   └── QuizQuestion.vue  # single quiz step
+│   ├── views/
+│   │   ├── HomeView.vue
+│   │   ├── AddPersonView.vue
+│   │   ├── EditPersonView.vue
+│   │   ├── PersonDetailView.vue
+│   │   └── QuizView.vue
+│   └── composables/
+│       └── useDinoQuiz.js    # 12-question quiz logic
+├── Dockerfile
+├── docker-compose.yml
+├── vite.config.js            # dev proxy config
+└── package.json
 ```
 
 ---
@@ -101,7 +201,7 @@ src/
 | `/add` | `AddPersonView` | Add new person |
 | `/person/:id/edit` | `EditPersonView` | Edit name, photo, dino |
 | `/person/:id` | `PersonDetailView` | Read-only detail page |
-| `/quiz` | `QuizView` | Personality quiz (standalone, no person required) |
+| `/quiz` | `QuizView` | Personality quiz (standalone) |
 
 ---
 
@@ -110,224 +210,140 @@ src/
 ### 1. Roster (`HomeView`)
 
 - Responsive grid of `PersonCard` components (2 cols mobile → 4 cols desktop).
-- Each card shows:
-  - Circular avatar (photo or initials fallback).
-  - Person name.
-  - Assigned dino name + small dino thumbnail (or "No dino yet" placeholder).
-  - Diet badge (🌿 herbivore / 🥩 carnivore / 🍽️ omnivore).
-  - Quick-edit pencil icon → goes to `EditPersonView`.
-  - Click card body → goes to `PersonDetailView`.
-- FAB or prominent button: **"+ Add Person"**.
-- Empty state: friendly illustration + "Add your first person" CTA.
+- Each card shows: circular avatar, name, assigned dino chip + thumbnail, diet badge, short dino description (2-line clamp), edit button.
+- FAB: **"+ Add Person"**.
+- Empty state: friendly illustration + CTA.
 
 ### 2. Add / Edit Person
 
-- Fields:
-  - **Name** (required, max 50 chars).
-  - **Photo URL** (optional, with live preview + fallback).
-  - **Dinosaur** (required to save a dino; optional for "person only").
-- Dino picker:
-  - Opens as a slide-over drawer or modal.
-  - Search input filters by name in real-time.
-  - Filter chips: diet (All / Herbivore / Carnivore / Omnivore) and period (All / Triassic / Jurassic / Cretaceous).
-  - Results shown as a scrollable grid of `DinoCard` tiles.
-  - Clicking a tile selects it, closes the drawer, and shows the selection in the form.
+- Fields: Name (required, max 50 chars), Photo URL (optional, live preview), Dinosaur (optional).
+- Dino picker: slide-over drawer with real-time name search + diet/period filter chips.
+- **Search filtering is done directly in `DinoSearch.vue`'s `computed()` by accessing `dinoStore.dinos`** — do NOT use a Pinia getter-factory (a getter that returns a function) for this; it breaks Vue's reactivity dependency tracking and the search stops updating.
+- After selection a short dino description is shown in the form (3-line clamp).
 - Save / Cancel buttons.
 
 ### 3. Person Detail (`PersonDetailView`)
 
-- Large hero: person avatar + name.
-- Full dino info card below:
-  - Dino image (large).
-  - Name, diet, period, region, weight, length, existed.
-  - Scrollable description text.
-- "Change Dino" button → opens picker.
-- "Edit Profile" button → goes to `EditPersonView`.
+- Hero: avatar + name.
+- Full dino info card: image, name, diet, period, region, weight, length, existed, Wikipedia pill link, description.
+- "Change Dino" → opens picker. "Edit Profile" → EditPersonView.
 
 ### 4. Dino Quiz (`QuizView`)
 
-The quiz determines a person's spirit dino through 6–8 personality questions. It is **standalone** — it does not require being associated with a person, but at the end the user can optionally save the result to an existing person.
+12-question personality quiz. Standalone — no person needed upfront. At the end the user can assign the result to an existing person.
 
 #### Quiz Logic (`useDinoQuiz.js`)
 
-Each question presents 4 answer options. Each answer maps to a set of dino traits/tags (diet, size, era, personality archetype). Accumulate a score vector across answers, then find the best-matching dino from the API list.
+Each answer maps to a `traits` object. Scores are accumulated across 4 dimensions:
 
-**Suggested trait dimensions:**
+| Dimension | Values | How it's used |
+|---|---|---|
+| `diet` | herbivore · carnivore · omnivore | Primary filter — must match dino's diet |
+| `mobility` | runner · flyer · swimmer · walker | Secondary filter — matched against dino's `type` field |
+| `energy` | high · low | Tertiary — size proxy when no explicit size voted |
+| `size` | small · medium · large · massive | Sort target; mapped from dino's `length` field |
 
-| Dimension | Values |
-|---|---|
-| `diet` | herbivore · carnivore · omnivore |
-| `size` | tiny · medium · large · massive |
-| `era` | triassic · jurassic · cretaceous |
-| `style` | solitary · pack · ambush · slow-and-steady |
+**Mobility → `type` mapping:**
+- `flyer` → `type` contains "fly" or "aerial" (e.g. Pterodactyl)
+- `swimmer` → `type` contains "aquatic", "semi", "marine" (e.g. Spinosaurus)
+- `runner` → `type === 'terrestrial'` AND small/medium length
+- `walker` → `type === 'terrestrial'` AND large/massive length
 
-**Sample questions (implement at least 6):**
+**Scoring algorithm:**
+1. Filter dino pool by dominant `diet`.
+2. If any `mobility` votes exist, filter further by matching `type`.
+3. Sort by closest size match (if no explicit `size` votes, infer: `energy: high` → small, `energy: low` → large).
+4. Prefer `isPopular: true` in the top 3.
 
-1. *"At a party, you are most likely to..."*
-   - A) Hunt for the best snacks alone → carnivore, solitary
-   - B) Graze the buffet with your whole squad → herbivore, pack
-   - C) Whatever everyone else is doing → omnivore, pack
-   - D) Leave early and find a quiet corner → solitary, slow-and-steady
+**Questions (12 total, alternating nutrition/activity):**
 
-2. *"Your ideal weekend looks like..."*
-   - A) Sprinting through a forest trail → carnivore, medium
-   - B) A long, peaceful countryside walk → herbivore, large
-   - C) Staying home with snacks and a movie → herbivore, slow-and-steady
-   - D) An underground cave adventure → omnivore, ambush
-
-3. *"When something goes wrong at work, you..."*
-   - A) Charge straight at the problem → carnivore, ambush
-   - B) Rally the team and tackle it together → pack, omnivore
-   - C) Take your time and plan carefully → slow-and-steady, large
-   - D) Adapt on the fly → omnivore, medium
-
-4. *"Your fashion sense is best described as..."*
-   - A) Bold and spiky → carnivore, solitary
-   - B) Armored and dependable → herbivore, large
-   - C) Long, elegant, understated → herbivore, slow-and-steady
-   - D) Compact and agile → carnivore, medium
-
-5. *"Favorite movie genre?"*
-   - A) Thriller / Action → carnivore, ambush
-   - B) Documentary / Nature → herbivore, slow-and-steady
-   - C) Comedy with friends → pack, omnivore
-   - D) Sci-Fi from a forgotten era → triassic, solitary
-
-6. *"Pick your superpower:"*
-   - A) Super speed → small/medium, carnivore
-   - B) Invincible armor → large, herbivore
-   - C) Mind control → solitary, ambush
-   - D) Healing factor → omnivore, pack
-
-#### Scoring algorithm
-
-```js
-// useDinoQuiz.js (outline)
-const TRAIT_WEIGHTS = {
-  diet: { herbivore: 0, carnivore: 0, omnivore: 0 },
-  size: { tiny: 0, medium: 0, large: 0, massive: 0 },
-  era: { triassic: 0, jurassic: 0, cretaceous: 0 },
-  style: { solitary: 0, pack: 0, ambush: 0, 'slow-and-steady': 0 },
-}
-
-// Each answer increments relevant trait counters.
-// After all answers, compute the dominant trait per dimension.
-// Filter the dino list for matching diet + era, then sort by closest size match.
-// Return top 3 candidates; display the #1 as the spirit dino.
-```
+| # | Theme | Focus |
+|---|---|---|
+| 1 | Nutrition | Ideal meal |
+| 2 | Activity | Favourite way to move |
+| 3 | Nutrition | Hunger behaviour |
+| 4 | Activity | Dream trip |
+| 5 | Nutrition | Buffet choices |
+| 6 | Activity | Energy levels through the day |
+| 7 | Nutrition | Portion sizes |
+| 8 | Activity | Exercise preference |
+| 9 | Nutrition | Diet philosophy |
+| 10 | Activity | Rest day behaviour |
+| 11 | Nutrition | Snack preference |
+| 12 | Activity | How friends describe your energy |
 
 #### Quiz UI
 
-- Progress bar at the top (e.g. "Question 3 / 6").
-- Animated transition between questions (slide-left).
+- Progress bar: "Question N / 12".
+- Slide transition between questions.
 - Answer options as large clickable cards (not radio buttons).
-- Result screen:
-  - "Your spirit dinosaur is... **Velociraptor**!" with large dino image.
-  - Dino stats ribbon (diet, period, region).
-  - Description excerpt.
-  - CTA buttons:
-    - **"Assign to me"** → dropdown of existing persons, saves dino to selected person.
-    - **"Retake Quiz"** → resets state.
-    - **"Back to Roster"** → navigate to `/`.
-
----
-
-## Design Guidelines
-
-**Aesthetic direction: Prehistoric Museum meets modern card game.**
-
-- Dark earthy base (`#1a1208`) with amber/gold accents (`#d97706`) and fossil-bone cream (`#f5f0e8`).
-- Use a serif display font (e.g. Google Fonts **"Playfair Display"**) for headings.
-- Body text: **"DM Sans"** or **"Nunito"**.
-- Dino cards have a slight texture overlay (CSS noise or a subtle SVG pattern).
-- Subtle hover animations: card lifts with `translateY(-4px)` + shadow increase.
-- Diet badges use color: 🌿 green for herbivore, 🥩 red for carnivore, 🍽️ amber for omnivore.
-- Period badges: muted clay tones.
-- Loading skeleton screens while dinos fetch (don't show spinners alone).
-- Accessible: all interactive elements must have `aria-label` or visible text; color is never the only indicator.
+- Result screen: spirit dino name + image, stats ribbon, description excerpt, assign-to-person dropdown, Retake / Back to Roster CTAs.
 
 ---
 
 ## State Management (Pinia)
 
 ### `dinoStore`
+
 ```js
-state: {
-  dinos: [],          // full list from API
-  loading: false,
-  error: null,
-}
+state: { dinos: [], loading: false, error: null }
+
 actions:
-  fetchDinos()        // GET /dinosaurs, only if dinos.length === 0
-  getDinoByName(name) // find from cached list
+  fetchDinos()          // GET /api/v1/dinosaurs, merge with fallback, only if dinos.length === 0
+  getDinoByName(name)   // case-insensitive find from cached list
 ```
 
 ### `personStore`
+
+> **No localStorage persistence.** All data lives in the Express/SQLite backend.
+
 ```js
-state: {
-  persons: [],        // persisted to localStorage via pinia-plugin-persistedstate
-}
+state: { persons: [] }
+
 // Person shape:
-{
-  id: crypto.randomUUID(),
-  name: '',
-  photoUrl: '',
-  dinoName: null,     // string matching dino.name from API
-}
+{ id: String (UUID), name: String, photoUrl: String, dinoName: String | null }
+
 actions:
-  addPerson(person)
-  updatePerson(id, patch)
-  removePerson(id)
-  assignDino(personId, dinoName)
+  fetchPersons()                        // GET /persons  — called once in App.vue onMounted
+  addPerson({ name, photoUrl, dinoName })   // POST /persons — optimistic add + rollback on error
+  updatePerson(id, patch)               // PATCH /persons/:id
+  removePerson(id)                      // DELETE /persons/:id
+  assignDino(personId, dinoName)        // PATCH /persons/:id with { dinoName }
 ```
 
----
-
-## Error & Loading States
-
-- If the DinoAPI is unavailable (fetch error), show a friendly banner: *"🦴 The dinosaurs are hiding — API unavailable. Try again later."* with a retry button.
-- The dino picker should still let the user search within the cached list if already loaded.
-- If a dino image 404s, fall back to a placeholder SVG of a generic dino silhouette (inline in `DinoCard.vue`).
+All actions do **optimistic UI updates** and roll back on network failure.
 
 ---
 
-## Accessibility & UX Requirements
+## Design Guidelines
 
-- All modals/drawers trap focus and close on `Escape`.
-- Keyboard navigable dino grid (arrow keys move between tiles, `Enter`/`Space` selects).
-- `prefers-reduced-motion`: disable slide animations, keep fade only.
-- Mobile-first: the dino picker opens as a bottom sheet on screens < 640 px.
+**Aesthetic: Prehistoric Museum meets modern card game.**
+
+- Dark earthy base (`#1a1208`) with amber/gold accents (`#d97706`) and fossil-bone cream (`#f5f0e8`).
+- Serif display font **"Playfair Display"** for headings; **"DM Sans"** for body.
+- Dino cards: subtle hover lift (`translateY(-4px)` + shadow).
+- Diet badges: green (herbivore), red (carnivore), amber (omnivore).
+- Loading skeleton screens while dinos fetch.
+- Accessible: all interactive elements have `aria-label` or visible text; color is never the only indicator.
 
 ---
 
-## Implementation Order (phases)
+## Known Issues & Decisions
 
-### Phase 1 — Core
-1. Scaffold Vite + Vue 3 + Tailwind + Pinia + Vue Router.
-2. Implement `dinoStore` with API fetch.
-3. Build `DinoCard.vue` and verify images load.
-4. Build `personStore` with localStorage persistence.
-5. `HomeView`: empty state + `PersonCard` grid.
-6. `AddPersonView` + `EditPersonView` with dino picker drawer.
-7. `PersonDetailView`.
-
-### Phase 2 — Quiz
-8. Design quiz questions and trait mapping in `useDinoQuiz.js`.
-9. Build `QuizView` with `QuizQuestion.vue` sub-component.
-10. Result screen + assign-to-person flow.
-
-### Phase 3 — Polish
-11. Skeleton loaders, error banners, fallback images.
-12. Animations (Vue `<Transition>`, Tailwind transitions).
-13. Accessibility audit (focus traps, `aria-*`, keyboard nav).
-14. Mobile bottom sheet for dino picker.
-15. Final visual polish (textures, typography, badges).
+| Issue | Decision |
+|---|---|
+| DinoAPI offline | Replaced with RESTasaurus; fallback dataset covers popular dinos |
+| RESTasaurus page 1 is A-names only | Merge API page 1 + `dinoFallback.js`; do not paginate |
+| RESTasaurus cold start (Render free tier) | Show loading state; app retries via user-visible error banner |
+| `better-sqlite3` fails on Node 24 | Use built-in `node:sqlite` (`DatabaseSync`) — no compilation |
+| Pinia getter-factory stale reactivity | Move filter logic into component `computed()`, read `dinoStore.dinos` directly |
+| Search case-sensitivity | All dino names stored lowercase; queries lowercased before compare |
 
 ---
 
 ## Out of Scope
 
-- User authentication / multi-user.
-- Server-side persistence (localStorage only).
-- Uploading photos (URL input only).
+- User authentication / multi-user isolation.
+- Photo uploads (URL input only).
 - Editing or adding dinos (read-only from API).
+- Paginating RESTasaurus beyond page 1.
