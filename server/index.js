@@ -106,29 +106,26 @@ function runInsert(d) {
 }
 
 async function seedDinos() {
-  const { n } = db.prepare('SELECT COUNT(*) AS n FROM dinos').get()
-  // Skip if we already have a full dataset (threshold guards against partial seeds)
-  if (n >= 200) {
-    console.log(`[dinos] cache ready — ${n} entries`)
-    return
-  }
-
+  const existing = db.prepare('SELECT COUNT(*) AS n FROM dinos').get().n
   dinoSeedInProgress = true
-  console.log('[dinos] seeding from RESTasaurus (first run — this takes ~1 min)…')
+  console.log(`[dinos] refreshing cache (${existing} entries currently)…`)
 
   const ORIGIN = 'https://restasaurus.onrender.com'
   let path = `${ORIGIN}/api/v1/dinosaurs`
-  let apiCount = 0
+  const fetched = []
 
   while (path) {
     try {
       const res = await fetch(path)
+      if (res.status === 429) {
+        console.warn('[dinos] 429 rate-limited — waiting 30 s before retry…')
+        await new Promise((resolve) => setTimeout(resolve, 30_000))
+        continue  // retry the same page
+      }
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const json = await res.json()
       const rows = Array.isArray(json) ? json : (json.data ?? [])
-      for (const raw of rows) runInsert(normalizeApiDino(raw))
-      apiCount += rows.length
-      // nextPage is a relative path like "/api/v1/dinosaurs?page=2"
+      for (const raw of rows) fetched.push(normalizeApiDino(raw))
       path = json.nextPage ? `${ORIGIN}${json.nextPage}` : null
     } catch (err) {
       console.error('[dinos] seed fetch error:', err.message)
@@ -136,21 +133,35 @@ async function seedDinos() {
     }
   }
 
-  // Insert well-known fallback dinos not returned by the API.
-  // Use empty image string — dead S3 URLs (403) are worse than a placeholder.
-  const seededNames = new Set(
-    db.prepare('SELECT name FROM dinos').all().map((r) => r.name)
-  )
-  let fallbackCount = 0
+  if (fetched.length < 200) {
+    console.warn(`[dinos] only ${fetched.length} dinos fetched — keeping existing cache`)
+    dinoSeedInProgress = false
+    return
+  }
+
+  // Append fallback dinos not covered by the API (empty image — S3 bucket is dead)
+  const fetchedNames = new Set(fetched.map((d) => d.name))
   for (const d of DINO_FALLBACK) {
-    if (!seededNames.has(d.name)) {
-      runInsert({ ...d, id: d._id, image: '', wikipediaUrl: d.wikipediaUrl ?? null })
-      fallbackCount++
+    if (!fetchedNames.has(d.name)) {
+      fetched.push({ ...d, id: d._id, image: '', wikipediaUrl: d.wikipediaUrl ?? null })
     }
   }
 
+  // Atomically swap the table so /dinos never returns an empty list mid-update
+  db.exec('BEGIN')
+  try {
+    db.exec('DELETE FROM dinos')
+    for (const d of fetched) runInsert(d)
+    db.exec('COMMIT')
+  } catch (err) {
+    db.exec('ROLLBACK')
+    console.error('[dinos] cache write failed, keeping old data:', err.message)
+    dinoSeedInProgress = false
+    return
+  }
+
   const total = db.prepare('SELECT COUNT(*) AS n FROM dinos').get().n
-  console.log(`[dinos] seeded — ${apiCount} API + ${fallbackCount} fallback = ${total} total`)
+  console.log(`[dinos] cache refreshed — ${total} dinos`)
   dinoSeedInProgress = false
 }
 
