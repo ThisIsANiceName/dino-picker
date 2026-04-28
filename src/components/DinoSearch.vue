@@ -19,6 +19,7 @@ const periodFilter = ref('')
 const drawerRef = ref(null)
 const searchInputRef = ref(null)
 const showAddForm = ref(false)
+const editingDino = ref(null)
 
 const DIET_OPTIONS = ['', 'herbivore', 'carnivore', 'omnivore']
 const PERIOD_OPTIONS = ['', 'triassic', 'jurassic', 'cretaceous']
@@ -47,6 +48,10 @@ function onDinoSaved(dino) {
   selectDino(dino)
 }
 
+function onDinoEdited() {
+  editingDino.value = null
+}
+
 // Focus trap + keyboard close
 function onKeydown(e) {
   if (e.key === 'Escape') close()
@@ -62,6 +67,7 @@ watch(
       searchInputRef.value?.focus()
     } else {
       showAddForm.value = false
+      editingDino.value = null
     }
   }
 )
@@ -160,47 +166,71 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
 
           <!-- Results grid -->
           <div class="overflow-y-auto p-4 flex-1">
-            <!-- Loading -->
-            <div v-if="dinoStore.loading" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              <div
-                v-for="n in 6"
-                :key="n"
-                class="rounded-xl bg-earth-800 animate-pulse aspect-video"
-              />
-            </div>
+            <!-- Edit form (replaces grid while editing) -->
+            <AddDinoForm
+              v-if="editingDino"
+              :dino="editingDino"
+              @saved="onDinoEdited"
+              @cancel="editingDino = null"
+            />
 
-            <!-- Empty -->
-            <div v-else-if="results.length === 0" class="py-6">
-              <AddDinoForm
-                v-if="showAddForm"
-                :initial-name="query.trim()"
-                @saved="onDinoSaved"
-                @cancel="showAddForm = false"
-              />
-              <div v-else class="text-center space-y-3">
-                <p class="text-earth-600 text-sm">No dinosaurs match your search.</p>
-                <button
-                  v-if="query.trim()"
-                  class="px-4 py-2 rounded-md border border-amber-600 text-amber-400 hover:bg-amber-600 hover:text-earth-950 text-sm font-semibold transition-colors"
-                  aria-label="Add this dinosaur to the database"
-                  @click="showAddForm = true"
-                >
-                  + Add Missing Dino
-                </button>
+            <template v-else>
+              <!-- Loading -->
+              <div v-if="dinoStore.loading" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div
+                  v-for="n in 6"
+                  :key="n"
+                  class="rounded-xl bg-earth-800 animate-pulse aspect-video"
+                />
               </div>
-            </div>
 
-            <!-- Grid -->
-            <div v-else class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              <DinoCard
-                v-for="dino in results"
-                :key="dino._id ?? dino.name"
-                :dino="dino"
-                :selected="modelValue === dino.name"
-                :clickable="true"
-                @select="selectDino"
-              />
-            </div>
+              <!-- Empty -->
+              <div v-else-if="results.length === 0" class="py-6">
+                <AddDinoForm
+                  v-if="showAddForm"
+                  :initial-name="query.trim()"
+                  @saved="onDinoSaved"
+                  @cancel="showAddForm = false"
+                />
+                <div v-else class="text-center space-y-3">
+                  <p class="text-earth-600 text-sm">No dinosaurs match your search.</p>
+                  <button
+                    v-if="query.trim()"
+                    class="px-4 py-2 rounded-md border border-amber-600 text-amber-400 hover:bg-amber-600 hover:text-earth-950 text-sm font-semibold transition-colors"
+                    aria-label="Add this dinosaur to the database"
+                    @click="showAddForm = true"
+                  >
+                    + Add Missing Dino
+                  </button>
+                </div>
+              </div>
+
+              <!-- Grid -->
+              <div v-else class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div
+                  v-for="dino in results"
+                  :key="dino._id ?? dino.name"
+                  class="relative group"
+                >
+                  <DinoCard
+                    :dino="dino"
+                    :selected="modelValue === dino.name"
+                    :clickable="true"
+                    @select="selectDino"
+                  />
+                  <!-- Edit button -->
+                  <button
+                    class="absolute top-2 left-2 w-6 h-6 rounded-full bg-earth-900/80 flex items-center justify-center text-earth-400 hover:text-amber-400 hover:bg-earth-800 transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100"
+                    :aria-label="`Edit ${dino.name}`"
+                    @click.stop="editingDino = dino"
+                  >
+                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 3.487a2.25 2.25 0 113.182 3.182L7.5 19.213l-4.5 1.125 1.125-4.5L16.862 3.487z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </template>
           </div>
         </div>
       </div>

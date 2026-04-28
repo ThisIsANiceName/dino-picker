@@ -4,19 +4,21 @@ import { useDinoStore } from '../stores/dinoStore.js'
 
 const props = defineProps({
   initialName: { type: String, default: '' },
+  dino:        { type: Object, default: null }, // when set, form is in edit mode
 })
 
 const emit = defineEmits(['saved', 'cancel'])
 
 const dinoStore = useDinoStore()
+const isEdit = !!props.dino
 
 const form = ref({
-  name:        props.initialName,
-  image:       '',
-  diet:        '',
-  period:      '',
-  type:        '',
-  description: '',
+  name:        props.dino?.name        ?? props.initialName,
+  image:       props.dino?.image       ?? '',
+  diet:        props.dino?.diet        ?? '',
+  period:      props.dino?.period      ?? '',
+  type:        props.dino?.type        ?? '',
+  description: props.dino?.description ?? '',
 })
 
 const saving = ref(false)
@@ -32,14 +34,17 @@ async function submit() {
   saving.value = true
   error.value  = null
   try {
-    const dino = await dinoStore.createDino({
+    const data = {
       name:        form.value.name.trim(),
       image:       form.value.image.trim(),
       diet:        form.value.diet,
       period:      form.value.period,
       type:        form.value.type,
       description: form.value.description.trim(),
-    })
+    }
+    const dino = isEdit
+      ? await dinoStore.updateDino(props.dino._id, data)
+      : await dinoStore.createDino(data)
     emit('saved', dino)
   } catch (err) {
     error.value = err.message
@@ -51,13 +56,15 @@ async function submit() {
 
 <template>
   <div class="text-left space-y-4">
-    <h3 class="font-display text-fossil-50 text-base">Add Missing Dinosaur</h3>
+    <h3 class="font-display text-fossil-50 text-base">
+      {{ isEdit ? 'Edit Dinosaur' : 'Add Missing Dinosaur' }}
+    </h3>
 
     <!-- Name -->
     <div>
-      <label class="block text-xs text-earth-400 mb-1" for="add-dino-name">Name <span class="text-amber-500">*</span></label>
+      <label class="block text-xs text-earth-400 mb-1" for="dino-form-name">Name <span class="text-amber-500">*</span></label>
       <input
-        id="add-dino-name"
+        id="dino-form-name"
         v-model="form.name"
         type="text"
         maxlength="100"
@@ -69,16 +76,15 @@ async function submit() {
 
     <!-- Image URL -->
     <div>
-      <label class="block text-xs text-earth-400 mb-1" for="add-dino-image">Image URL</label>
+      <label class="block text-xs text-earth-400 mb-1" for="dino-form-image">Image URL</label>
       <input
-        id="add-dino-image"
+        id="dino-form-image"
         v-model="form.image"
         type="url"
         placeholder="https://…"
         class="w-full bg-earth-800 border border-earth-600 rounded-lg px-3 py-2 text-sm text-fossil-50 placeholder-earth-600 focus:outline-none focus:border-amber-500"
         @input="imgPreviewError = false"
       />
-      <!-- Live image preview -->
       <div
         v-if="form.image && !imgPreviewError"
         class="mt-2 w-full aspect-video rounded-lg overflow-hidden bg-earth-900"
@@ -96,9 +102,9 @@ async function submit() {
     <!-- Diet + Period row -->
     <div class="grid grid-cols-2 gap-3">
       <div>
-        <label class="block text-xs text-earth-400 mb-1" for="add-dino-diet">Diet</label>
+        <label class="block text-xs text-earth-400 mb-1" for="dino-form-diet">Diet</label>
         <select
-          id="add-dino-diet"
+          id="dino-form-diet"
           v-model="form.diet"
           class="w-full bg-earth-800 border border-earth-600 rounded-lg px-3 py-2 text-sm text-fossil-50 focus:outline-none focus:border-amber-500 capitalize"
         >
@@ -108,9 +114,9 @@ async function submit() {
         </select>
       </div>
       <div>
-        <label class="block text-xs text-earth-400 mb-1" for="add-dino-period">Period</label>
+        <label class="block text-xs text-earth-400 mb-1" for="dino-form-period">Period</label>
         <select
-          id="add-dino-period"
+          id="dino-form-period"
           v-model="form.period"
           class="w-full bg-earth-800 border border-earth-600 rounded-lg px-3 py-2 text-sm text-fossil-50 focus:outline-none focus:border-amber-500 capitalize"
         >
@@ -123,9 +129,9 @@ async function submit() {
 
     <!-- Locomotion type -->
     <div>
-      <label class="block text-xs text-earth-400 mb-1" for="add-dino-type">Locomotion</label>
+      <label class="block text-xs text-earth-400 mb-1" for="dino-form-type">Locomotion</label>
       <select
-        id="add-dino-type"
+        id="dino-form-type"
         v-model="form.type"
         class="w-full bg-earth-800 border border-earth-600 rounded-lg px-3 py-2 text-sm text-fossil-50 focus:outline-none focus:border-amber-500 capitalize"
       >
@@ -137,9 +143,9 @@ async function submit() {
 
     <!-- Description -->
     <div>
-      <label class="block text-xs text-earth-400 mb-1" for="add-dino-desc">Description</label>
+      <label class="block text-xs text-earth-400 mb-1" for="dino-form-desc">Description</label>
       <textarea
-        id="add-dino-desc"
+        id="dino-form-desc"
         v-model="form.description"
         rows="3"
         placeholder="A short description…"
@@ -165,7 +171,7 @@ async function submit() {
         class="px-4 py-1.5 rounded-md bg-amber-600 hover:bg-amber-500 disabled:opacity-40 disabled:cursor-not-allowed text-earth-950 text-sm font-semibold transition-colors"
         @click="submit"
       >
-        {{ saving ? 'Saving…' : 'Add Dinosaur' }}
+        {{ saving ? 'Saving…' : isEdit ? 'Save Changes' : 'Add Dinosaur' }}
       </button>
     </div>
   </div>

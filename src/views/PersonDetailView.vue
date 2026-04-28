@@ -5,6 +5,7 @@ import { usePersonStore } from '../stores/personStore.js'
 import { useDinoStore } from '../stores/dinoStore.js'
 import AvatarFallback from '../components/AvatarFallback.vue'
 import DinoSearch from '../components/DinoSearch.vue'
+import AddDinoForm from '../components/AddDinoForm.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -18,6 +19,7 @@ const photoError = ref(false)
 const dinoImgError = ref(false)
 const pickerOpen = ref(false)
 const pickerValue = ref(null)
+const showEditDino = ref(false)
 
 function openPicker() {
   pickerValue.value = person.value?.dinoName ?? null
@@ -67,6 +69,14 @@ const FALLBACK_SVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
         @click="openPicker"
       >
         {{ dino ? 'Change Dino' : '🦕 Pick a Dino' }}
+      </button>
+      <button
+        v-if="dino"
+        class="px-4 py-2 rounded-lg bg-earth-800 border border-earth-600 hover:border-amber-500 text-fossil-200 text-sm font-medium transition-colors"
+        :aria-label="`Edit ${dino.name}`"
+        @click="showEditDino = true"
+      >
+        Edit Dino
       </button>
       <RouterLink
         :to="`/person/${person.id}/edit`"
@@ -174,6 +184,29 @@ const FALLBACK_SVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
       @close="pickerOpen = false"
       @update:modelValue="onDinoPicked"
     />
+
+    <!-- Edit dino modal -->
+    <Teleport v-if="dino && showEditDino" to="body">
+      <div
+        class="fixed inset-0 z-50 flex items-center justify-center"
+        role="dialog"
+        aria-modal="true"
+        :aria-label="`Edit ${dino.name}`"
+      >
+        <div
+          class="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          aria-hidden="true"
+          @click="showEditDino = false"
+        />
+        <div class="relative z-10 w-full max-w-md mx-4 bg-earth-900 border border-earth-700 rounded-2xl p-6 max-h-[90vh] overflow-y-auto">
+          <AddDinoForm
+            :dino="dino"
+            @saved="showEditDino = false"
+            @cancel="showEditDino = false"
+          />
+        </div>
+      </div>
+    </Teleport>
   </div>
 
   <!-- Person not found -->

@@ -147,10 +147,10 @@ async function seedDinos() {
     }
   }
 
-  // Atomically swap the table so /dinos never returns an empty list mid-update
+  // Atomically refresh API dinos, preserving any custom-* rows added by users
   db.exec('BEGIN')
   try {
-    db.exec('DELETE FROM dinos')
+    db.exec("DELETE FROM dinos WHERE id NOT LIKE 'custom-%'")
     for (const d of fetched) runInsert(d)
     db.exec('COMMIT')
   } catch (err) {
@@ -174,6 +174,30 @@ app.get('/dinos', (_req, res) => {
   const rows = db.prepare('SELECT * FROM dinos ORDER BY name').all()
   res.set('X-Dinos-Seeding', dinoSeedInProgress ? '1' : '0')
   res.json(rows.map(rowToDino))
+})
+
+app.patch('/dinos/:id', (req, res) => {
+  const fieldMap = {
+    name: 'name', image: 'image', diet: 'diet', period: 'period',
+    existed: 'existed', region: 'region', type: 'type',
+    description: 'description', wikipediaUrl: 'wikipedia_url',
+    weight: 'weight', height: 'height', length: 'length',
+  }
+  const keys = Object.keys(req.body).filter((k) => fieldMap[k])
+  if (!keys.length) return res.status(400).json({ error: 'nothing to update' })
+
+  const body = { ...req.body }
+  if (body.name !== undefined) {
+    body.name = body.name.trim().toLowerCase()
+    if (!body.name) return res.status(400).json({ error: 'name cannot be empty' })
+  }
+
+  const sets = keys.map((k) => `${fieldMap[k]} = ?`).join(', ')
+  const vals = keys.map((k) => body[k] ?? null)
+  const result = db.prepare(`UPDATE dinos SET ${sets} WHERE id = ?`).run(...vals, req.params.id)
+  if (result.changes === 0) return res.status(404).json({ error: 'dino not found' })
+
+  res.json(rowToDino(db.prepare('SELECT * FROM dinos WHERE id = ?').get(req.params.id)))
 })
 
 app.post('/dinos', (req, res) => {

@@ -46,6 +46,22 @@ export const useDinoStore = defineStore('dinos', {
       return this.dinos.find((d) => d.name.toLowerCase() === name.toLowerCase()) ?? null
     },
 
+    async updateDino(id, patch) {
+      const res = await fetch(`/dinos/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(patch),
+      })
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}))
+        throw new Error(body.error ?? `HTTP ${res.status}`)
+      }
+      const updated = await res.json()
+      const idx = this.dinos.findIndex((d) => d._id === id)
+      if (idx !== -1) this.dinos[idx] = updated
+      return updated
+    },
+
     async createDino(data) {
       const res = await fetch('/dinos', {
         method: 'POST',
