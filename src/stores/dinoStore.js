@@ -45,5 +45,21 @@ export const useDinoStore = defineStore('dinos', {
       if (!name) return null
       return this.dinos.find((d) => d.name.toLowerCase() === name.toLowerCase()) ?? null
     },
+
+    async createDino(data) {
+      const res = await fetch('/dinos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}))
+        throw new Error(body.error ?? `HTTP ${res.status}`)
+      }
+      const dino = await res.json()
+      this.dinos.push(dino)
+      this.dinos.sort((a, b) => a.name.localeCompare(b.name))
+      return dino
+    },
   },
 })

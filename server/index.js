@@ -176,6 +176,28 @@ app.get('/dinos', (_req, res) => {
   res.json(rows.map(rowToDino))
 })
 
+app.post('/dinos', (req, res) => {
+  const {
+    name, image = '', diet = '', period = '', existed = '',
+    region = '', type = '', description = '',
+    wikipediaUrl = null, weight = null, height = null, length = null,
+  } = req.body
+
+  const normalized = (name ?? '').trim().toLowerCase()
+  if (!normalized) return res.status(400).json({ error: 'name is required' })
+
+  const existing = db.prepare('SELECT id FROM dinos WHERE name = ?').get(normalized)
+  if (existing) return res.status(409).json({ error: 'a dino with that name already exists' })
+
+  const id = `custom-${Date.now()}`
+  db.prepare(`
+    INSERT INTO dinos (id, name, diet, period, existed, region, type, description, image, wikipedia_url, weight, height, length, is_popular)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)
+  `).run(id, normalized, diet, period, existed, region, type, description, image, wikipediaUrl, weight, height, length)
+
+  res.status(201).json(rowToDino(db.prepare('SELECT * FROM dinos WHERE id = ?').get(id)))
+})
+
 // ── Person CRUD ──────────────────────────────────────────────────────────────
 
 app.get('/persons', (_req, res) => {

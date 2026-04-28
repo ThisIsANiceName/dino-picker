@@ -2,6 +2,7 @@
 import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useDinoStore } from '../stores/dinoStore.js'
 import DinoCard from './DinoCard.vue'
+import AddDinoForm from './AddDinoForm.vue'
 
 const props = defineProps({
   modelValue: { type: String, default: null }, // currently selected dino name
@@ -17,6 +18,7 @@ const dietFilter = ref('')
 const periodFilter = ref('')
 const drawerRef = ref(null)
 const searchInputRef = ref(null)
+const showAddForm = ref(false)
 
 const DIET_OPTIONS = ['', 'herbivore', 'carnivore', 'omnivore']
 const PERIOD_OPTIONS = ['', 'triassic', 'jurassic', 'cretaceous']
@@ -37,7 +39,12 @@ function selectDino(dino) {
 }
 
 function close() {
+  showAddForm.value = false
   emit('close')
+}
+
+function onDinoSaved(dino) {
+  selectDino(dino)
 }
 
 // Focus trap + keyboard close
@@ -45,12 +52,16 @@ function onKeydown(e) {
   if (e.key === 'Escape') close()
 }
 
+watch(query, () => { showAddForm.value = false })
+
 watch(
   () => props.open,
   async (isOpen) => {
     if (isOpen) {
       await nextTick()
       searchInputRef.value?.focus()
+    } else {
+      showAddForm.value = false
     }
   }
 )
@@ -159,9 +170,25 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
             </div>
 
             <!-- Empty -->
-            <p v-else-if="results.length === 0" class="text-center text-earth-600 py-8 text-sm">
-              No dinosaurs match your search.
-            </p>
+            <div v-else-if="results.length === 0" class="py-6">
+              <AddDinoForm
+                v-if="showAddForm"
+                :initial-name="query.trim()"
+                @saved="onDinoSaved"
+                @cancel="showAddForm = false"
+              />
+              <div v-else class="text-center space-y-3">
+                <p class="text-earth-600 text-sm">No dinosaurs match your search.</p>
+                <button
+                  v-if="query.trim()"
+                  class="px-4 py-2 rounded-md border border-amber-600 text-amber-400 hover:bg-amber-600 hover:text-earth-950 text-sm font-semibold transition-colors"
+                  aria-label="Add this dinosaur to the database"
+                  @click="showAddForm = true"
+                >
+                  + Add Missing Dino
+                </button>
+              </div>
+            </div>
 
             <!-- Grid -->
             <div v-else class="grid grid-cols-2 sm:grid-cols-3 gap-3">
