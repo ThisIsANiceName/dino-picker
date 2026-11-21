@@ -1,0 +1,961 @@
+{
+  "version": 1,
+  "accessories": [
+    {
+      "id": "party-hat",
+      "file": "accessories/party-hat.svg",
+      "slot": "hat",
+      "label": "Party hat",
+      "anchor": [
+        100,
+        166
+      ],
+      "width": 84,
+      "defaults": {
+        "--acc-1": "#f472b6",
+        "--acc-2": "#fde047",
+        "--acc-3": "#38bdf8"
+      }
+    },
+    {
+      "id": "crown",
+      "file": "accessories/crown.svg",
+      "slot": "hat",
+      "label": "Crown",
+      "anchor": [
+        100,
+        164
+      ],
+      "width": 104,
+      "defaults": {
+        "--acc-1": "#fbbf24",
+        "--acc-2": "#ef4444",
+        "--acc-3": "#38bdf8"
+      }
+    },
+    {
+      "id": "cowboy-hat",
+      "file": "accessories/cowboy-hat.svg",
+      "slot": "hat",
+      "label": "Cowboy hat",
+      "anchor": [
+        100,
+        146
+      ],
+      "width": 88,
+      "defaults": {
+        "--acc-1": "#b7793f",
+        "--acc-2": "#5b3a1e",
+        "--acc-3": "#fbbf24"
+      }
+    },
+    {
+      "id": "beanie",
+      "file": "accessories/beanie.svg",
+      "slot": "hat",
+      "label": "Beanie",
+      "anchor": [
+        100,
+        164
+      ],
+      "width": 106,
+      "defaults": {
+        "--acc-1": "#14b8a6",
+        "--acc-2": "#0f766e",
+        "--acc-3": "#fef3c7"
+      }
+    },
+    {
+      "id": "top-hat",
+      "file": "accessories/top-hat.svg",
+      "slot": "hat",
+      "label": "Top hat",
+      "anchor": [
+        100,
+        152
+      ],
+      "width": 74,
+      "defaults": {
+        "--acc-1": "#1f2937",
+        "--acc-2": "#dc2626",
+        "--acc-3": "#fbbf24"
+      }
+    },
+    {
+      "id": "baseball-cap",
+      "file": "accessories/baseball-cap.svg",
+      "slot": "hat",
+      "label": "Baseball cap",
+      "anchor": [
+        96,
+        156
+      ],
+      "width": 96,
+      "defaults": {
+        "--acc-1": "#3b82f6",
+        "--acc-2": "#f8fafc",
+        "--acc-3": "#f97316"
+      }
+    },
+    {
+      "id": "flower-crown",
+      "file": "accessories/flower-crown.svg",
+      "slot": "hat",
+      "label": "Flower crown",
+      "anchor": [
+        100,
+        162
+      ],
+      "width": 156,
+      "defaults": {
+        "--acc-1": "#f472b6",
+        "--acc-2": "#fde047",
+        "--acc-3": "#22c55e"
+      }
+    },
+    {
+      "id": "wizard-hat",
+      "file": "accessories/wizard-hat.svg",
+      "slot": "hat",
+      "label": "Wizard hat",
+      "anchor": [
+        100,
+        160
+      ],
+      "width": 100,
+      "defaults": {
+        "--acc-1": "#6d28d9",
+        "--acc-2": "#fde047",
+        "--acc-3": "#a78bfa"
+      }
+    },
+    {
+      "id": "chef-hat",
+      "file": "accessories/chef-hat.svg",
+      "slot": "hat",
+      "label": "Chef hat",
+      "anchor": [
+        100,
+        166
+      ],
+      "width": 76,
+      "defaults": {
+        "--acc-1": "#ffffff",
+        "--acc-2": "#e5e7eb",
+        "--acc-3": "#ef4444"
+      }
+    },
+    {
+      "id": "headphones",
+      "file": "accessories/headphones.svg",
+      "slot": "hat",
+      "label": "Headphones",
+      "anchor": [
+        100,
+        150
+      ],
+      "width": 104,
+      "defaults": {
+        "--acc-1": "#1f2937",
+        "--acc-2": "#f43f5e",
+        "--acc-3": "#9ca3af"
+      }
+    },
+    {
+      "id": "santa-hat",
+      "file": "accessories/santa-hat.svg",
+      "slot": "hat",
+      "label": "Santa hat",
+      "anchor": [
+        100,
+        160
+      ],
+      "width": 108,
+      "defaults": {
+        "--acc-1": "#dc2626",
+        "--acc-2": "#ffffff",
+        "--acc-3": "#ffffff"
+      }
+    },
+    {
+      "id": "propeller-cap",
+      "file": "accessories/propeller-cap.svg",
+      "slot": "hat",
+      "label": "Propeller cap",
+      "anchor": [
+        100,
+        160
+      ],
+      "width": 104,
+      "defaults": {
+        "--acc-1": "#ef4444",
+        "--acc-2": "#fde047",
+        "--acc-3": "#3b82f6"
+      }
+    },
+    {
+      "id": "sunglasses",
+      "file": "accessories/sunglasses.svg",
+      "slot": "eyewear",
+      "label": "Sunglasses",
+      "anchor": [
+        128,
+        100
+      ],
+      "width": 76,
+      "defaults": {
+        "--acc-1": "#111827",
+        "--acc-2": "#f97316",
+        "--acc-3": "#38bdf8"
+      }
+    },
+    {
+      "id": "round-glasses",
+      "file": "accessories/round-glasses.svg",
+      "slot": "eyewear",
+      "label": "Round glasses",
+      "anchor": [
+        128,
+        100
+      ],
+      "width": 68,
+      "defaults": {
+        "--acc-1": "#b45309",
+        "--acc-2": "#bae6fd",
+        "--acc-3": "#b45309"
+      }
+    },
+    {
+      "id": "monocle",
+      "file": "accessories/monocle.svg",
+      "slot": "eyewear",
+      "label": "Monocle",
+      "anchor": [
+        128,
+        96
+      ],
+      "width": 60,
+      "defaults": {
+        "--acc-1": "#d4a017",
+        "--acc-2": "#e0f2fe",
+        "--acc-3": "#d4a017"
+      }
+    },
+    {
+      "id": "star-glasses",
+      "file": "accessories/star-glasses.svg",
+      "slot": "eyewear",
+      "label": "Star glasses",
+      "anchor": [
+        128,
+        100
+      ],
+      "width": 84,
+      "defaults": {
+        "--acc-1": "#ec4899",
+        "--acc-2": "#fde047",
+        "--acc-3": "#ec4899"
+      }
+    },
+    {
+      "id": "eye-patch",
+      "file": "accessories/eye-patch.svg",
+      "slot": "eyewear",
+      "label": "Eye patch",
+      "anchor": [
+        126,
+        102
+      ],
+      "width": 48,
+      "defaults": {
+        "--acc-1": "#111827",
+        "--acc-2": "#111827",
+        "--acc-3": "#fbbf24"
+      }
+    },
+    {
+      "id": "bowtie",
+      "file": "accessories/bowtie.svg",
+      "slot": "neck",
+      "label": "Bow tie",
+      "anchor": [
+        100,
+        100
+      ],
+      "width": 120,
+      "defaults": {
+        "--acc-1": "#e11d48",
+        "--acc-2": "#fecdd3",
+        "--acc-3": "#9f1239"
+      }
+    },
+    {
+      "id": "scarf",
+      "file": "accessories/scarf.svg",
+      "slot": "neck",
+      "label": "Scarf",
+      "anchor": [
+        100,
+        96
+      ],
+      "width": 124,
+      "defaults": {
+        "--acc-1": "#f97316",
+        "--acc-2": "#fef3c7",
+        "--acc-3": "#c2410c"
+      }
+    },
+    {
+      "id": "bandana",
+      "file": "accessories/bandana.svg",
+      "slot": "neck",
+      "label": "Bandana",
+      "anchor": [
+        100,
+        82
+      ],
+      "width": 128,
+      "defaults": {
+        "--acc-1": "#dc2626",
+        "--acc-2": "#ffffff",
+        "--acc-3": "#991b1b"
+      }
+    },
+    {
+      "id": "medal",
+      "file": "accessories/medal.svg",
+      "slot": "neck",
+      "label": "Medal",
+      "anchor": [
+        100,
+        104
+      ],
+      "width": 44,
+      "defaults": {
+        "--acc-1": "#fbbf24",
+        "--acc-2": "#2563eb",
+        "--acc-3": "#ef4444"
+      }
+    },
+    {
+      "id": "necktie",
+      "file": "accessories/necktie.svg",
+      "slot": "neck",
+      "label": "Necktie",
+      "anchor": [
+        100,
+        46
+      ],
+      "width": 34,
+      "defaults": {
+        "--acc-1": "#2563eb",
+        "--acc-2": "#93c5fd",
+        "--acc-3": "#1e3a8a"
+      }
+    },
+    {
+      "id": "coffee-cup",
+      "file": "accessories/coffee-cup.svg",
+      "slot": "extra",
+      "label": "Coffee cup",
+      "anchor": [
+        100,
+        100
+      ],
+      "width": 70,
+      "defaults": {
+        "--acc-1": "#ffffff",
+        "--acc-2": "#b45309",
+        "--acc-3": "#3f2a1d"
+      }
+    },
+    {
+      "id": "heart-sticker",
+      "file": "accessories/heart-sticker.svg",
+      "slot": "extra",
+      "label": "Heart sticker",
+      "anchor": [
+        100,
+        104
+      ],
+      "width": 150,
+      "defaults": {
+        "--acc-1": "#f43f5e",
+        "--acc-2": "#ffffff",
+        "--acc-3": "#fda4af"
+      }
+    },
+    {
+      "id": "speech-bubble",
+      "file": "accessories/speech-bubble.svg",
+      "slot": "extra",
+      "label": "Speech bubble",
+      "anchor": [
+        100,
+        92
+      ],
+      "width": 160,
+      "defaults": {
+        "--acc-1": "#ffffff",
+        "--acc-2": "#e5e7eb",
+        "--acc-3": "#ffffff"
+      }
+    },
+    {
+      "id": "sparkle-cluster",
+      "file": "accessories/sparkle-cluster.svg",
+      "slot": "extra",
+      "label": "Sparkle cluster",
+      "anchor": [
+        100,
+        100
+      ],
+      "width": 150,
+      "defaults": {
+        "--acc-1": "#fde047",
+        "--acc-2": "#f472b6",
+        "--acc-3": "#38bdf8"
+      }
+    },
+    {
+      "id": "guitar",
+      "file": "accessories/guitar.svg",
+      "slot": "extra",
+      "label": "Guitar",
+      "anchor": [
+        100,
+        100
+      ],
+      "width": 110,
+      "defaults": {
+        "--acc-1": "#f59e0b",
+        "--acc-2": "#7c2d12",
+        "--acc-3": "#3f2a1d"
+      }
+    },
+    {
+      "id": "balloon",
+      "file": "accessories/balloon.svg",
+      "slot": "extra",
+      "label": "Balloon",
+      "anchor": [
+        100,
+        100
+      ],
+      "width": 92,
+      "defaults": {
+        "--acc-1": "#ef4444",
+        "--acc-2": "#9ca3af",
+        "--acc-3": "#b91c1c"
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "solid",
+      "file": "backgrounds/solid.svg",
+      "label": "Solid",
+      "defaults": {
+        "--bg-1": "#fde68a"
+      }
+    },
+    {
+      "id": "sunburst",
+      "file": "backgrounds/sunburst.svg",
+      "label": "Sunburst",
+      "defaults": {
+        "--bg-1": "#fcd34d",
+        "--bg-2": "#fbbf24",
+        "--bg-3": "#fff7d6"
+      }
+    },
+    {
+      "id": "jungle-leaves",
+      "file": "backgrounds/jungle-leaves.svg",
+      "label": "Jungle leaves",
+      "defaults": {
+        "--bg-1": "#d9f99d",
+        "--bg-2": "#15803d",
+        "--bg-3": "#22c55e"
+      }
+    },
+    {
+      "id": "volcano-sunset",
+      "file": "backgrounds/volcano-sunset.svg",
+      "label": "Volcano sunset",
+      "defaults": {
+        "--bg-1": "#f97316",
+        "--bg-2": "#7c2d12",
+        "--bg-3": "#fde047"
+      }
+    },
+    {
+      "id": "polka",
+      "file": "backgrounds/polka.svg",
+      "label": "Polka dots",
+      "defaults": {
+        "--bg-1": "#fbcfe8",
+        "--bg-2": "#f472b6",
+        "--bg-3": "#ffffff"
+      }
+    },
+    {
+      "id": "stripes-diagonal",
+      "file": "backgrounds/stripes-diagonal.svg",
+      "label": "Diagonal stripes",
+      "defaults": {
+        "--bg-1": "#bae6fd",
+        "--bg-2": "#7dd3fc",
+        "--bg-3": "#ffffff"
+      }
+    },
+    {
+      "id": "night-sky",
+      "file": "backgrounds/night-sky.svg",
+      "label": "Night sky",
+      "defaults": {
+        "--bg-1": "#1e1b4b",
+        "--bg-2": "#fde68a",
+        "--bg-3": "#fef9c3"
+      }
+    },
+    {
+      "id": "mountains",
+      "file": "backgrounds/mountains.svg",
+      "label": "Mountains",
+      "defaults": {
+        "--bg-1": "#bfdbfe",
+        "--bg-2": "#475569",
+        "--bg-3": "#ffffff"
+      }
+    },
+    {
+      "id": "confetti",
+      "file": "backgrounds/confetti.svg",
+      "label": "Confetti",
+      "defaults": {
+        "--bg-1": "#ede9fe",
+        "--bg-2": "#8b5cf6",
+        "--bg-3": "#f59e0b"
+      }
+    },
+    {
+      "id": "topographic",
+      "file": "backgrounds/topographic.svg",
+      "label": "Topographic",
+      "defaults": {
+        "--bg-1": "#ecfccb",
+        "--bg-2": "#84cc16",
+        "--bg-3": "#65a30d"
+      }
+    },
+    {
+      "id": "fern-pattern",
+      "file": "backgrounds/fern-pattern.svg",
+      "label": "Fern pattern",
+      "defaults": {
+        "--bg-1": "#f0fdf4",
+        "--bg-2": "#4ade80",
+        "--bg-3": "#86efac"
+      }
+    },
+    {
+      "id": "retro-rings",
+      "file": "backgrounds/retro-rings.svg",
+      "label": "Retro rings",
+      "defaults": {
+        "--bg-1": "#fef3c7",
+        "--bg-2": "#f97316",
+        "--bg-3": "#14b8a6"
+      }
+    }
+  ],
+  "frames": [
+    {
+      "id": "circle-ring",
+      "file": "frames/circle-ring.svg",
+      "label": "Circle ring",
+      "clip": "circle",
+      "inset": 16,
+      "clipPath": "M16,256 A240,240 0 1 0 496,256 A240,240 0 1 0 16,256 Z",
+      "defaults": {
+        "--frame-1": "#f59e0b",
+        "--frame-2": "#fde68a"
+      }
+    },
+    {
+      "id": "double-ring",
+      "file": "frames/double-ring.svg",
+      "label": "Double ring",
+      "clip": "circle",
+      "inset": 8,
+      "clipPath": "M8,256 A248,248 0 1 0 504,256 A248,248 0 1 0 8,256 Z",
+      "defaults": {
+        "--frame-1": "#14b8a6",
+        "--frame-2": "#0f766e"
+      }
+    },
+    {
+      "id": "laurel",
+      "file": "frames/laurel.svg",
+      "label": "Laurel",
+      "clip": "circle",
+      "inset": 36,
+      "clipPath": "M36,256 A220,220 0 1 0 476,256 A220,220 0 1 0 36,256 Z",
+      "defaults": {
+        "--frame-1": "#65a30d",
+        "--frame-2": "#fbbf24"
+      }
+    },
+    {
+      "id": "sticker-outline",
+      "file": "frames/sticker-outline.svg",
+      "label": "Sticker outline",
+      "clip": "circle",
+      "inset": 28,
+      "clipPath": "M28,256 A228,228 0 1 0 484,256 A228,228 0 1 0 28,256 Z",
+      "defaults": {
+        "--frame-1": "#ffffff",
+        "--frame-2": "#e5e7eb"
+      }
+    },
+    {
+      "id": "badge-scalloped",
+      "file": "frames/badge-scalloped.svg",
+      "label": "Scalloped badge",
+      "clip": "circle",
+      "inset": 48,
+      "clipPath": "M48,256 A208,208 0 1 0 464,256 A208,208 0 1 0 48,256 Z",
+      "defaults": {
+        "--frame-1": "#ef4444",
+        "--frame-2": "#fecaca"
+      }
+    },
+    {
+      "id": "hexagon",
+      "file": "frames/hexagon.svg",
+      "label": "Hexagon",
+      "clip": "hexagon",
+      "inset": 20,
+      "clipPath": "M230.0,35.0 Q256.0,20.0 282.0,35.0 L434.4,123.0 Q460.4,138.0 460.4,168.0 L460.4,344.0 Q460.4,374.0 434.4,389.0 L282.0,477.0 Q256.0,492.0 230.0,477.0 L77.6,389.0 Q51.6,374.0 51.6,344.0 L51.6,168.0 Q51.6,138.0 77.6,123.0 Z",
+      "defaults": {
+        "--frame-1": "#8b5cf6",
+        "--frame-2": "#ddd6fe"
+      }
+    },
+    {
+      "id": "shield",
+      "file": "frames/shield.svg",
+      "label": "Shield",
+      "clip": "shield",
+      "inset": 20,
+      "clipPath": "M57.3,75.7 Q57.3,53.6 79.4,49.9 Q167.7,35.2 256.0,24.2 Q344.3,35.2 432.6,49.9 Q454.7,53.6 454.7,75.7 L454.7,250.5 Q454.7,406.9 256.0,487.8 Q57.3,406.9 57.3,250.5 Z",
+      "defaults": {
+        "--frame-1": "#2563eb",
+        "--frame-2": "#fbbf24"
+      }
+    },
+    {
+      "id": "stamp-perforated",
+      "file": "frames/stamp-perforated.svg",
+      "label": "Perforated stamp",
+      "clip": "rounded-square",
+      "inset": 52,
+      "clipPath": "M52.0,76.0 Q52.0,52.0 76.0,52.0 L436.0,52.0 Q460.0,52.0 460.0,76.0 L460.0,436.0 Q460.0,460.0 436.0,460.0 L76.0,460.0 Q52.0,460.0 52.0,436.0 Z",
+      "defaults": {
+        "--frame-1": "#fffbeb",
+        "--frame-2": "#f97316"
+      }
+    }
+  ],
+  "decor": [
+    {
+      "id": "single-footprint",
+      "file": "decor/single-footprint.svg",
+      "label": "Footprint",
+      "defaults": {
+        "--decor-1": "#78350f"
+      },
+      "textBox": null
+    },
+    {
+      "id": "footprint-trail",
+      "file": "decor/footprint-trail.svg",
+      "label": "Footprint trail",
+      "defaults": {
+        "--decor-1": "#78350f"
+      },
+      "textBox": null
+    },
+    {
+      "id": "bone",
+      "file": "decor/bone.svg",
+      "label": "Bone",
+      "defaults": {
+        "--decor-1": "#fef3c7"
+      },
+      "textBox": null
+    },
+    {
+      "id": "crossed-bones",
+      "file": "decor/crossed-bones.svg",
+      "label": "Crossed bones",
+      "defaults": {
+        "--decor-1": "#fef3c7"
+      },
+      "textBox": null
+    },
+    {
+      "id": "fern-leaf",
+      "file": "decor/fern-leaf.svg",
+      "label": "Fern leaf",
+      "defaults": {
+        "--decor-1": "#16a34a"
+      },
+      "textBox": null
+    },
+    {
+      "id": "palm-leaf",
+      "file": "decor/palm-leaf.svg",
+      "label": "Palm leaf",
+      "defaults": {
+        "--decor-1": "#15803d"
+      },
+      "textBox": null
+    },
+    {
+      "id": "volcano",
+      "file": "decor/volcano.svg",
+      "label": "Volcano",
+      "defaults": {
+        "--decor-1": "#7c2d12",
+        "--decor-2": "#f97316"
+      },
+      "textBox": null
+    },
+    {
+      "id": "egg-whole",
+      "file": "decor/egg-whole.svg",
+      "label": "Egg",
+      "defaults": {
+        "--decor-1": "#a7f3d0",
+        "--decor-2": "#10b981"
+      },
+      "textBox": null
+    },
+    {
+      "id": "egg-cracked",
+      "file": "decor/egg-cracked.svg",
+      "label": "Cracked egg",
+      "defaults": {
+        "--decor-1": "#fde68a",
+        "--decor-2": "#f59e0b"
+      },
+      "textBox": null
+    },
+    {
+      "id": "star",
+      "file": "decor/star.svg",
+      "label": "Star",
+      "defaults": {
+        "--decor-1": "#facc15"
+      },
+      "textBox": null
+    },
+    {
+      "id": "star-burst",
+      "file": "decor/star-burst.svg",
+      "label": "Star burst",
+      "defaults": {
+        "--decor-1": "#ef4444",
+        "--decor-2": "#fde047"
+      },
+      "textBox": null
+    },
+    {
+      "id": "lightning",
+      "file": "decor/lightning.svg",
+      "label": "Lightning",
+      "defaults": {
+        "--decor-1": "#facc15"
+      },
+      "textBox": null
+    },
+    {
+      "id": "meteor",
+      "file": "decor/meteor.svg",
+      "label": "Meteor",
+      "defaults": {
+        "--decor-1": "#f97316",
+        "--decor-2": "#78350f"
+      },
+      "textBox": null
+    },
+    {
+      "id": "sun-rays-half",
+      "file": "decor/sun-rays-half.svg",
+      "label": "Half sun",
+      "defaults": {
+        "--decor-1": "#f97316",
+        "--decor-2": "#fef3c7"
+      },
+      "textBox": null
+    },
+    {
+      "id": "mountain-range",
+      "file": "decor/mountain-range.svg",
+      "label": "Mountain range",
+      "defaults": {
+        "--decor-1": "#334155",
+        "--decor-2": "#ffffff"
+      },
+      "textBox": null
+    },
+    {
+      "id": "banner-ribbon",
+      "file": "decor/banner-ribbon.svg",
+      "label": "Banner ribbon",
+      "defaults": {
+        "--decor-1": "#dc2626",
+        "--decor-2": "#991b1b"
+      },
+      "textBox": [
+        38,
+        78,
+        124,
+        38
+      ]
+    },
+    {
+      "id": "circle-badge-ring",
+      "file": "decor/circle-badge-ring.svg",
+      "label": "Circle badge ring",
+      "defaults": {
+        "--decor-1": "#1e293b",
+        "--decor-2": "#fbbf24"
+      },
+      "textBox": null,
+      "textArc": {
+        "cx": 100,
+        "cy": 100,
+        "r": 72,
+        "topArc": [
+          200,
+          340
+        ],
+        "bottomArc": [
+          20,
+          160
+        ]
+      }
+    },
+    {
+      "id": "tooth",
+      "file": "decor/tooth.svg",
+      "label": "Dino tooth",
+      "defaults": {
+        "--decor-1": "#fffbeb"
+      },
+      "textBox": null
+    },
+    {
+      "id": "amber-drop",
+      "file": "decor/amber-drop.svg",
+      "label": "Amber",
+      "defaults": {
+        "--decor-1": "#f59e0b",
+        "--decor-2": "#78350f"
+      },
+      "textBox": null
+    },
+    {
+      "id": "laurel-pair",
+      "file": "decor/laurel-pair.svg",
+      "label": "Laurel sprigs",
+      "defaults": {
+        "--decor-1": "#ca8a04"
+      },
+      "textBox": null
+    }
+  ],
+  "mockups": [
+    {
+      "id": "tshirt-front",
+      "file": "mockups/tshirt-front.svg",
+      "label": "T-shirt (front)",
+      "printArea": [
+        280,
+        212,
+        240,
+        288
+      ]
+    },
+    {
+      "id": "tshirt-back",
+      "file": "mockups/tshirt-back.svg",
+      "label": "T-shirt (back)",
+      "printArea": [
+        280,
+        190,
+        240,
+        288
+      ]
+    },
+    {
+      "id": "hoodie-front",
+      "file": "mockups/hoodie-front.svg",
+      "label": "Hoodie (front)",
+      "printArea": [
+        300,
+        270,
+        200,
+        240
+      ]
+    },
+    {
+      "id": "tote-bag",
+      "file": "mockups/tote-bag.svg",
+      "label": "Tote bag",
+      "printArea": [
+        290,
+        390,
+        220,
+        264
+      ]
+    }
+  ],
+  "brand": [
+    {
+      "id": "logo-mark",
+      "file": "brand/logo-mark.svg",
+      "label": "Logo mark",
+      "defaults": {
+        "--brand-1": "#f59e0b",
+        "--brand-2": "#1a1208"
+      },
+      "favicon": "/favicon.svg"
+    }
+  ],
+  "spots": [
+    {
+      "id": "empty-roster",
+      "file": "brand/empty-roster.svg",
+      "label": "Empty roster: nest with eggs"
+    },
+    {
+      "id": "empty-search",
+      "file": "brand/empty-search.svg",
+      "label": "Empty search: fading footprints"
+    },
+    {
+      "id": "quiz-hero",
+      "file": "brand/quiz-hero.svg",
+      "label": "Quiz hero: mystery egg"
+    },
+    {
+      "id": "error-meteor",
+      "file": "brand/error-meteor.svg",
+      "label": "Error: incoming meteor"
+    }
+  ]
+}

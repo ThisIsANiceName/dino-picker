@@ -1,0 +1,302 @@
+{
+  "tyrannosaur": {
+    "file": "tyrannosaur.svg",
+    "label": "Tyrannosaur",
+    "avatarCrop": [
+      262,
+      44,
+      250
+    ],
+    "anchors": {
+      "headTop": [
+        402,
+        90
+      ],
+      "eye": [
+        398,
+        138
+      ],
+      "neck": [
+        342,
+        238
+      ]
+    },
+    "headAngle": -4,
+    "headScale": 1.0
+  },
+  "raptor": {
+    "file": "raptor.svg",
+    "label": "Raptor",
+    "avatarCrop": [
+      278,
+      30,
+      224
+    ],
+    "anchors": {
+      "headTop": [
+        401,
+        82
+      ],
+      "eye": [
+        388,
+        121
+      ],
+      "neck": [
+        372,
+        188
+      ]
+    },
+    "headAngle": 5,
+    "headScale": 0.85
+  },
+  "sauropod": {
+    "file": "sauropod.svg",
+    "label": "Sauropod",
+    "avatarCrop": [
+      336,
+      20,
+      176
+    ],
+    "anchors": {
+      "headTop": [
+        442,
+        60
+      ],
+      "eye": [
+        444,
+        84
+      ],
+      "neck": [
+        424,
+        138
+      ]
+    },
+    "headAngle": 2,
+    "headScale": 0.65
+  },
+  "ceratopsian": {
+    "file": "ceratopsian.svg",
+    "label": "Ceratopsian",
+    "avatarCrop": [
+      196,
+      30,
+      316
+    ],
+    "anchors": {
+      "headTop": [
+        352,
+        74
+      ],
+      "eye": [
+        408,
+        222
+      ],
+      "neck": [
+        378,
+        304
+      ]
+    },
+    "headAngle": -14,
+    "headScale": 1.05
+  },
+  "stegosaur": {
+    "file": "stegosaur.svg",
+    "label": "Stegosaur",
+    "avatarCrop": [
+      318,
+      190,
+      190
+    ],
+    "anchors": {
+      "headTop": [
+        446,
+        258
+      ],
+      "eye": [
+        442,
+        284
+      ],
+      "neck": [
+        404,
+        326
+      ]
+    },
+    "headAngle": 4,
+    "headScale": 0.7
+  },
+  "ankylosaur": {
+    "file": "ankylosaur.svg",
+    "label": "Ankylosaur",
+    "avatarCrop": [
+      318,
+      206,
+      190
+    ],
+    "anchors": {
+      "headTop": [
+        446,
+        272
+      ],
+      "eye": [
+        442,
+        302
+      ],
+      "neck": [
+        410,
+        352
+      ]
+    },
+    "headAngle": 4,
+    "headScale": 0.75
+  },
+  "hadrosaur": {
+    "file": "hadrosaur.svg",
+    "label": "Hadrosaur",
+    "avatarCrop": [
+      258,
+      34,
+      248
+    ],
+    "anchors": {
+      "headTop": [
+        420,
+        108
+      ],
+      "eye": [
+        404,
+        136
+      ],
+      "neck": [
+        392,
+        202
+      ]
+    },
+    "headAngle": 6,
+    "headScale": 0.75
+  },
+  "pachycephalosaur": {
+    "file": "pachycephalosaur.svg",
+    "label": "Pachycephalosaur",
+    "avatarCrop": [
+      272,
+      40,
+      236
+    ],
+    "anchors": {
+      "headTop": [
+        410,
+        80
+      ],
+      "eye": [
+        420,
+        166
+      ],
+      "neck": [
+        372,
+        222
+      ]
+    },
+    "headAngle": 0,
+    "headScale": 1.05
+  },
+  "spinosaur": {
+    "file": "spinosaur.svg",
+    "label": "Spinosaur",
+    "avatarCrop": [
+      300,
+      80,
+      212
+    ],
+    "anchors": {
+      "headTop": [
+        420,
+        152
+      ],
+      "eye": [
+        414,
+        176
+      ],
+      "neck": [
+        394,
+        224
+      ]
+    },
+    "headAngle": 6,
+    "headScale": 0.75
+  },
+  "ornithomimid": {
+    "file": "ornithomimid.svg",
+    "label": "Ornithomimid",
+    "avatarCrop": [
+      318,
+      22,
+      190
+    ],
+    "anchors": {
+      "headTop": [
+        420,
+        74
+      ],
+      "eye": [
+        414,
+        100
+      ],
+      "neck": [
+        384,
+        140
+      ]
+    },
+    "headAngle": 4,
+    "headScale": 0.7
+  },
+  "pterosaur": {
+    "file": "pterosaur.svg",
+    "label": "Pterosaur",
+    "avatarCrop": [
+      208,
+      56,
+      300
+    ],
+    "anchors": {
+      "headTop": [
+        312,
+        144
+      ],
+      "eye": [
+        316,
+        180
+      ],
+      "neck": [
+        268,
+        250
+      ]
+    },
+    "headAngle": -4,
+    "headScale": 0.75
+  },
+  "marine": {
+    "file": "marine.svg",
+    "label": "Plesiosaur",
+    "avatarCrop": [
+      324,
+      56,
+      188
+    ],
+    "anchors": {
+      "headTop": [
+        436,
+        112
+      ],
+      "eye": [
+        432,
+        142
+      ],
+      "neck": [
+        404,
+        186
+      ]
+    },
+    "headAngle": 2,
+    "headScale": 0.75
+  }
+}

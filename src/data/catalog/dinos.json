@@ -1,0 +1,6426 @@
+[
+  {
+    "id": "tyrannosaurus",
+    "name": "Tyrannosaurus",
+    "commonName": "T. rex",
+    "pronunciation": "tie-RAN-oh-SORE-us",
+    "meaning": "tyrant lizard",
+    "group": "Theropoda · Tyrannosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 68,
+    "myaTo": 66,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1905,
+    "lengthM": 12.3,
+    "heightM": 3.7,
+    "weightKg": 8400,
+    "speedKmh": 27,
+    "description": "The most famous predator in history, Tyrannosaurus combined a skull built like a bone-crushing vice with senses sharp enough to track prey from far off. Its arms were tiny, but its legs and jaws did all the talking.",
+    "funFact": "Its bite force is estimated at more than 35,000 newtons, the strongest of any known land animal.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "large",
+      "social": "solo",
+      "temperament": "fierce",
+      "defense": "weapons",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Boss",
+      "tagline": "You walk into the room and the meeting starts itself.",
+      "strengths": [
+        "commanding presence",
+        "decisive",
+        "fearless"
+      ],
+      "quirk": "Insists on running every meeting, then forgets the agenda because of tiny arms and big feelings.",
+      "teamRole": "makes the final call"
+    },
+    "palette": {
+      "body": "#6b6a3a",
+      "belly": "#e0d3a8",
+      "accent": "#b4472a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tyrannosaurus"
+  },
+  {
+    "id": "albertosaurus",
+    "name": "Albertosaurus",
+    "commonName": null,
+    "pronunciation": "al-BER-toe-SORE-us",
+    "meaning": "Alberta lizard",
+    "group": "Theropoda · Tyrannosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 71,
+    "myaTo": 69,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1905,
+    "lengthM": 9,
+    "heightM": null,
+    "weightKg": 2000,
+    "speedKmh": null,
+    "description": "A lighter, faster-built cousin of T. rex, Albertosaurus stalked the river plains of ancient Alberta. Its long legs suggest it could outpace the plant-eaters around it.",
+    "funFact": "A bonebed in Alberta holds at least 22 Albertosaurus of different ages, hinting that some may have travelled together.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "large",
+      "social": "herd",
+      "temperament": "bold",
+      "defense": "speed",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Pack Captain",
+      "tagline": "You are at your best when someone else is on the same team call.",
+      "strengths": [
+        "team spirit",
+        "stamina",
+        "quick reflexes"
+      ],
+      "quirk": "Will not start lunch until the whole group has arrived and picked a restaurant.",
+      "teamRole": "rallies the group"
+    },
+    "palette": {
+      "body": "#4d5d6e",
+      "belly": "#d8d2c0",
+      "accent": "#c26a3d"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Albertosaurus"
+  },
+  {
+    "id": "gorgosaurus",
+    "name": "Gorgosaurus",
+    "commonName": null,
+    "pronunciation": "GOR-go-SORE-us",
+    "meaning": "fierce lizard",
+    "group": "Theropoda · Tyrannosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 77,
+    "myaTo": 75,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1914,
+    "lengthM": 8.5,
+    "heightM": null,
+    "weightKg": 2500,
+    "speedKmh": null,
+    "description": "Gorgosaurus ruled a lush coastal plain, with a deep skull, long legs and a no-nonsense bite. Dozens of excellent skeletons make it one of the best-known tyrannosaurs.",
+    "funFact": "Like all tyrannosaurids, Gorgosaurus had just two fingers on each hand.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "weapons",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Straight Shooter",
+      "tagline": "You say the thing everyone is thinking, with excellent timing.",
+      "strengths": [
+        "directness",
+        "focus",
+        "precision"
+      ],
+      "quirk": "Has never once said \"let us circle back\".",
+      "teamRole": "cuts through the fluff"
+    },
+    "palette": {
+      "body": "#7a3b2e",
+      "belly": "#e3cfae",
+      "accent": "#2f4858"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gorgosaurus"
+  },
+  {
+    "id": "tarbosaurus",
+    "name": "Tarbosaurus",
+    "commonName": null,
+    "pronunciation": "TAR-boh-SORE-us",
+    "meaning": "alarming lizard",
+    "group": "Theropoda · Tyrannosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 70,
+    "myaTo": 66,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1955,
+    "lengthM": 10,
+    "heightM": 3,
+    "weightKg": 4500,
+    "speedKmh": null,
+    "description": "Asia's answer to T. rex, Tarbosaurus patrolled the floodplains of what is now the Gobi Desert. It had a long, heavy skull and some of the shortest arms of any tyrannosaurid.",
+    "funFact": "Its arms were proportionally even shorter than those of T. rex, ending in just two fingers.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "solo",
+      "temperament": "stubborn",
+      "defense": "weapons",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Desert Veteran",
+      "tagline": "You have seen things, mostly sand, and you remain unbothered.",
+      "strengths": [
+        "grit",
+        "patience",
+        "heavy hitting"
+      ],
+      "quirk": "Refuses to use the shortcut because \"this way has always worked\".",
+      "teamRole": "holds the line"
+    },
+    "palette": {
+      "body": "#9a6b3d",
+      "belly": "#e8d7b0",
+      "accent": "#4a3b2a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tarbosaurus"
+  },
+  {
+    "id": "daspletosaurus",
+    "name": "Daspletosaurus",
+    "commonName": null,
+    "pronunciation": "das-PLEE-toe-SORE-us",
+    "meaning": "frightful lizard",
+    "group": "Theropoda · Tyrannosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 77,
+    "myaTo": 74,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1970,
+    "lengthM": 9,
+    "heightM": null,
+    "weightKg": 2500,
+    "speedKmh": null,
+    "description": "Daspletosaurus was a stout, heavily built tyrannosaur whose face was studded with rough bumps and sensory scars. It lived alongside horned dinosaurs that were probably its main menu.",
+    "funFact": "Some skulls carry healed bite marks, probably from fights with other tyrannosaurs.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "pair",
+      "temperament": "fierce",
+      "defense": "weapons",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Night Shift Enforcer",
+      "tagline": "You do your best work when the office is empty and the lights are low.",
+      "strengths": [
+        "intensity",
+        "toughness",
+        "focus"
+      ],
+      "quirk": "Replies to emails at 2 a.m. with a single word.",
+      "teamRole": "handles the tough calls"
+    },
+    "palette": {
+      "body": "#3f4a5a",
+      "belly": "#cfc4b0",
+      "accent": "#a6432f"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Daspletosaurus"
+  },
+  {
+    "id": "allosaurus",
+    "name": "Allosaurus",
+    "commonName": null,
+    "pronunciation": "AL-oh-SORE-us",
+    "meaning": "different lizard",
+    "group": "Theropoda · Allosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 155,
+    "myaTo": 145,
+    "regions": [
+      "north america",
+      "europe"
+    ],
+    "namedYear": 1877,
+    "lengthM": 9.7,
+    "heightM": 3,
+    "weightKg": 2300,
+    "speedKmh": null,
+    "description": "The great predator of the Jurassic, Allosaurus struck downward with its hatchet-like skull and raked with big clawed hands. It hunted the long-necked giants of the Morrison floodplains.",
+    "funFact": "The famous skeleton \"Big Al\" shows 19 broken or infected bones, a hard life well documented.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "large",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "weapons",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Early Bird Predator",
+      "tagline": "You are already three tasks deep before everyone else finds the coffee.",
+      "strengths": [
+        "initiative",
+        "sharp focus",
+        "resilience"
+      ],
+      "quirk": "Treats a minor paper cut as a legendary battle scar.",
+      "teamRole": "kicks off the project"
+    },
+    "palette": {
+      "body": "#8a5a32",
+      "belly": "#e5d4ae",
+      "accent": "#3d5a4a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Allosaurus"
+  },
+  {
+    "id": "giganotosaurus",
+    "name": "Giganotosaurus",
+    "commonName": null,
+    "pronunciation": "JIG-ah-NOTE-oh-SORE-us",
+    "meaning": "giant southern lizard",
+    "group": "Theropoda · Carcharodontosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 111,
+    "myaTo": 106,
+    "regions": [
+      "south america"
+    ],
+    "namedYear": 1995,
+    "lengthM": 12.5,
+    "heightM": null,
+    "weightKg": 7000,
+    "speedKmh": null,
+    "description": "Giganotosaurus rivalled T. rex in length, with a long, slicing skull and a lean, powerful build. It may have hunted the colossal sauropods of Patagonia.",
+    "funFact": "Its skull was about 1.5 metres long, longer than most people are tall.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Gentle Heavyweight Champion",
+      "tagline": "You do not need to raise your voice; the room already got quiet.",
+      "strengths": [
+        "sheer scale",
+        "calm under pressure",
+        "big-picture vision"
+      ],
+      "quirk": "Apologises to chairs before sitting on them.",
+      "teamRole": "handles the biggest problems"
+    },
+    "palette": {
+      "body": "#4f6a5c",
+      "belly": "#dbd2b4",
+      "accent": "#b8793c"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Giganotosaurus"
+  },
+  {
+    "id": "carcharodontosaurus",
+    "name": "Carcharodontosaurus",
+    "commonName": null,
+    "pronunciation": "kar-KAR-oh-DON-toe-SORE-us",
+    "meaning": "shark-toothed lizard",
+    "group": "Theropoda · Carcharodontosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 100,
+    "myaTo": 94,
+    "regions": [
+      "africa"
+    ],
+    "namedYear": 1931,
+    "lengthM": 12,
+    "heightM": null,
+    "weightKg": 6000,
+    "speedKmh": null,
+    "description": "With serrated, blade-like teeth and a skull longer than a person is tall, Carcharodontosaurus was a top predator of North Africa. It shared its river world with the sail-backed Spinosaurus.",
+    "funFact": "Its teeth were serrated like a great white shark's and could reach around 20 centimetres, root included.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "solo",
+      "temperament": "fierce",
+      "defense": "weapons",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Sharp-Tongued Closer",
+      "tagline": "You are polite right up until the contract is signed.",
+      "strengths": [
+        "razor focus",
+        "negotiation",
+        "confidence"
+      ],
+      "quirk": "Cannot go past a sandwich without sizing it up.",
+      "teamRole": "closes the deal"
+    },
+    "palette": {
+      "body": "#a2623a",
+      "belly": "#ecd9b0",
+      "accent": "#2f3e4c"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Carcharodontosaurus"
+  },
+  {
+    "id": "carnotaurus",
+    "name": "Carnotaurus",
+    "commonName": null,
+    "pronunciation": "KAR-no-TOR-us",
+    "meaning": "meat-eating bull",
+    "group": "Theropoda · Abelisauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 72,
+    "myaTo": 69,
+    "regions": [
+      "south america"
+    ],
+    "namedYear": 1985,
+    "lengthM": 8,
+    "heightM": 2.5,
+    "weightKg": 1500,
+    "speedKmh": null,
+    "description": "Carnotaurus wore a pair of bull-like horns above its eyes and carried absurdly tiny arms. Its tall, deep tail muscles hint at a sprinter's burst of speed.",
+    "funFact": "One fossil preserved patches of skin, revealing a mosaic of small pebbly scales.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "speed",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Horned Sprinter",
+      "tagline": "You do everything at full tilt, including standing still.",
+      "strengths": [
+        "burst speed",
+        "boldness",
+        "style"
+      ],
+      "quirk": "Wins every race and loses every argument about who started it.",
+      "teamRole": "delivers the fast fix"
+    },
+    "palette": {
+      "body": "#b2452f",
+      "belly": "#ecd3a8",
+      "accent": "#3a3a4a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Carnotaurus"
+  },
+  {
+    "id": "majungasaurus",
+    "name": "Majungasaurus",
+    "commonName": null,
+    "pronunciation": "mah-JOON-gah-SORE-us",
+    "meaning": "Mahajanga lizard",
+    "group": "Theropoda · Abelisauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 70,
+    "myaTo": 66,
+    "regions": [
+      "africa"
+    ],
+    "namedYear": 1955,
+    "lengthM": 6.5,
+    "heightM": null,
+    "weightKg": 1000,
+    "speedKmh": null,
+    "description": "This stocky, short-snouted predator ruled the island of Madagascar at the very end of the dinosaur era. Its blunt, bone-ridged skull gave it a stern, no-nonsense look.",
+    "funFact": "Bite marks on Majungasaurus bones, matching its own teeth, are strong evidence that it sometimes ate its own kind.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "stubborn",
+      "defense": "weapons",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Island Local",
+      "tagline": "You know every shortcut because you are the only one who has ever lived here.",
+      "strengths": [
+        "resourcefulness",
+        "local knowledge",
+        "toughness"
+      ],
+      "quirk": "Refuses to eat anything labelled \"new\".",
+      "teamRole": "knows where everything is"
+    },
+    "palette": {
+      "body": "#5a6a3c",
+      "belly": "#ddd0a8",
+      "accent": "#9c4a2b"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Majungasaurus"
+  },
+  {
+    "id": "ceratosaurus",
+    "name": "Ceratosaurus",
+    "commonName": null,
+    "pronunciation": "seh-RAT-oh-SORE-us",
+    "meaning": "horned lizard",
+    "group": "Theropoda · Ceratosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 156,
+    "myaTo": 147,
+    "regions": [
+      "north america",
+      "europe"
+    ],
+    "namedYear": 1884,
+    "lengthM": 6,
+    "heightM": 2,
+    "weightKg": 700,
+    "speedKmh": null,
+    "description": "Ceratosaurus sported a blade-like horn on its nose and unusually deep, long teeth. It lurked in the same forests as Allosaurus and Stegosaurus.",
+    "funFact": "A row of small bony plates ran down the middle of its back.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "weapons",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Horn Tooter",
+      "tagline": "You make an entrance, and you make sure it has a soundtrack.",
+      "strengths": [
+        "showmanship",
+        "versatility",
+        "nerve"
+      ],
+      "quirk": "Will absolutely bring a trumpet to a quiet library.",
+      "teamRole": "brings the flair"
+    },
+    "palette": {
+      "body": "#a85f3c",
+      "belly": "#f0dfb8",
+      "accent": "#42536a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ceratosaurus"
+  },
+  {
+    "id": "dilophosaurus",
+    "name": "Dilophosaurus",
+    "commonName": null,
+    "pronunciation": "die-LOAF-oh-SORE-us",
+    "meaning": "two-crested lizard",
+    "group": "Theropoda · Dilophosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "jurassic",
+    "epoch": "Early Jurassic",
+    "myaFrom": 196,
+    "myaTo": 186,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1970,
+    "lengthM": 7,
+    "heightM": 1.5,
+    "weightKg": 400,
+    "speedKmh": null,
+    "description": "Dilophosaurus wore two thin, arching crests on its skull, perfect for showing off to rivals and mates. It was a long-legged, lightly built predator of Early Jurassic river valleys.",
+    "funFact": "Its crests were too thin and fragile for fighting, so they were almost certainly for display, not for spitting venom.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "medium",
+      "social": "pair",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Crested Charmer",
+      "tagline": "You walk like it is a runway and you never trip.",
+      "strengths": [
+        "charisma",
+        "agility",
+        "style"
+      ],
+      "quirk": "Checks their reflection in every window.",
+      "teamRole": "wins over the client"
+    },
+    "palette": {
+      "body": "#3f7a72",
+      "belly": "#e9dfb8",
+      "accent": "#c24b4b"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dilophosaurus"
+  },
+  {
+    "id": "cryolophosaurus",
+    "name": "Cryolophosaurus",
+    "commonName": null,
+    "pronunciation": "KRY-oh-LOAF-oh-SORE-us",
+    "meaning": "cold-crested lizard",
+    "group": "Theropoda · Averostra",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "jurassic",
+    "epoch": "Early Jurassic",
+    "myaFrom": 196,
+    "myaTo": 188,
+    "regions": [
+      "antarctica"
+    ],
+    "namedYear": 1994,
+    "lengthM": 6.5,
+    "heightM": null,
+    "weightKg": 400,
+    "speedKmh": null,
+    "description": "Cryolophosaurus lived in the forests of what is now frozen Antarctica, long before that continent iced over. A ridged crest swept across its forehead like a pompadour.",
+    "funFact": "Its side-to-side crest earned it the nickname \"Elvisaurus\".",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "weapons",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Polar Rockstar",
+      "tagline": "You stay cool in every crisis and look good doing it.",
+      "strengths": [
+        "composure",
+        "stage presence",
+        "adaptability"
+      ],
+      "quirk": "Has strong opinions about hair gel.",
+      "teamRole": "keeps everyone calm"
+    },
+    "palette": {
+      "body": "#3d5a7a",
+      "belly": "#e4e0d0",
+      "accent": "#d09a3c"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cryolophosaurus"
+  },
+  {
+    "id": "megalosaurus",
+    "name": "Megalosaurus",
+    "commonName": null,
+    "pronunciation": "MEG-ah-lo-SORE-us",
+    "meaning": "great lizard",
+    "group": "Theropoda · Megalosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "jurassic",
+    "epoch": "Middle Jurassic",
+    "myaFrom": 168,
+    "myaTo": 166,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1824,
+    "lengthM": 6,
+    "heightM": null,
+    "weightKg": 700,
+    "speedKmh": null,
+    "description": "Megalosaurus was a robust, heavy-limbed hunter that prowled the island landscapes of Middle Jurassic England. Early scientists imagined it as a giant, four-legged lizard before better fossils corrected the picture.",
+    "funFact": "In 1824 it became the first dinosaur ever given a scientific name.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "stubborn",
+      "defense": "weapons",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Original",
+      "tagline": "You were doing it before it had a name.",
+      "strengths": [
+        "seniority",
+        "steadiness",
+        "first-mover instinct"
+      ],
+      "quirk": "Starts too many sentences with \"back in my day\".",
+      "teamRole": "sets the precedent"
+    },
+    "palette": {
+      "body": "#6e5a3e",
+      "belly": "#e0d2b0",
+      "accent": "#4a6a52"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Megalosaurus"
+  },
+  {
+    "id": "yutyrannus",
+    "name": "Yutyrannus",
+    "commonName": null,
+    "pronunciation": "YOO-tie-RAN-us",
+    "meaning": "feathered tyrant",
+    "group": "Theropoda · Proceratosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 125,
+    "myaTo": 125,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 2012,
+    "lengthM": 9,
+    "heightM": null,
+    "weightKg": 1400,
+    "speedKmh": null,
+    "description": "A big early tyrannosaur relative that lived in a cool Cretaceous forest, Yutyrannus was covered in shaggy, fuzzy filaments. It was the size of a bus but dressed like a woolly coat.",
+    "funFact": "Its fossils show filament-like feathers, a rarity for a predator weighing well over a tonne.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "pair",
+      "temperament": "gentle",
+      "defense": "size",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Cosy Giant",
+      "tagline": "You bring blankets to every meeting and somehow it works.",
+      "strengths": [
+        "warmth",
+        "hospitality",
+        "calm"
+      ],
+      "quirk": "Wears a scarf in July.",
+      "teamRole": "keeps morale high"
+    },
+    "palette": {
+      "body": "#8a6a4a",
+      "belly": "#ecdcc0",
+      "accent": "#b8553a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Yutyrannus"
+  },
+  {
+    "id": "acrocanthosaurus",
+    "name": "Acrocanthosaurus",
+    "commonName": null,
+    "pronunciation": "AK-roh-KAN-thoh-SORE-us",
+    "meaning": "high-spined lizard",
+    "group": "Theropoda · Carcharodontosauridae",
+    "bodyType": "tyrannosaur",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 113,
+    "myaTo": 110,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1950,
+    "lengthM": 11.5,
+    "heightM": 3.4,
+    "weightKg": 6000,
+    "speedKmh": null,
+    "description": "Acrocanthosaurus carried a ridge of tall spines along its neck and back, probably anchoring a muscular crest. It was the biggest predator of Early Cretaceous North America.",
+    "funFact": "Its name refers to the tall spines along its backbone, which may have held up a ridge of muscle.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "solo",
+      "temperament": "stubborn",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Ridge Walker",
+      "tagline": "You make steady progress, one ridge at a time.",
+      "strengths": [
+        "endurance",
+        "reliability",
+        "strength"
+      ],
+      "quirk": "Never skips leg day, or any other day.",
+      "teamRole": "carries the heavy lifting"
+    },
+    "palette": {
+      "body": "#5c4a3a",
+      "belly": "#dccaa4",
+      "accent": "#b5622f"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Acrocanthosaurus"
+  },
+  {
+    "id": "velociraptor",
+    "name": "Velociraptor",
+    "commonName": null,
+    "pronunciation": "veh-LOSS-ih-RAP-tor",
+    "meaning": "swift thief",
+    "group": "Theropoda · Dromaeosauridae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 75,
+    "myaTo": 71,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1924,
+    "lengthM": 2,
+    "heightM": 0.5,
+    "weightKg": 15,
+    "speedKmh": 40,
+    "description": "Turkey-sized but sharp as a tack, Velociraptor had a swinging sickle claw on each foot and a quick, clever mind. It lived in the dusty dunes of ancient Mongolia and was covered in feathers.",
+    "funFact": "A famous fossil from Mongolia shows a Velociraptor locked in battle with a Protoceratops.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "pair",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Clever Sprinter",
+      "tagline": "You solve the problem while everyone else is still reading the brief.",
+      "strengths": [
+        "quick thinking",
+        "agility",
+        "teamwork"
+      ],
+      "quirk": "Has opened every door in the building, including the ones marked \"staff only\".",
+      "teamRole": "cracks the tricky problem"
+    },
+    "palette": {
+      "body": "#8a5a34",
+      "belly": "#e8d6ae",
+      "accent": "#2f5a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Velociraptor"
+  },
+  {
+    "id": "deinonychus",
+    "name": "Deinonychus",
+    "commonName": null,
+    "pronunciation": "die-NON-ih-kus",
+    "meaning": "terrible claw",
+    "group": "Theropoda · Dromaeosauridae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 115,
+    "myaTo": 108,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1969,
+    "lengthM": 3.4,
+    "heightM": 0.9,
+    "weightKg": 73,
+    "speedKmh": null,
+    "description": "Deinonychus was a nimble, long-tailed hunter with a large hooked claw on each foot. Its discovery in the 1960s helped change how we picture dinosaurs: active, agile and bird-like.",
+    "funFact": "Its discovery by John Ostrom in the 1960s helped spark the \"dinosaur renaissance\".",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "herd",
+      "temperament": "bold",
+      "defense": "weapons",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Game Changer",
+      "tagline": "You walked in, rewrote the playbook, and left a note.",
+      "strengths": [
+        "innovation",
+        "agility",
+        "boldness"
+      ],
+      "quirk": "Insists on a \"quick sync\" that is always 90 minutes.",
+      "teamRole": "shakes up the old way"
+    },
+    "palette": {
+      "body": "#a8452d",
+      "belly": "#ecd7b0",
+      "accent": "#3a4a5a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Deinonychus"
+  },
+  {
+    "id": "utahraptor",
+    "name": "Utahraptor",
+    "commonName": null,
+    "pronunciation": "YOO-tah-RAP-tor",
+    "meaning": "Utah thief",
+    "group": "Theropoda · Dromaeosauridae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 139,
+    "myaTo": 135,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1993,
+    "lengthM": 6,
+    "heightM": 1.7,
+    "weightKg": 500,
+    "speedKmh": null,
+    "description": "The heavyweight of the raptor family, Utahraptor was as long as a car and as heavy as a polar bear. It combined a big slashing foot-claw with a surprisingly athletic build.",
+    "funFact": "It is among the biggest dromaeosaurids ever found, with a body mass comparable to a polar bear.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "medium",
+      "social": "pair",
+      "temperament": "fierce",
+      "defense": "weapons",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Heavy Raptor",
+      "tagline": "You are the fast one and the big one, which is unfair but effective.",
+      "strengths": [
+        "power",
+        "nerve",
+        "athleticism"
+      ],
+      "quirk": "Calls everything a \"quick win\" before knocking it over.",
+      "teamRole": "takes on the big challenge"
+    },
+    "palette": {
+      "body": "#6a4a8a",
+      "belly": "#e6d9c4",
+      "accent": "#e0a032"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Utahraptor"
+  },
+  {
+    "id": "microraptor",
+    "name": "Microraptor",
+    "commonName": null,
+    "pronunciation": "MY-kro-RAP-tor",
+    "meaning": "small thief",
+    "group": "Theropoda · Dromaeosauridae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 125,
+    "myaTo": 120,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 2000,
+    "lengthM": 0.8,
+    "heightM": 0.3,
+    "weightKg": 1,
+    "speedKmh": null,
+    "description": "Microraptor was a crow-sized hunter with long feathers on all four limbs, which let it glide between trees. It scampered up trunks and sailed out over the Cretaceous forest.",
+    "funFact": "It had flight feathers on both its arms and legs, making it a four-winged glider.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "flyer",
+      "size": "tiny",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "flight",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Four-Winged Wonder",
+      "tagline": "You see a gap and you glide through it.",
+      "strengths": [
+        "adaptability",
+        "curiosity",
+        "lightness"
+      ],
+      "quirk": "Has never taken the stairs in a building with a balcony.",
+      "teamRole": "tries the wild idea first"
+    },
+    "palette": {
+      "body": "#2f4f6a",
+      "belly": "#d8d2c0",
+      "accent": "#e08a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Microraptor"
+  },
+  {
+    "id": "archaeopteryx",
+    "name": "Archaeopteryx",
+    "commonName": null,
+    "pronunciation": "AR-kee-OP-ter-ix",
+    "meaning": "ancient wing",
+    "group": "Avialae · Archaeopterygidae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 151,
+    "myaTo": 148,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1861,
+    "lengthM": 0.5,
+    "heightM": null,
+    "weightKg": 0.8,
+    "speedKmh": null,
+    "description": "Archaeopteryx had wings and feathers like a bird, but also teeth, clawed fingers and a long bony tail like a small dinosaur. It is the classic \"missing link\" between the two, living in warm lagoon islands of Jurassic Europe.",
+    "funFact": "The first skeleton surfaced in 1861, just two years after Darwin published On the Origin of Species.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "flyer",
+      "size": "tiny",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "flight",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Bridge Builder",
+      "tagline": "You connect two worlds that never knew they were neighbours.",
+      "strengths": [
+        "versatility",
+        "storytelling",
+        "curiosity"
+      ],
+      "quirk": "Puts \"between jobs\" on every form, proudly.",
+      "teamRole": "connects the teams"
+    },
+    "palette": {
+      "body": "#5a6a4a",
+      "belly": "#e6dfc6",
+      "accent": "#b04a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Archaeopteryx"
+  },
+  {
+    "id": "coelophysis",
+    "name": "Coelophysis",
+    "commonName": null,
+    "pronunciation": "SEEL-oh-FY-sis",
+    "meaning": "hollow form",
+    "group": "Theropoda · Coelophysidae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "triassic",
+    "epoch": "Late Triassic",
+    "myaFrom": 216,
+    "myaTo": 203,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1889,
+    "lengthM": 3,
+    "heightM": 0.7,
+    "weightKg": 20,
+    "speedKmh": null,
+    "description": "Coelophysis was a slim, long-necked runner with a lightweight skeleton, one of the early dinosaurs that carried on through the Triassic. Hundreds of skeletons at one quarry hint at group living.",
+    "funFact": "A quarry at Ghost Ranch, New Mexico, yielded hundreds of Coelophysis skeletons.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Early Adopter",
+      "tagline": "You were using the new tool before it was released.",
+      "strengths": [
+        "speed",
+        "light touch",
+        "social energy"
+      ],
+      "quirk": "Always shows up to the party early and stays until everyone leaves.",
+      "teamRole": "tests the new thing first"
+    },
+    "palette": {
+      "body": "#4a7a62",
+      "belly": "#e6e2c4",
+      "accent": "#c8573a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Coelophysis"
+  },
+  {
+    "id": "compsognathus",
+    "name": "Compsognathus",
+    "commonName": null,
+    "pronunciation": "KOMP-sog-NAY-thus",
+    "meaning": "elegant jaw",
+    "group": "Theropoda · Compsognathidae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 151,
+    "myaTo": 150,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1859,
+    "lengthM": 1,
+    "heightM": 0.3,
+    "weightKg": 2.5,
+    "speedKmh": null,
+    "description": "About the size of a turkey, Compsognathus was a quick little hunter on the sunny islands of Jurassic Europe. It darted after lizards and insects on slim, speedy legs.",
+    "funFact": "One fossil has a small lizard preserved in its belly, a snack it never finished.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "tiny",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Pocket-Sized Dynamo",
+      "tagline": "You are small but you are everywhere at once.",
+      "strengths": [
+        "speed",
+        "curiosity",
+        "energy"
+      ],
+      "quirk": "Fits into any bag, any meeting, any conversation.",
+      "teamRole": "handles the small stuff fast"
+    },
+    "palette": {
+      "body": "#6a8a4a",
+      "belly": "#eee6c2",
+      "accent": "#d17a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Compsognathus"
+  },
+  {
+    "id": "troodon",
+    "name": "Troodon",
+    "commonName": null,
+    "pronunciation": "TROH-oh-don",
+    "meaning": "wounding tooth",
+    "group": "Theropoda · Troodontidae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 77,
+    "myaTo": 75,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1856,
+    "lengthM": 2.4,
+    "heightM": 1,
+    "weightKg": 50,
+    "speedKmh": null,
+    "description": "With big eyes, a large brain and long legs, Troodon was one of the sharpest-looking dinosaurs of the northern forests. It probably hunted at dusk and into the long polar nights.",
+    "funFact": "Troodontids had some of the largest brains relative to body size of any dinosaurs.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "pair",
+      "temperament": "curious",
+      "defense": "stealth",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Night Owl Genius",
+      "tagline": "You have your best ideas when everyone else is asleep.",
+      "strengths": [
+        "big thinking",
+        "sharp eyesight",
+        "patience"
+      ],
+      "quirk": "Sends brilliant emails at 3 a.m. with the subject line \"thoughts\".",
+      "teamRole": "solves it overnight"
+    },
+    "palette": {
+      "body": "#3a3f5a",
+      "belly": "#d6d2cc",
+      "accent": "#e0b03a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Troodon"
+  },
+  {
+    "id": "herrerasaurus",
+    "name": "Herrerasaurus",
+    "commonName": null,
+    "pronunciation": "heh-RARE-ah-SORE-us",
+    "meaning": "Herrera's lizard",
+    "group": "Dinosauria · Herrerasauridae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "triassic",
+    "epoch": "Late Triassic",
+    "myaFrom": 231,
+    "myaTo": 229,
+    "regions": [
+      "south america"
+    ],
+    "namedYear": 1963,
+    "lengthM": 6,
+    "heightM": 1,
+    "weightKg": 350,
+    "speedKmh": null,
+    "description": "Herrerasaurus was one of the earliest dinosaurs, a lean two-legged predator with sharp, curved teeth. It hunted in the Triassic badlands long before giants like T. rex existed.",
+    "funFact": "It was named for Victorino Herrera, the Argentine goatherd who found its first bones.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Founding Member",
+      "tagline": "You were here before the logo and the office plants.",
+      "strengths": [
+        "experience",
+        "drive",
+        "resilience"
+      ],
+      "quirk": "Still has the first coffee mug the company ever made.",
+      "teamRole": "remembers how it all began"
+    },
+    "palette": {
+      "body": "#7a5a3a",
+      "belly": "#e4d6b2",
+      "accent": "#466a7a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Herrerasaurus"
+  },
+  {
+    "id": "eoraptor",
+    "name": "Eoraptor",
+    "commonName": null,
+    "pronunciation": "EE-oh-RAP-tor",
+    "meaning": "dawn thief",
+    "group": "Saurischia · Basal Dinosauria",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "triassic",
+    "epoch": "Late Triassic",
+    "myaFrom": 231,
+    "myaTo": 228,
+    "regions": [
+      "south america"
+    ],
+    "namedYear": 1993,
+    "lengthM": 1.2,
+    "heightM": 0.4,
+    "weightKg": 10,
+    "speedKmh": null,
+    "description": "Eoraptor was a small, lightly built runner from near the very start of the dinosaur story. Its mix of leaf-shaped and blade-like teeth suggests it ate both plants and small animals.",
+    "funFact": "Its two kinds of teeth hint at an omnivorous diet, unusual for such an early dinosaur.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "tiny",
+      "social": "pair",
+      "temperament": "gentle",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The First Light",
+      "tagline": "You are the one who always says \"let us just try it\".",
+      "strengths": [
+        "optimism",
+        "flexibility",
+        "fresh energy"
+      ],
+      "quirk": "Eats everything on the buffet \"for science\".",
+      "teamRole": "starts the day with energy"
+    },
+    "palette": {
+      "body": "#c9843a",
+      "belly": "#f1e5c4",
+      "accent": "#4a5a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Eoraptor"
+  },
+  {
+    "id": "achillobator",
+    "name": "Achillobator",
+    "commonName": null,
+    "pronunciation": "ah-KILL-oh-BAY-tor",
+    "meaning": "Achilles hero",
+    "group": "Theropoda · Dromaeosauridae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 96,
+    "myaTo": 89,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1999,
+    "lengthM": 5,
+    "heightM": 1.6,
+    "weightKg": 270,
+    "speedKmh": null,
+    "description": "Achillobator was a big, strongly built dromaeosaurid of ancient Mongolia, with powerful legs and a sturdy stiff tail. It hunted the plant-eaters of dry, seasonal floodplains.",
+    "funFact": "The \"bator\" part of its name is Mongolian for hero, the same word found in Ulaanbaatar.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "medium",
+      "social": "pair",
+      "temperament": "bold",
+      "defense": "weapons",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Hero's Heel",
+      "tagline": "You are tough everywhere, and you know exactly where you are soft.",
+      "strengths": [
+        "grit",
+        "self-awareness",
+        "strength"
+      ],
+      "quirk": "Cannot resist a dramatic entrance in a doorway.",
+      "teamRole": "steps up when it matters"
+    },
+    "palette": {
+      "body": "#7a3a3a",
+      "belly": "#e6d3b4",
+      "accent": "#3e5a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Achillobator"
+  },
+  {
+    "id": "bambiraptor",
+    "name": "Bambiraptor",
+    "commonName": null,
+    "pronunciation": "BAM-bee-RAP-tor",
+    "meaning": "Bambi thief",
+    "group": "Theropoda · Dromaeosauridae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 73,
+    "myaTo": 71,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 2000,
+    "lengthM": 1,
+    "heightM": 0.4,
+    "weightKg": 2,
+    "speedKmh": null,
+    "description": "Bambiraptor was a young, cat-sized dromaeosaurid with large eyes and long, nimble hands. Its excellent skeleton shows how bird-like these little hunters were.",
+    "funFact": "Its skeleton was found by a 14-year-old in Montana in 1993 and is one of the most complete of any dromaeosaurid.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "tiny",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Prodigy",
+      "tagline": "You have been better than the grown-ups since day one.",
+      "strengths": [
+        "fast learning",
+        "curiosity",
+        "agility"
+      ],
+      "quirk": "Was promoted twice before finishing the onboarding.",
+      "teamRole": "brings fresh eyes"
+    },
+    "palette": {
+      "body": "#a86a3a",
+      "belly": "#f0e2c0",
+      "accent": "#3a6a5a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bambiraptor"
+  },
+  {
+    "id": "sinosauropteryx",
+    "name": "Sinosauropteryx",
+    "commonName": null,
+    "pronunciation": "SY-no-sore-OP-ter-ix",
+    "meaning": "Chinese lizard wing",
+    "group": "Theropoda · Compsognathidae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 125,
+    "myaTo": 122,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1996,
+    "lengthM": 1.1,
+    "heightM": 0.3,
+    "weightKg": 0.6,
+    "speedKmh": null,
+    "description": "Sinosauropteryx was a long-tailed little hunter wrapped in fuzzy, downy filaments. Its beautifully preserved fossils transformed how we picture dinosaurs' coverings.",
+    "funFact": "It was the first non-bird dinosaur found with preserved feather-like filaments, announced in 1996.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "tiny",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "stealth",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Trendsetter",
+      "tagline": "You came dressed in the future and everyone is catching up.",
+      "strengths": [
+        "style",
+        "early insight",
+        "nimble thinking"
+      ],
+      "quirk": "Is already bored of this season's trends.",
+      "teamRole": "spots what is next"
+    },
+    "palette": {
+      "body": "#b87a3a",
+      "belly": "#f0e3c4",
+      "accent": "#6a4a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Sinosauropteryx"
+  },
+  {
+    "id": "austroraptor",
+    "name": "Austroraptor",
+    "commonName": null,
+    "pronunciation": "OW-stroh-RAP-tor",
+    "meaning": "southern thief",
+    "group": "Theropoda · Dromaeosauridae",
+    "bodyType": "raptor",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 78,
+    "myaTo": 66,
+    "regions": [
+      "south america"
+    ],
+    "namedYear": 2008,
+    "lengthM": 5.5,
+    "heightM": null,
+    "weightKg": 400,
+    "speedKmh": null,
+    "description": "Austroraptor was the largest dromaeosaurid known from the southern continents, with a long, narrow snout and arms that were comically short. It likely snapped up fish and small prey near Patagonian waterways.",
+    "funFact": "Its arms were remarkably short compared with other dromaeosaurids.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "runner",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "gentle",
+      "defense": "weapons",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Southern Specialist",
+      "tagline": "You do one thing in a very particular way and it works.",
+      "strengths": [
+        "specialisation",
+        "patience",
+        "precision"
+      ],
+      "quirk": "Brings a tiny, very specific tool to every job.",
+      "teamRole": "masters the niche"
+    },
+    "palette": {
+      "body": "#4a6a8a",
+      "belly": "#e4dfcc",
+      "accent": "#c8563a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Austroraptor"
+  },
+  {
+    "id": "brachiosaurus",
+    "name": "Brachiosaurus",
+    "commonName": null,
+    "pronunciation": "BRAK-ee-oh-SORE-us",
+    "meaning": "arm lizard",
+    "group": "Sauropoda · Brachiosauridae",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 154,
+    "myaTo": 150,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1903,
+    "lengthM": 22,
+    "heightM": 6,
+    "weightKg": 35000,
+    "speedKmh": null,
+    "description": "With front legs longer than its back legs, Brachiosaurus held its neck high like a living crane. It could browse treetops that nothing else could reach.",
+    "funFact": "A Brachiosaurus was the first dinosaur the audience saw in the 1993 film Jurassic Park.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "colossal",
+      "social": "herd",
+      "temperament": "calm",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Big-Picture Thinker",
+      "tagline": "You see the whole forest because your head is above it.",
+      "strengths": [
+        "vision",
+        "patience",
+        "reach"
+      ],
+      "quirk": "Has never lost a game of hide and seek, because nobody can find the ceiling.",
+      "teamRole": "keeps the long view"
+    },
+    "palette": {
+      "body": "#5a7a4a",
+      "belly": "#dfd6b0",
+      "accent": "#b5703a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Brachiosaurus"
+  },
+  {
+    "id": "giraffatitan",
+    "name": "Giraffatitan",
+    "commonName": null,
+    "pronunciation": "jih-RAF-ah-TIE-tan",
+    "meaning": "giant giraffe",
+    "group": "Sauropoda · Brachiosauridae",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 150,
+    "myaTo": 145,
+    "regions": [
+      "africa"
+    ],
+    "namedYear": 1988,
+    "lengthM": 22,
+    "heightM": 6,
+    "weightKg": 31000,
+    "speedKmh": null,
+    "description": "Giraffatitan was a towering, long-necked giant from Tanzania, similar to Brachiosaurus but built a bit lighter. Its nostrils sat atop a tall, arched skull.",
+    "funFact": "Its mounted skeleton in Berlin stands 13 metres tall, the tallest mounted dinosaur skeleton in the world.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "colossal",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "size",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Skyline Spotter",
+      "tagline": "You always know what is coming, because you saw it from up there.",
+      "strengths": [
+        "foresight",
+        "gentleness",
+        "height"
+      ],
+      "quirk": "Is the reason every group photo has a person cropped at the neck.",
+      "teamRole": "spots problems early"
+    },
+    "palette": {
+      "body": "#8a7a4a",
+      "belly": "#ece1bc",
+      "accent": "#4a6a5a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Giraffatitan"
+  },
+  {
+    "id": "diplodocus",
+    "name": "Diplodocus",
+    "commonName": null,
+    "pronunciation": "dih-PLOD-oh-kus",
+    "meaning": "double beam",
+    "group": "Sauropoda · Diplodocidae",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 154,
+    "myaTo": 150,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1878,
+    "lengthM": 26,
+    "heightM": 4,
+    "weightKg": 14000,
+    "speedKmh": null,
+    "description": "One of the longest dinosaurs ever found, Diplodocus stretched out a long neck and an even longer whip-like tail. Its peg-like teeth raked leaves from low branches.",
+    "funFact": "Casts of a Diplodocus skeleton nicknamed \"Dippy\" were sent to museums across the world in the early 1900s.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "colossal",
+      "social": "herd",
+      "temperament": "calm",
+      "defense": "stealth",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Long Haul",
+      "tagline": "You are in this for the long term, all twenty-six metres of it.",
+      "strengths": [
+        "stamina",
+        "consistency",
+        "balance"
+      ],
+      "quirk": "Needs two meeting rooms to fit one person.",
+      "teamRole": "sees the project through"
+    },
+    "palette": {
+      "body": "#6a6a8a",
+      "belly": "#e1dcc8",
+      "accent": "#c26a4a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Diplodocus"
+  },
+  {
+    "id": "apatosaurus",
+    "name": "Apatosaurus",
+    "commonName": null,
+    "pronunciation": "ah-PAT-oh-SORE-us",
+    "meaning": "deceptive lizard",
+    "group": "Sauropoda · Diplodocidae",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 152,
+    "myaTo": 151,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1877,
+    "lengthM": 21,
+    "heightM": 4.5,
+    "weightKg": 22000,
+    "speedKmh": null,
+    "description": "Apatosaurus was heavier-built than its slender cousins, with thick, strong neck bones and a long tail. It could rear and use its whip-like tail as a warning signal.",
+    "funFact": "For decades its skeleton wore the wrong head, a Camarasaurus skull, until the mistake was fixed in the 1970s.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "colossal",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "size",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Late Bloomer",
+      "tagline": "You got the wrong head for a few decades and handled it with grace.",
+      "strengths": [
+        "resilience",
+        "humility",
+        "strength"
+      ],
+      "quirk": "Remains cheerful about being mislabelled in the staff directory.",
+      "teamRole": "makes the best of a mix-up"
+    },
+    "palette": {
+      "body": "#4a6a6a",
+      "belly": "#dcd8c2",
+      "accent": "#b8803a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Apatosaurus"
+  },
+  {
+    "id": "brontosaurus",
+    "name": "Brontosaurus",
+    "commonName": null,
+    "pronunciation": "bron-toe-SORE-us",
+    "meaning": "thunder lizard",
+    "group": "Sauropoda · Diplodocidae",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 156,
+    "myaTo": 146,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1879,
+    "lengthM": 22,
+    "heightM": 4.5,
+    "weightKg": 15000,
+    "speedKmh": null,
+    "description": "Brontosaurus was a thick-necked, deep-bodied sauropod with a powerful stride. The giant was famous for decades, struck from the record, and then reinstated.",
+    "funFact": "Brontosaurus was declared invalid in 1903 but restored as a genuine genus by researchers in 2015.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "colossal",
+      "social": "herd",
+      "temperament": "bold",
+      "defense": "size",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Comeback Kid",
+      "tagline": "They said you were out, and you came back louder.",
+      "strengths": [
+        "persistence",
+        "charisma",
+        "bounce-back"
+      ],
+      "quirk": "Has a \"told you so\" mug and uses it sparingly.",
+      "teamRole": "recovers from setbacks"
+    },
+    "palette": {
+      "body": "#7a5a7a",
+      "belly": "#e6dcc8",
+      "accent": "#d6923a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Brontosaurus"
+  },
+  {
+    "id": "argentinosaurus",
+    "name": "Argentinosaurus",
+    "commonName": null,
+    "pronunciation": "AR-jen-TEE-no-SORE-us",
+    "meaning": "Argentine lizard",
+    "group": "Sauropoda · Titanosauria",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 97,
+    "myaTo": 94,
+    "regions": [
+      "south america"
+    ],
+    "namedYear": 1993,
+    "lengthM": 30,
+    "heightM": 7,
+    "weightKg": 70000,
+    "speedKmh": null,
+    "description": "Argentinosaurus is one of the biggest land animals ever to have lived. Its backbones were as tall as a grown person and it may have weighed as much as a dozen elephants.",
+    "funFact": "Its first bone, a huge limb bone, was mistaken for petrified wood by the rancher who found it.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "colossal",
+      "social": "herd",
+      "temperament": "calm",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Biggest Deal",
+      "tagline": "Everyone adjusts their schedule around you, and you do not even notice.",
+      "strengths": [
+        "sheer presence",
+        "patience",
+        "steady appetite"
+      ],
+      "quirk": "Has had three chairs \"retired from service\".",
+      "teamRole": "is the main event"
+    },
+    "palette": {
+      "body": "#3f6a5a",
+      "belly": "#ddd5b2",
+      "accent": "#c58a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Argentinosaurus"
+  },
+  {
+    "id": "patagotitan",
+    "name": "Patagotitan",
+    "commonName": null,
+    "pronunciation": "PAT-ah-go-TIE-tan",
+    "meaning": "Patagonian giant",
+    "group": "Sauropoda · Titanosauria",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 102,
+    "myaTo": 100,
+    "regions": [
+      "south america"
+    ],
+    "namedYear": 2017,
+    "lengthM": 31,
+    "heightM": 7,
+    "weightKg": 57000,
+    "speedKmh": null,
+    "description": "Patagotitan was a Patagonian titanosaur on the same scale as Argentinosaurus, with remarkably complete fossils. A herd of the giants may have trudged across Cretaceous floodplains.",
+    "funFact": "A cast of Patagotitan at the American Museum of Natural History is so long its head pokes out of the hall.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "colossal",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "size",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Gentle Titan",
+      "tagline": "You are huge, you know it, and you always hold the door.",
+      "strengths": [
+        "kindness",
+        "scale",
+        "reliability"
+      ],
+      "quirk": "Waits for everyone else to exit the lift first, then waits again.",
+      "teamRole": "makes room for everyone"
+    },
+    "palette": {
+      "body": "#6a8a5a",
+      "belly": "#e8e0c0",
+      "accent": "#9a5a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Patagotitan"
+  },
+  {
+    "id": "dreadnoughtus",
+    "name": "Dreadnoughtus",
+    "commonName": null,
+    "pronunciation": "dred-NOT-us",
+    "meaning": "fears nothing",
+    "group": "Sauropoda · Titanosauria",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 70,
+    "regions": [
+      "south america"
+    ],
+    "namedYear": 2014,
+    "lengthM": 26,
+    "heightM": 6,
+    "weightKg": 49000,
+    "speedKmh": null,
+    "description": "Dreadnoughtus was so massive that adults probably had little to fear from any predator. The bones of one animal were so complete that it gives a rare detailed look at a giant titanosaur.",
+    "funFact": "Roughly 70 percent of its skeleton below the head has been recovered, remarkable for such a giant.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "colossal",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "size",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Unbothered",
+      "tagline": "You are not worried, you simply are not.",
+      "strengths": [
+        "composure",
+        "heft",
+        "fearlessness"
+      ],
+      "quirk": "Greets deadlines the way a mountain greets weather.",
+      "teamRole": "stays calm in a crisis"
+    },
+    "palette": {
+      "body": "#4a5a7a",
+      "belly": "#dad4c0",
+      "accent": "#c0703a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dreadnoughtus"
+  },
+  {
+    "id": "camarasaurus",
+    "name": "Camarasaurus",
+    "commonName": null,
+    "pronunciation": "KAM-ar-ah-SORE-us",
+    "meaning": "chambered lizard",
+    "group": "Sauropoda · Camarasauridae",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 155,
+    "myaTo": 145,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1877,
+    "lengthM": 15,
+    "heightM": 4,
+    "weightKg": 12000,
+    "speedKmh": null,
+    "description": "Camarasaurus had a short, boxy skull and sturdy spoon-shaped teeth that could chew tough plants. Hollow chambers inside its vertebrae kept its huge frame lighter.",
+    "funFact": "It is one of the most common sauropods found in the Morrison Formation, with several complete skeletons known.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "herd",
+      "temperament": "stubborn",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Dependable Regular",
+      "tagline": "You are the one everybody finds in the same spot at the same time.",
+      "strengths": [
+        "reliability",
+        "appetite",
+        "toughness"
+      ],
+      "quirk": "Orders the same lunch every day and calls it \"optimised\".",
+      "teamRole": "keeps things steady"
+    },
+    "palette": {
+      "body": "#8a7a3a",
+      "belly": "#e6dcb8",
+      "accent": "#4a5a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Camarasaurus"
+  },
+  {
+    "id": "mamenchisaurus",
+    "name": "Mamenchisaurus",
+    "commonName": null,
+    "pronunciation": "mah-MUN-chee-SORE-us",
+    "meaning": "Mamenchi lizard",
+    "group": "Sauropoda · Mamenchisauridae",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 161,
+    "myaTo": 159,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1954,
+    "lengthM": 22,
+    "heightM": 5,
+    "weightKg": 15000,
+    "speedKmh": null,
+    "description": "Mamenchisaurus had a neck that could stretch to nearly half of its entire body length. Its small head swayed on a long stalk of stiff neck bones.",
+    "funFact": "Its neck had 19 bones and could make up about half of the animal's total length.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "colossal",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "size",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Long Neck Networker",
+      "tagline": "You can reach anyone in the building, even the folks at the back.",
+      "strengths": [
+        "outreach",
+        "curiosity",
+        "reach"
+      ],
+      "quirk": "Pokes their head into every meeting \"just to say hi\".",
+      "teamRole": "connects every department"
+    },
+    "palette": {
+      "body": "#7a4a5a",
+      "belly": "#e8d8c0",
+      "accent": "#4a7a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mamenchisaurus"
+  },
+  {
+    "id": "amargasaurus",
+    "name": "Amargasaurus",
+    "commonName": null,
+    "pronunciation": "ah-MAR-gah-SORE-us",
+    "meaning": "La Amarga lizard",
+    "group": "Sauropoda · Dicraeosauridae",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 130,
+    "myaTo": 120,
+    "regions": [
+      "south america"
+    ],
+    "namedYear": 1991,
+    "lengthM": 10,
+    "heightM": 2.5,
+    "weightKg": 3000,
+    "speedKmh": null,
+    "description": "Amargasaurus was a compact sauropod with two rows of tall spikes running down its neck. They may have supported skin sails or been covered in horn for display.",
+    "funFact": "Its neck spines, up to half a metre or more tall, are unlike those of almost any other sauropod.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "weapons",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Punk Sauropod",
+      "tagline": "You turned a neck into a statement.",
+      "strengths": [
+        "style",
+        "nerve",
+        "originality"
+      ],
+      "quirk": "Has more pins on their backpack than backpack.",
+      "teamRole": "brings the fresh look"
+    },
+    "palette": {
+      "body": "#6a3a6a",
+      "belly": "#e4d6c6",
+      "accent": "#e0a63a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Amargasaurus"
+  },
+  {
+    "id": "nigersaurus",
+    "name": "Nigersaurus",
+    "commonName": null,
+    "pronunciation": "NYE-zher-SORE-us",
+    "meaning": "Niger lizard",
+    "group": "Sauropoda · Rebbachisauridae",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 115,
+    "myaTo": 105,
+    "regions": [
+      "africa"
+    ],
+    "namedYear": 1999,
+    "lengthM": 9,
+    "heightM": 2,
+    "weightKg": 4000,
+    "speedKmh": null,
+    "description": "Nigersaurus had a wide, straight-edged mouth lined with hundreds of tiny teeth, like a living vacuum cleaner for low plants. Its skull was thin and light, built for grazing close to the ground.",
+    "funFact": "It had more than 500 teeth, replaced roughly every two weeks.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "large",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Hoover",
+      "tagline": "You get through the pile and the pile is gone.",
+      "strengths": [
+        "efficiency",
+        "appetite",
+        "thoroughness"
+      ],
+      "quirk": "Eats the entire snack table and then tidies it up.",
+      "teamRole": "clears the backlog"
+    },
+    "palette": {
+      "body": "#8a8a4a",
+      "belly": "#ece4c4",
+      "accent": "#6a3a4a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Nigersaurus"
+  },
+  {
+    "id": "plateosaurus",
+    "name": "Plateosaurus",
+    "commonName": null,
+    "pronunciation": "PLAT-ee-oh-SORE-us",
+    "meaning": "flat lizard",
+    "group": "Sauropodomorpha · Plateosauridae",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "triassic",
+    "epoch": "Late Triassic",
+    "myaFrom": 214,
+    "myaTo": 204,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1837,
+    "lengthM": 8,
+    "heightM": 2.1,
+    "weightKg": 2500,
+    "speedKmh": null,
+    "description": "One of the first big plant-eaters, Plateosaurus could rear up on its hind legs to reach higher leaves. Its long neck and gripping hands were a model for the giants to come.",
+    "funFact": "More than a hundred skeletons have been found in Germany and Switzerland, many together.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Trailblazer Herbivore",
+      "tagline": "You are early to every trend, and you lead with your neck.",
+      "strengths": [
+        "pioneering",
+        "versatility",
+        "sociability"
+      ],
+      "quirk": "Is always the first to try the vegan option.",
+      "teamRole": "leads the way"
+    },
+    "palette": {
+      "body": "#5a7a4a",
+      "belly": "#eadfba",
+      "accent": "#a8582f"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Plateosaurus"
+  },
+  {
+    "id": "massospondylus",
+    "name": "Massospondylus",
+    "commonName": null,
+    "pronunciation": "MAS-oh-SPON-dih-lus",
+    "meaning": "massive vertebra",
+    "group": "Sauropodomorpha · Massospondylidae",
+    "bodyType": "sauropod",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Early Jurassic",
+    "myaFrom": 201,
+    "myaTo": 184,
+    "regions": [
+      "africa"
+    ],
+    "namedYear": 1854,
+    "lengthM": 5,
+    "heightM": 1,
+    "weightKg": 190,
+    "speedKmh": null,
+    "description": "Massospondylus was a slender early long-neck that walked on two or four legs as it browsed. Its tiny head and big, grasping hands suited a flexible lifestyle.",
+    "funFact": "Eggs from South Africa contain some of the oldest known dinosaur embryos, around 190 million years old.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "stealth",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Nesting Pro",
+      "tagline": "You make sure the project is in good hands and then hover nearby.",
+      "strengths": [
+        "care",
+        "flexibility",
+        "planning"
+      ],
+      "quirk": "Always brings snacks \"for the team\", then stays to check on them.",
+      "teamRole": "looks after the details"
+    },
+    "palette": {
+      "body": "#a8884a",
+      "belly": "#f0e6c4",
+      "accent": "#4a6a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Massospondylus"
+  },
+  {
+    "id": "triceratops",
+    "name": "Triceratops",
+    "commonName": "Trike",
+    "pronunciation": "try-SERR-ah-tops",
+    "meaning": "three-horned face",
+    "group": "Ceratopsia · Ceratopsidae",
+    "bodyType": "ceratopsian",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 68,
+    "myaTo": 66,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1889,
+    "lengthM": 9,
+    "heightM": 3,
+    "weightKg": 9000,
+    "speedKmh": 25,
+    "description": "With three horns and a great bony frill, Triceratops was the tank of the Late Cretaceous. It lived alongside T. rex and probably faced it down with horns lowered.",
+    "funFact": "Its skull could reach about two metres long, roughly a third of its body length.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "herd",
+      "temperament": "stubborn",
+      "defense": "weapons",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Immovable Object",
+      "tagline": "You have a plan, and the plan has horns.",
+      "strengths": [
+        "resolve",
+        "defence",
+        "loyalty"
+      ],
+      "quirk": "Treats every gentle suggestion as a challenge to a duel.",
+      "teamRole": "defends the plan"
+    },
+    "palette": {
+      "body": "#6a7a5a",
+      "belly": "#e0d6b4",
+      "accent": "#b0432f"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Triceratops"
+  },
+  {
+    "id": "torosaurus",
+    "name": "Torosaurus",
+    "commonName": null,
+    "pronunciation": "TOR-oh-SORE-us",
+    "meaning": "perforated lizard",
+    "group": "Ceratopsia · Ceratopsidae",
+    "bodyType": "ceratopsian",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 68,
+    "myaTo": 66,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1891,
+    "lengthM": 8,
+    "heightM": 2.7,
+    "weightKg": 8000,
+    "speedKmh": null,
+    "description": "Torosaurus had an enormous frill with two large windows, giving it one of the longest skulls of any land animal. Its great shield was probably a billboard for rivals and mates.",
+    "funFact": "Its skull could exceed 2.5 metres, among the longest of any land animal ever.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "calm",
+      "defense": "size",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Skull Show-Off",
+      "tagline": "You make a big first impression and the follow-up is even bigger.",
+      "strengths": [
+        "presence",
+        "poise",
+        "display"
+      ],
+      "quirk": "Cannot fit through a door without announcing it.",
+      "teamRole": "sets the tone"
+    },
+    "palette": {
+      "body": "#7a4a3a",
+      "belly": "#e8d4b0",
+      "accent": "#3a6a7a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Torosaurus"
+  },
+  {
+    "id": "styracosaurus",
+    "name": "Styracosaurus",
+    "commonName": null,
+    "pronunciation": "sty-RAK-oh-SORE-us",
+    "meaning": "spiked lizard",
+    "group": "Ceratopsia · Ceratopsidae",
+    "bodyType": "ceratopsian",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 75,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1913,
+    "lengthM": 5.5,
+    "heightM": 1.8,
+    "weightKg": 2700,
+    "speedKmh": null,
+    "description": "Styracosaurus wore a crown of long spikes around its frill and a tall horn on its nose. The effect was part armour, part party hat.",
+    "funFact": "Its frill carried up to six long spikes, plus smaller ones around the edge.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "bold",
+      "defense": "weapons",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Party Crown",
+      "tagline": "You were born to be the centrepiece.",
+      "strengths": [
+        "flair",
+        "confidence",
+        "team spirit"
+      ],
+      "quirk": "Has a hat for every occasion, including funerals, but less so.",
+      "teamRole": "lifts the mood"
+    },
+    "palette": {
+      "body": "#b2503a",
+      "belly": "#f0dcb6",
+      "accent": "#3a5a7a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Styracosaurus"
+  },
+  {
+    "id": "centrosaurus",
+    "name": "Centrosaurus",
+    "commonName": null,
+    "pronunciation": "SEN-tro-SORE-us",
+    "meaning": "pointed lizard",
+    "group": "Ceratopsia · Ceratopsidae",
+    "bodyType": "ceratopsian",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 75,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1904,
+    "lengthM": 6,
+    "heightM": 1.8,
+    "weightKg": 2000,
+    "speedKmh": null,
+    "description": "Centrosaurus had a great nose horn and a frill ringed with curled hooks. It moved in huge herds along the coastal plains of ancient Alberta.",
+    "funFact": "Giant bonebeds hold the remains of thousands of Centrosaurus, suggesting enormous herds.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "size",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Crowd Pleaser",
+      "tagline": "You never walk alone, and honestly, neither does anyone near you.",
+      "strengths": [
+        "sociability",
+        "steadiness",
+        "belonging"
+      ],
+      "quirk": "Starts a group chat to ask about the other group chat.",
+      "teamRole": "brings everyone together"
+    },
+    "palette": {
+      "body": "#5a8a7a",
+      "belly": "#e8e2c4",
+      "accent": "#b8643a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Centrosaurus"
+  },
+  {
+    "id": "pachyrhinosaurus",
+    "name": "Pachyrhinosaurus",
+    "commonName": null,
+    "pronunciation": "PAK-ee-RYE-no-SORE-us",
+    "meaning": "thick-nosed lizard",
+    "group": "Ceratopsia · Ceratopsidae",
+    "bodyType": "ceratopsian",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 74,
+    "myaTo": 66,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1950,
+    "lengthM": 6,
+    "heightM": 2,
+    "weightKg": 3500,
+    "speedKmh": null,
+    "description": "Instead of a nose horn, Pachyrhinosaurus grew a thick bony boss on its snout, probably for head-to-head shoving matches. It survived in northern forests where winters were dark and long.",
+    "funFact": "Fossils from Alaska show it lived in a polar forest with months of winter darkness.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "stubborn",
+      "defense": "armor",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Head-First Negotiator",
+      "tagline": "You lead with your forehead, and it usually works.",
+      "strengths": [
+        "persistence",
+        "toughness",
+        "resilience"
+      ],
+      "quirk": "Opens negotiations by gently nudging the other party.",
+      "teamRole": "pushes the deal through"
+    },
+    "palette": {
+      "body": "#4a5a6a",
+      "belly": "#ded8c8",
+      "accent": "#c2923a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Pachyrhinosaurus"
+  },
+  {
+    "id": "protoceratops",
+    "name": "Protoceratops",
+    "commonName": null,
+    "pronunciation": "PRO-toe-SERR-ah-tops",
+    "meaning": "first horned face",
+    "group": "Ceratopsia · Protoceratopsidae",
+    "bodyType": "ceratopsian",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 75,
+    "myaTo": 71,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1923,
+    "lengthM": 1.8,
+    "heightM": 0.6,
+    "weightKg": 170,
+    "speedKmh": null,
+    "description": "Protoceratops was a sheep-sized ancestor of the great horned dinosaurs, with a beak, a small frill and a bunch of nests to look after. It scurried across the dune fields of Mongolia.",
+    "funFact": "Some scholars suggest its skeletons may have inspired the ancient legend of the griffin.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "armor",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Humble Pioneer",
+      "tagline": "You started small and made everyone else look easy.",
+      "strengths": [
+        "grit",
+        "humility",
+        "adaptability"
+      ],
+      "quirk": "Keeps a spreadsheet of every nest, and has never been thanked.",
+      "teamRole": "does the groundwork"
+    },
+    "palette": {
+      "body": "#a8884a",
+      "belly": "#efe2c0",
+      "accent": "#4a5a4a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Protoceratops"
+  },
+  {
+    "id": "psittacosaurus",
+    "name": "Psittacosaurus",
+    "commonName": null,
+    "pronunciation": "SIT-ah-koh-SORE-us",
+    "meaning": "parrot lizard",
+    "group": "Ceratopsia · Psittacosauridae",
+    "bodyType": "ceratopsian",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 125,
+    "myaTo": 105,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1923,
+    "lengthM": 2,
+    "heightM": 0.6,
+    "weightKg": 20,
+    "speedKmh": null,
+    "description": "Psittacosaurus had a parrot-like beak, sharp cheek teeth and quick legs for dashing into the undergrowth. It sometimes ran on two legs and sometimes on four.",
+    "funFact": "One famous fossil shows an adult surrounded by 34 juveniles, suggesting a nursery group.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Chatty One",
+      "tagline": "You have a lot to say and a beak to say it with.",
+      "strengths": [
+        "communication",
+        "agility",
+        "social energy"
+      ],
+      "quirk": "Cannot go five minutes without commenting on the weather.",
+      "teamRole": "keeps the team talking"
+    },
+    "palette": {
+      "body": "#5a8a4a",
+      "belly": "#ece6bc",
+      "accent": "#d6643a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Psittacosaurus"
+  },
+  {
+    "id": "pentaceratops",
+    "name": "Pentaceratops",
+    "commonName": null,
+    "pronunciation": "PEN-tah-SERR-ah-tops",
+    "meaning": "five-horned face",
+    "group": "Ceratopsia · Ceratopsidae",
+    "bodyType": "ceratopsian",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 73,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1923,
+    "lengthM": 6,
+    "heightM": 2,
+    "weightKg": 2500,
+    "speedKmh": null,
+    "description": "Pentaceratops had an extraordinarily long frill and three facial horns, with a pair of cheek spikes that earned it its name. It grazed southwestern floodplains in family groups.",
+    "funFact": "Despite the name it had only three true horns; the \"extra\" two are spikes on its cheeks.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "pair",
+      "temperament": "bold",
+      "defense": "weapons",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Overachiever",
+      "tagline": "You claim five, deliver three, and still win the room.",
+      "strengths": [
+        "confidence",
+        "display",
+        "focus"
+      ],
+      "quirk": "Rounds up on every resume.",
+      "teamRole": "sells the vision"
+    },
+    "palette": {
+      "body": "#3a4a6a",
+      "belly": "#e2d8be",
+      "accent": "#d0803a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Pentaceratops"
+  },
+  {
+    "id": "chasmosaurus",
+    "name": "Chasmosaurus",
+    "commonName": null,
+    "pronunciation": "KAZ-mo-SORE-us",
+    "meaning": "opening lizard",
+    "group": "Ceratopsia · Ceratopsidae",
+    "bodyType": "ceratopsian",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 75,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1914,
+    "lengthM": 4.5,
+    "heightM": 1.7,
+    "weightKg": 1800,
+    "speedKmh": null,
+    "description": "Chasmosaurus carried a broad, heart-shaped frill with two huge openings, light but eye-catching. It lived beside rivers where it roamed in modest herds.",
+    "funFact": "Its frill had two very large windows, keeping a giant display structure surprisingly light.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Window Shopper",
+      "tagline": "You enjoy the view, and you let everyone know it.",
+      "strengths": [
+        "perspective",
+        "lightness",
+        "good taste"
+      ],
+      "quirk": "Has an opinion on every curtain in the building.",
+      "teamRole": "adds a fresh perspective"
+    },
+    "palette": {
+      "body": "#8a4a5a",
+      "belly": "#e8d6c4",
+      "accent": "#4a7a5a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chasmosaurus"
+  },
+  {
+    "id": "stegosaurus",
+    "name": "Stegosaurus",
+    "commonName": null,
+    "pronunciation": "STEG-oh-SORE-us",
+    "meaning": "roofed lizard",
+    "group": "Stegosauria · Stegosauridae",
+    "bodyType": "stegosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 155,
+    "myaTo": 150,
+    "regions": [
+      "north america",
+      "europe"
+    ],
+    "namedYear": 1877,
+    "lengthM": 9,
+    "heightM": 2.75,
+    "weightKg": 5000,
+    "speedKmh": 7,
+    "description": "Stegosaurus carried two rows of broad bony plates and a tail armed with four long spikes. Its tiny head and low-slung front end focused on ferns and cycads.",
+    "funFact": "It is the official state dinosaur of Colorado.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "solo",
+      "temperament": "stubborn",
+      "defense": "weapons",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Spiky Strategist",
+      "tagline": "You have a plan for every angle, including the back one.",
+      "strengths": [
+        "defence",
+        "planning",
+        "cool head"
+      ],
+      "quirk": "Has more than one back-up plan for the back-up plan.",
+      "teamRole": "covers all the angles"
+    },
+    "palette": {
+      "body": "#5a7a5a",
+      "belly": "#e0d8b6",
+      "accent": "#c0502f"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Stegosaurus"
+  },
+  {
+    "id": "kentrosaurus",
+    "name": "Kentrosaurus",
+    "commonName": null,
+    "pronunciation": "KEN-troh-SORE-us",
+    "meaning": "spiked lizard",
+    "group": "Stegosauria · Stegosauridae",
+    "bodyType": "stegosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 152,
+    "myaTo": 150,
+    "regions": [
+      "africa"
+    ],
+    "namedYear": 1915,
+    "lengthM": 4.5,
+    "heightM": 1.5,
+    "weightKg": 1000,
+    "speedKmh": null,
+    "description": "Kentrosaurus was a smaller, spikier cousin of Stegosaurus, with plates on its front half and long spines on its back half. It spent its days browsing low plants in what is now Tanzania.",
+    "funFact": "German expeditions shipped about 250 tonnes of fossils from Tendaguru, including Kentrosaurus, to Berlin.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "bold",
+      "defense": "weapons",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Pointed Colleague",
+      "tagline": "You are lovely until you are not, and everyone knows which.",
+      "strengths": [
+        "boundaries",
+        "agility",
+        "protectiveness"
+      ],
+      "quirk": "Has a policy on desk-borrowing and it is in writing.",
+      "teamRole": "enforces the boundaries"
+    },
+    "palette": {
+      "body": "#a06a3a",
+      "belly": "#eadcb6",
+      "accent": "#3a4a5a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kentrosaurus"
+  },
+  {
+    "id": "huayangosaurus",
+    "name": "Huayangosaurus",
+    "commonName": null,
+    "pronunciation": "hwah-YANG-oh-SORE-us",
+    "meaning": "Huayang lizard",
+    "group": "Stegosauria · Huayangosauridae",
+    "bodyType": "stegosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Middle Jurassic",
+    "myaFrom": 168,
+    "myaTo": 163,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1982,
+    "lengthM": 4,
+    "heightM": 1.5,
+    "weightKg": 500,
+    "speedKmh": null,
+    "description": "One of the earliest and most primitive stegosaurs, Huayangosaurus had a short snout, small plates and shoulder spikes. Its ancient design shows how the group began.",
+    "funFact": "It still had small teeth at the tip of its upper jaw, something later stegosaurs lost.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "armor",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Prototype",
+      "tagline": "You are the first draft that turned out suspiciously good.",
+      "strengths": [
+        "originality",
+        "toughness",
+        "foundations"
+      ],
+      "quirk": "Always reminds you they were doing it before it was cool.",
+      "teamRole": "builds the foundations"
+    },
+    "palette": {
+      "body": "#5a6a8a",
+      "belly": "#e4dcc4",
+      "accent": "#c4723a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Huayangosaurus"
+  },
+  {
+    "id": "tuojiangosaurus",
+    "name": "Tuojiangosaurus",
+    "commonName": null,
+    "pronunciation": "too-OH-jee-ANG-oh-SORE-us",
+    "meaning": "Tuo River lizard",
+    "group": "Stegosauria · Stegosauridae",
+    "bodyType": "stegosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 163,
+    "myaTo": 152,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1977,
+    "lengthM": 7,
+    "heightM": 2,
+    "weightKg": 2800,
+    "speedKmh": null,
+    "description": "Tuojiangosaurus was a long, low stegosaur from Sichuan with a line of narrow, pointed plates and tail spikes. It browsed ferns and cycads in humid river basins.",
+    "funFact": "Its plates were narrow and pointed, more spike-like than the broad, leaf-shaped plates of Stegosaurus.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "calm",
+      "defense": "armor",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The River Regular",
+      "tagline": "You keep a steady pace, and the river keeps up.",
+      "strengths": [
+        "consistency",
+        "calm",
+        "patience"
+      ],
+      "quirk": "Takes the same walk to work every day and notices a different bird each time.",
+      "teamRole": "keeps the rhythm"
+    },
+    "palette": {
+      "body": "#4a7a6a",
+      "belly": "#e8e2c8",
+      "accent": "#c0603a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tuojiangosaurus"
+  },
+  {
+    "id": "miragaia",
+    "name": "Miragaia",
+    "commonName": null,
+    "pronunciation": "meer-ah-GUY-ah",
+    "meaning": "from Miragaia, Portugal",
+    "group": "Stegosauria · Stegosauridae",
+    "bodyType": "stegosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 152,
+    "myaTo": 150,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 2009,
+    "lengthM": 6,
+    "heightM": null,
+    "weightKg": 2000,
+    "speedKmh": null,
+    "description": "Miragaia was a Portuguese stegosaur with an unusually long neck, giving it the reach of a small sauropod. Plates and spikes lined its back as it browsed the Jurassic coast.",
+    "funFact": "It had at least 17 neck vertebrae, far more than any other known stegosaur.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "armor",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Reach Extender",
+      "tagline": "You always take one more step than the plan said.",
+      "strengths": [
+        "reach",
+        "curiosity",
+        "initiative"
+      ],
+      "quirk": "Always the one who can get the thing off the top shelf, and does.",
+      "teamRole": "stretches the goal"
+    },
+    "palette": {
+      "body": "#7a4a6a",
+      "belly": "#eadcc6",
+      "accent": "#3a7a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Miragaia_(dinosaur)"
+  },
+  {
+    "id": "dacentrurus",
+    "name": "Dacentrurus",
+    "commonName": null,
+    "pronunciation": "DAY-sen-TROO-rus",
+    "meaning": "very pointed tail",
+    "group": "Stegosauria · Stegosauridae",
+    "bodyType": "stegosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 154,
+    "myaTo": 145,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1902,
+    "lengthM": 8.5,
+    "heightM": 2.5,
+    "weightKg": 5500,
+    "speedKmh": null,
+    "description": "Dacentrurus was a big European stegosaur with tall, thick spikes along its back and tail. Fossils turn up across England, France, Spain and Portugal.",
+    "funFact": "Originally named Omosaurus, it had to be renamed because that name was already taken by a prehistoric crocodile relative.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "stubborn",
+      "defense": "weapons",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Renamed Veteran",
+      "tagline": "You have been through a rebrand and came out sharper.",
+      "strengths": [
+        "adaptability",
+        "toughness",
+        "long memory"
+      ],
+      "quirk": "Is a little defensive about the new business card.",
+      "teamRole": "survives the reorganisation"
+    },
+    "palette": {
+      "body": "#6a5a3a",
+      "belly": "#e6dcc0",
+      "accent": "#a8503a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dacentrurus"
+  },
+  {
+    "id": "ankylosaurus",
+    "name": "Ankylosaurus",
+    "commonName": null,
+    "pronunciation": "an-KY-loh-SORE-us",
+    "meaning": "fused lizard",
+    "group": "Ankylosauria · Ankylosauridae",
+    "bodyType": "ankylosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 68,
+    "myaTo": 66,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1908,
+    "lengthM": 6.5,
+    "heightM": 1.7,
+    "weightKg": 6000,
+    "speedKmh": null,
+    "description": "Ankylosaurus was a living tank with armour plates across its back, a heavy head and a massive club of fused bone on its tail. Even its eyelids were armoured.",
+    "funFact": "A swing of its tail club may have been strong enough to break an attacker's leg bones.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "stubborn",
+      "defense": "armor",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Fortress",
+      "tagline": "You are polite, and you are also impenetrable.",
+      "strengths": [
+        "resilience",
+        "steadiness",
+        "boundaries"
+      ],
+      "quirk": "Treats a locked door as a personal compliment.",
+      "teamRole": "protects the project"
+    },
+    "palette": {
+      "body": "#7a6a5a",
+      "belly": "#e0d4b8",
+      "accent": "#a8452f"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ankylosaurus"
+  },
+  {
+    "id": "euoplocephalus",
+    "name": "Euoplocephalus",
+    "commonName": null,
+    "pronunciation": "YOO-oh-plo-SEF-ah-lus",
+    "meaning": "well-armoured head",
+    "group": "Ankylosauria · Ankylosauridae",
+    "bodyType": "ankylosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 75,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1910,
+    "lengthM": 5.5,
+    "heightM": 1.7,
+    "weightKg": 2000,
+    "speedKmh": null,
+    "description": "Euoplocephalus wore armour from nose to tail tip, including bony eyelids and a heavy tail club. It was a low, broad grazer built for defence over speed.",
+    "funFact": "Even its eyelids carried bony armour.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "gentle",
+      "defense": "armor",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Thick-Skinned Optimist",
+      "tagline": "Criticism bounces right off, and you thank it on the way out.",
+      "strengths": [
+        "optimism",
+        "toughness",
+        "composure"
+      ],
+      "quirk": "Takes feedback surprisingly well, mostly because none of it lands.",
+      "teamRole": "absorbs the criticism"
+    },
+    "palette": {
+      "body": "#6a5a4a",
+      "belly": "#e4d6b8",
+      "accent": "#3a6a5a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Euoplocephalus"
+  },
+  {
+    "id": "edmontonia",
+    "name": "Edmontonia",
+    "commonName": null,
+    "pronunciation": "ED-mon-TOH-nee-ah",
+    "meaning": "of Edmonton",
+    "group": "Ankylosauria · Nodosauridae",
+    "bodyType": "ankylosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 71,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1928,
+    "lengthM": 6.6,
+    "heightM": 1.7,
+    "weightKg": 3000,
+    "speedKmh": null,
+    "description": "Edmontonia had massive shoulder spikes and a broad, club-free tail. It was armoured in rows of bony studs and sported a pointed, almost tapered snout.",
+    "funFact": "Instead of a tail club it had huge spikes on its shoulders.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "calm",
+      "defense": "armor",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Shoulder to Cry On",
+      "tagline": "You show up, you stand firm, and you carry spikes for everyone.",
+      "strengths": [
+        "reliability",
+        "protection",
+        "calm"
+      ],
+      "quirk": "Always has a tissue and a lecture ready.",
+      "teamRole": "has everyone's back"
+    },
+    "palette": {
+      "body": "#5a4a5a",
+      "belly": "#dccfb8",
+      "accent": "#c8703a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Edmontonia"
+  },
+  {
+    "id": "sauropelta",
+    "name": "Sauropelta",
+    "commonName": null,
+    "pronunciation": "SORE-oh-PEL-tah",
+    "meaning": "lizard shield",
+    "group": "Ankylosauria · Nodosauridae",
+    "bodyType": "ankylosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 109,
+    "myaTo": 108,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1970,
+    "lengthM": 5.5,
+    "heightM": 1.4,
+    "weightKg": 1700,
+    "speedKmh": null,
+    "description": "Sauropelta bristled with armour, with rows of bony studs and long spikes that curved from its neck and shoulders. It shared its ecosystem with Deinonychus.",
+    "funFact": "It lived alongside Deinonychus and Tenontosaurus in the Cloverly Formation of Montana and Wyoming.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "stubborn",
+      "defense": "armor",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Spike Diplomat",
+      "tagline": "You are charming from a distance and fortified up close.",
+      "strengths": [
+        "defence",
+        "charm",
+        "nerve"
+      ],
+      "quirk": "Always chooses the seat with the best back protection.",
+      "teamRole": "guards the flank"
+    },
+    "palette": {
+      "body": "#3a6a5a",
+      "belly": "#dfd8bc",
+      "accent": "#b8603a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Sauropelta"
+  },
+  {
+    "id": "borealopelta",
+    "name": "Borealopelta",
+    "commonName": null,
+    "pronunciation": "BOR-ee-AL-oh-PEL-tah",
+    "meaning": "northern shield",
+    "group": "Ankylosauria · Nodosauridae",
+    "bodyType": "ankylosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 112,
+    "myaTo": 110,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 2017,
+    "lengthM": 5.5,
+    "heightM": 1.3,
+    "weightKg": 1300,
+    "speedKmh": null,
+    "description": "Borealopelta is one of the best-preserved armoured dinosaurs ever found, an almost mummy-like fossil with skin and armour intact. It was a bulky, spiky nodosaur that likely wore reddish camouflage.",
+    "funFact": "Its remarkably preserved body even includes stomach contents, with a last meal mostly of ferns.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "calm",
+      "defense": "stealth",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Time Capsule",
+      "tagline": "You kept every detail, including the receipts.",
+      "strengths": [
+        "memory",
+        "calm",
+        "organisation"
+      ],
+      "quirk": "Has kept every email since 2009, filed by colour.",
+      "teamRole": "keeps the records"
+    },
+    "palette": {
+      "body": "#8a4a3a",
+      "belly": "#e8d4bc",
+      "accent": "#3a5a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Borealopelta"
+  },
+  {
+    "id": "gastonia",
+    "name": "Gastonia",
+    "commonName": null,
+    "pronunciation": "gas-TOH-nee-ah",
+    "meaning": "Gaston's (lizard)",
+    "group": "Ankylosauria · Polacanthidae",
+    "bodyType": "ankylosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 139,
+    "myaTo": 126,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1998,
+    "lengthM": 5,
+    "heightM": 1.2,
+    "weightKg": 1900,
+    "speedKmh": null,
+    "description": "Gastonia was a spiky, armoured plant-eater with huge hip spines and thick tail spikes instead of a club. It lived in Utah in the same habitat as Utahraptor.",
+    "funFact": "Its fossils turn up in the same Utah rocks as Utahraptor, which may have hunted it.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "armor",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Spiked Survivor",
+      "tagline": "You have been told off by experts, and you are still here.",
+      "strengths": [
+        "survival skills",
+        "toughness",
+        "nerve"
+      ],
+      "quirk": "Wears a hard hat to the pool.",
+      "teamRole": "survives the rough project"
+    },
+    "palette": {
+      "body": "#7a5a3a",
+      "belly": "#e0d2b0",
+      "accent": "#3a5a7a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gastonia_(dinosaur)"
+  },
+  {
+    "id": "minmi",
+    "name": "Minmi",
+    "commonName": null,
+    "pronunciation": "MIN-mee",
+    "meaning": "from Minmi Crossing, Australia",
+    "group": "Ankylosauria · Minmidae",
+    "bodyType": "ankylosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 120,
+    "myaTo": 112,
+    "regions": [
+      "australia"
+    ],
+    "namedYear": 1980,
+    "lengthM": 3,
+    "heightM": 0.8,
+    "weightKg": 300,
+    "speedKmh": null,
+    "description": "Minmi was a small armoured dinosaur from Australia, with bony plates across its back and extra rods of bone along its spine. It gave scientists their first good look at an Australian ankylosaur.",
+    "funFact": "One specimen preserved stomach contents, with fruit and seeds among its last meal.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "small",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "armor",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Pocket Knight",
+      "tagline": "You are compact, tough and weirdly good at everything.",
+      "strengths": [
+        "adaptability",
+        "compactness",
+        "curiosity"
+      ],
+      "quirk": "Takes the whole toolbox on a walk \"just in case\".",
+      "teamRole": "fixes the odd jobs"
+    },
+    "palette": {
+      "body": "#8a6a3a",
+      "belly": "#ecdebc",
+      "accent": "#3a6a5a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Minmi_(dinosaur)"
+  },
+  {
+    "id": "polacanthus",
+    "name": "Polacanthus",
+    "commonName": null,
+    "pronunciation": "POH-lah-KAN-thus",
+    "meaning": "many spines",
+    "group": "Ankylosauria · Polacanthidae",
+    "bodyType": "ankylosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 130,
+    "myaTo": 125,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1865,
+    "lengthM": 5,
+    "heightM": 1.3,
+    "weightKg": 1500,
+    "speedKmh": null,
+    "description": "Polacanthus bristled with spines along its flanks and carried a fused shield of bone over its hips. It browsed the coastal plains of what is now southern England.",
+    "funFact": "It carried a solid shield of fused bone over its hips.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "stubborn",
+      "defense": "armor",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Hedgehog",
+      "tagline": "You are softer than you look, as long as nobody pokes first.",
+      "strengths": [
+        "protectiveness",
+        "wit",
+        "reliability"
+      ],
+      "quirk": "Cannot be hugged, but it is the thought that counts.",
+      "teamRole": "keeps the peace by being prickly"
+    },
+    "palette": {
+      "body": "#4a6a4a",
+      "belly": "#e2dcba",
+      "accent": "#b0703a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Polacanthus"
+  },
+  {
+    "id": "parasaurolophus",
+    "name": "Parasaurolophus",
+    "commonName": null,
+    "pronunciation": "PAR-ah-SORE-OL-oh-fus",
+    "meaning": "near crested lizard",
+    "group": "Ornithopoda · Hadrosauridae",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 73,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1922,
+    "lengthM": 9.5,
+    "heightM": 2.5,
+    "weightKg": 2500,
+    "speedKmh": null,
+    "description": "Parasaurolophus carried a long, curved, hollow crest that arched back from its head like a trombone. It probably used the tube to make deep, resonant calls across the herd.",
+    "funFact": "Its hollow crest, up to about 1.8 metres long, could have produced low, booming sounds.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "speed",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Trombone Communicator",
+      "tagline": "You say it loud, and somehow it is always in tune.",
+      "strengths": [
+        "communication",
+        "rhythm",
+        "team spirit"
+      ],
+      "quirk": "Is the reason the office has a \"quiet hour\".",
+      "teamRole": "keeps the team in sync"
+    },
+    "palette": {
+      "body": "#3a7a8a",
+      "belly": "#e6e2c4",
+      "accent": "#c4553a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Parasaurolophus"
+  },
+  {
+    "id": "corythosaurus",
+    "name": "Corythosaurus",
+    "commonName": null,
+    "pronunciation": "kor-ITH-oh-SORE-us",
+    "meaning": "Corinthian helmet lizard",
+    "group": "Ornithopoda · Hadrosauridae",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 77,
+    "myaTo": 76,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1914,
+    "lengthM": 9,
+    "heightM": 2.5,
+    "weightKg": 3000,
+    "speedKmh": null,
+    "description": "Corythosaurus had a tall, semicircular crest like a helmet and a broad beak for cropping leaves. Hollow passages in the crest may have amplified its calls.",
+    "funFact": "Its crest grew larger with age, so older animals looked the part.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "herd",
+      "temperament": "calm",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Helmeted Voice of Reason",
+      "tagline": "You wear the hat and you carry the group.",
+      "strengths": [
+        "calm",
+        "respectability",
+        "sociability"
+      ],
+      "quirk": "Brings an actual helmet to the stand-up.",
+      "teamRole": "chairs the discussion"
+    },
+    "palette": {
+      "body": "#6a4a7a",
+      "belly": "#e6dcc8",
+      "accent": "#d09a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Corythosaurus"
+  },
+  {
+    "id": "lambeosaurus",
+    "name": "Lambeosaurus",
+    "commonName": null,
+    "pronunciation": "LAM-bee-oh-SORE-us",
+    "meaning": "Lambe's lizard",
+    "group": "Ornithopoda · Hadrosauridae",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 75,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1923,
+    "lengthM": 7.5,
+    "heightM": 2.3,
+    "weightKg": 3000,
+    "speedKmh": null,
+    "description": "Lambeosaurus sported a hatchet-shaped crest with a pointed spike at the rear. It moved in big social herds, munching on conifers and flowering plants.",
+    "funFact": "Its crest was shaped like a hatchet, with a backward-pointing spike.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "bold",
+      "defense": "speed",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Hatchet Hype Man",
+      "tagline": "You cut straight to the point, and the point is a party.",
+      "strengths": [
+        "energy",
+        "group spirit",
+        "confidence"
+      ],
+      "quirk": "Has called more than one meeting \"a celebration of ideas\".",
+      "teamRole": "gets the room moving"
+    },
+    "palette": {
+      "body": "#8a3a4a",
+      "belly": "#ebd9bc",
+      "accent": "#3a6a7a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Lambeosaurus"
+  },
+  {
+    "id": "edmontosaurus",
+    "name": "Edmontosaurus",
+    "commonName": null,
+    "pronunciation": "ed-MON-toh-SORE-us",
+    "meaning": "Edmonton lizard",
+    "group": "Ornithopoda · Hadrosauridae",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 73,
+    "myaTo": 66,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1917,
+    "lengthM": 10,
+    "heightM": 3,
+    "weightKg": 5600,
+    "speedKmh": null,
+    "description": "Edmontosaurus was a huge, flat-billed hadrosaur that lived in enormous herds across northern plains. It had hundreds of teeth in tightly packed batteries for grinding tough plants.",
+    "funFact": "One specimen's tail bones show a healed bite wound from a T. rex.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "herd",
+      "temperament": "calm",
+      "defense": "size",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Survivor of the Bite",
+      "tagline": "You were bitten once, it healed, and you moved on.",
+      "strengths": [
+        "resilience",
+        "steadiness",
+        "forgiveness"
+      ],
+      "quirk": "Has the best \"that is nothing\" stories in the office.",
+      "teamRole": "keeps morale during rough patches"
+    },
+    "palette": {
+      "body": "#5a7a5a",
+      "belly": "#e4dcb8",
+      "accent": "#b05a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Edmontosaurus"
+  },
+  {
+    "id": "maiasaura",
+    "name": "Maiasaura",
+    "commonName": null,
+    "pronunciation": "MY-ah-SORE-ah",
+    "meaning": "good mother lizard",
+    "group": "Ornithopoda · Hadrosauridae",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 77,
+    "myaTo": 75,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1979,
+    "lengthM": 9,
+    "heightM": 2.5,
+    "weightKg": 4000,
+    "speedKmh": null,
+    "description": "Maiasaura nested in large colonies, tending its nests and feeding hatchlings. Scientists found nests, eggshells and babies together, evidence of a very caring dinosaur.",
+    "funFact": "At Egg Mountain in Montana, nests and young suggest parents tended their hatchlings.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Team Parent",
+      "tagline": "You made sure everyone ate, and that they were wearing a jacket.",
+      "strengths": [
+        "care",
+        "organisation",
+        "patience"
+      ],
+      "quirk": "Has a first aid kit and a snack drawer, and both are well stocked.",
+      "teamRole": "looks after the team"
+    },
+    "palette": {
+      "body": "#8a6a5a",
+      "belly": "#ecdfc6",
+      "accent": "#4a7a5a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Maiasaura"
+  },
+  {
+    "id": "saurolophus",
+    "name": "Saurolophus",
+    "commonName": null,
+    "pronunciation": "sore-OL-oh-fus",
+    "meaning": "lizard crest",
+    "group": "Ornithopoda · Hadrosauridae",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 71,
+    "myaTo": 66,
+    "regions": [
+      "north america",
+      "asia"
+    ],
+    "namedYear": 1912,
+    "lengthM": 8.5,
+    "heightM": 2.5,
+    "weightKg": 3000,
+    "speedKmh": null,
+    "description": "Saurolophus sported a solid, spike-like crest that rose from the top of its head. One species lived in Canada and another far across the world in Mongolia.",
+    "funFact": "It is known from both North America and Asia, which is rare for a hadrosaur.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "stealth",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Intercontinental Consultant",
+      "tagline": "You have a colleague on every continent, and a visa for each.",
+      "strengths": [
+        "networking",
+        "adaptability",
+        "curiosity"
+      ],
+      "quirk": "Has a time zone widget for every time zone, and uses none.",
+      "teamRole": "bridges the offices"
+    },
+    "palette": {
+      "body": "#4a5a8a",
+      "belly": "#e6dfc8",
+      "accent": "#d89a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Saurolophus"
+  },
+  {
+    "id": "shantungosaurus",
+    "name": "Shantungosaurus",
+    "commonName": null,
+    "pronunciation": "shan-TUNG-oh-SORE-us",
+    "meaning": "Shandong lizard",
+    "group": "Ornithopoda · Hadrosauridae",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 78,
+    "myaTo": 72,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1973,
+    "lengthM": 15,
+    "heightM": 4,
+    "weightKg": 13000,
+    "speedKmh": null,
+    "description": "Shantungosaurus is the largest hadrosaur known, a plant-eating giant longer than a city bus. Its massive skeleton towers above visitors in a Chinese museum.",
+    "funFact": "It is the biggest hadrosaur ever found, with a mounted skeleton about 15 metres long.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Gentle Giant of Shandong",
+      "tagline": "You are the largest person in the room and the nicest.",
+      "strengths": [
+        "kindness",
+        "size",
+        "steadiness"
+      ],
+      "quirk": "Moves furniture by simply leaning on it.",
+      "teamRole": "carries the team"
+    },
+    "palette": {
+      "body": "#6a6a8a",
+      "belly": "#e4e0cc",
+      "accent": "#c28a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Shantungosaurus"
+  },
+  {
+    "id": "iguanodon",
+    "name": "Iguanodon",
+    "commonName": null,
+    "pronunciation": "ih-GWAH-no-don",
+    "meaning": "iguana tooth",
+    "group": "Ornithopoda · Iguanodontia",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 126,
+    "myaTo": 122,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1825,
+    "lengthM": 10,
+    "heightM": 3,
+    "weightKg": 3500,
+    "speedKmh": null,
+    "description": "Iguanodon was one of the first dinosaurs ever scientifically described. It had dexterous fingers, a sturdy beak, and a sharp thumb spike used for defence or foraging.",
+    "funFact": "Early scientists mistakenly placed its thumb spike on its nose, like a rhino horn.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "herd",
+      "temperament": "bold",
+      "defense": "weapons",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Thumbs-Up Original",
+      "tagline": "You have been in the history books since before the books were finished.",
+      "strengths": [
+        "dexterity",
+        "reliability",
+        "legacy"
+      ],
+      "quirk": "Gives a thumbs-up that may also be a weapon.",
+      "teamRole": "sets the standard"
+    },
+    "palette": {
+      "body": "#7a5a3a",
+      "belly": "#ece0bc",
+      "accent": "#3a6a5a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Iguanodon"
+  },
+  {
+    "id": "ouranosaurus",
+    "name": "Ouranosaurus",
+    "commonName": null,
+    "pronunciation": "oo-RAN-oh-SORE-us",
+    "meaning": "brave monitor lizard",
+    "group": "Ornithopoda · Iguanodontia",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 125,
+    "myaTo": 113,
+    "regions": [
+      "africa"
+    ],
+    "namedYear": 1976,
+    "lengthM": 7.5,
+    "heightM": 2.5,
+    "weightKg": 2200,
+    "speedKmh": null,
+    "description": "Ouranosaurus carried tall spines along its back that held up a sail or a muscular hump. It lived in the hot, humid river valleys of what is now Niger.",
+    "funFact": "Tall bony spines on its back supported either a sail or a fatty hump.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "calm",
+      "defense": "stealth",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Heat Regulator",
+      "tagline": "You keep the office comfortable by existing.",
+      "strengths": [
+        "temperature control",
+        "calm",
+        "patience"
+      ],
+      "quirk": "Is the reason the thermostat has a sign on it.",
+      "teamRole": "keeps the mood stable"
+    },
+    "palette": {
+      "body": "#a8683a",
+      "belly": "#efdfba",
+      "accent": "#3a5a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ouranosaurus"
+  },
+  {
+    "id": "muttaburrasaurus",
+    "name": "Muttaburrasaurus",
+    "commonName": null,
+    "pronunciation": "MUT-ah-bur-ah-SORE-us",
+    "meaning": "Muttaburra lizard",
+    "group": "Ornithopoda · Iguanodontia",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 105,
+    "myaTo": 97,
+    "regions": [
+      "australia"
+    ],
+    "namedYear": 1981,
+    "lengthM": 8,
+    "heightM": 2.2,
+    "weightKg": 2800,
+    "speedKmh": null,
+    "description": "Muttaburrasaurus was a sizeable ornithopod from Australia, with a bump on its snout that may have amplified its calls. It had strong, shearing teeth for tough plants.",
+    "funFact": "A Queensland grazier found its first bones in 1963 near the town of Muttaburra.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "size",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Outback Local",
+      "tagline": "You know where the water is, and you will not tell tourists.",
+      "strengths": [
+        "resourcefulness",
+        "good humour",
+        "endurance"
+      ],
+      "quirk": "Replies to every question with \"no worries\".",
+      "teamRole": "keeps things easygoing"
+    },
+    "palette": {
+      "body": "#a8723a",
+      "belly": "#efdfba",
+      "accent": "#4a6a4a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Muttaburrasaurus"
+  },
+  {
+    "id": "tenontosaurus",
+    "name": "Tenontosaurus",
+    "commonName": null,
+    "pronunciation": "teh-NON-toe-SORE-us",
+    "meaning": "sinew lizard",
+    "group": "Ornithopoda · Iguanodontia",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 115,
+    "myaTo": 108,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1970,
+    "lengthM": 6,
+    "heightM": 1.5,
+    "weightKg": 1000,
+    "speedKmh": null,
+    "description": "Tenontosaurus was a long-tailed plant-eater with a big, stiff tail for balance. It was common in its ecosystem and a frequent meal for Deinonychus.",
+    "funFact": "Fossils of Deinonychus are found among Tenontosaurus bones, suggesting it was a regular prey animal.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Reliable Snack",
+      "tagline": "You are loved by all, mainly for being plentiful and kind.",
+      "strengths": [
+        "generosity",
+        "speed",
+        "endurance"
+      ],
+      "quirk": "Always the first one asked to \"take one for the team\".",
+      "teamRole": "supports the stars"
+    },
+    "palette": {
+      "body": "#5a8a6a",
+      "belly": "#e8e4c2",
+      "accent": "#b8553a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tenontosaurus"
+  },
+  {
+    "id": "camptosaurus",
+    "name": "Camptosaurus",
+    "commonName": null,
+    "pronunciation": "KAMP-toe-SORE-us",
+    "meaning": "flexible lizard",
+    "group": "Ornithopoda · Iguanodontia",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 155,
+    "myaTo": 150,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1885,
+    "lengthM": 6,
+    "heightM": 1.5,
+    "weightKg": 800,
+    "speedKmh": null,
+    "description": "Camptosaurus was a sturdy mid-sized ornithopod that could walk on two or four legs as it browsed. It was an early cousin of the great duck-billed herds that followed.",
+    "funFact": "Its original name, Camptonotus, was already taken by a cricket, so it was renamed.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "calm",
+      "defense": "speed",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Flexible Friend",
+      "tagline": "You adapt your stance to whatever the day needs.",
+      "strengths": [
+        "flexibility",
+        "calm",
+        "teamwork"
+      ],
+      "quirk": "Has a standing desk, a sitting desk and a floor desk.",
+      "teamRole": "adapts to every plan"
+    },
+    "palette": {
+      "body": "#8a7a4a",
+      "belly": "#ece2c0",
+      "accent": "#4a5a7a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Camptosaurus"
+  },
+  {
+    "id": "hypsilophodon",
+    "name": "Hypsilophodon",
+    "commonName": null,
+    "pronunciation": "HIP-sih-LOH-foh-don",
+    "meaning": "high-ridge tooth",
+    "group": "Ornithopoda · Hypsilophodontidae",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 126,
+    "myaTo": 125,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1869,
+    "lengthM": 1.8,
+    "heightM": 0.6,
+    "weightKg": 20,
+    "speedKmh": null,
+    "description": "Hypsilophodon was a nimble, small plant-eater that relied on quick legs to dash away from predators. It lived on the sunny shrublands of what is now the Isle of Wight.",
+    "funFact": "It was once pictured living in trees, but its feet could not grasp branches.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Quick Exit",
+      "tagline": "You always know the nearest escape route.",
+      "strengths": [
+        "speed",
+        "alertness",
+        "sharp senses"
+      ],
+      "quirk": "Reads the fire exit sign at every restaurant.",
+      "teamRole": "spots trouble early"
+    },
+    "palette": {
+      "body": "#6a8a4a",
+      "belly": "#eee6c0",
+      "accent": "#c8643a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hypsilophodon"
+  },
+  {
+    "id": "dryosaurus",
+    "name": "Dryosaurus",
+    "commonName": null,
+    "pronunciation": "DRY-oh-SORE-us",
+    "meaning": "oak lizard",
+    "group": "Ornithopoda · Dryosauridae",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 156,
+    "myaTo": 147,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1894,
+    "lengthM": 3,
+    "heightM": 1,
+    "weightKg": 90,
+    "speedKmh": null,
+    "description": "Dryosaurus was a long-legged, light-bodied plant-eater that sprinted across Jurassic floodplains. Its big eyes and quick reflexes helped it stay out of trouble.",
+    "funFact": "Its cheek teeth had lobed edges, a bit like oak leaves, hence its name.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Fast Mover",
+      "tagline": "You are already on the next task, and the one after.",
+      "strengths": [
+        "speed",
+        "alertness",
+        "lightness"
+      ],
+      "quirk": "Finishes the sentence, the project and your lunch.",
+      "teamRole": "turns things around quickly"
+    },
+    "palette": {
+      "body": "#a86a4a",
+      "belly": "#efe0c0",
+      "accent": "#3a6a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dryosaurus"
+  },
+  {
+    "id": "heterodontosaurus",
+    "name": "Heterodontosaurus",
+    "commonName": null,
+    "pronunciation": "HET-er-oh-DON-toe-SORE-us",
+    "meaning": "different-toothed lizard",
+    "group": "Ornithischia · Heterodontosauridae",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "jurassic",
+    "epoch": "Early Jurassic",
+    "myaFrom": 200,
+    "myaTo": 190,
+    "regions": [
+      "africa"
+    ],
+    "namedYear": 1962,
+    "lengthM": 1.2,
+    "heightM": 0.4,
+    "weightKg": 5,
+    "speedKmh": null,
+    "description": "This tiny, long-legged dinosaur had three different tooth types, including a pair of small tusks. It probably ate plants and the odd small animal, and could sprint to safety.",
+    "funFact": "It had boar-like tusks plus three different kinds of teeth in the same mouth.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "tiny",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Swiss Army Dino",
+      "tagline": "You have a tool for every situation and a tooth for most.",
+      "strengths": [
+        "versatility",
+        "speed",
+        "resourcefulness"
+      ],
+      "quirk": "Has been described as \"oddly prepared\".",
+      "teamRole": "fills any gap on the team"
+    },
+    "palette": {
+      "body": "#a8503a",
+      "belly": "#f0e0c0",
+      "accent": "#3a4a5a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Heterodontosaurus"
+  },
+  {
+    "id": "leaellynasaura",
+    "name": "Leaellynasaura",
+    "commonName": null,
+    "pronunciation": "lee-ELL-in-ah-SORE-ah",
+    "meaning": "Leaellyn's lizard",
+    "group": "Ornithopoda · Hypsilophodontidae",
+    "bodyType": "hadrosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 118,
+    "myaTo": 110,
+    "regions": [
+      "australia"
+    ],
+    "namedYear": 1989,
+    "lengthM": 1.8,
+    "heightM": 0.5,
+    "weightKg": 10,
+    "speedKmh": null,
+    "description": "Leaellynasaura was a small, agile plant-eater from a polar forest in southern Australia, where winter meant weeks of darkness. Its big eyes and optic lobes suggest it saw well in low light.",
+    "funFact": "It was named after Leaellyn Rich, the young daughter of the paleontologists who found it.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "runner",
+      "size": "small",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "stealth",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Polar Night Dreamer",
+      "tagline": "You thrive in the dark months and bring lanterns.",
+      "strengths": [
+        "night vision",
+        "imagination",
+        "endurance"
+      ],
+      "quirk": "Works best from October to March.",
+      "teamRole": "does the quiet deep work"
+    },
+    "palette": {
+      "body": "#3a5a7a",
+      "belly": "#dde4e6",
+      "accent": "#d87a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Leaellynasaura"
+  },
+  {
+    "id": "pachycephalosaurus",
+    "name": "Pachycephalosaurus",
+    "commonName": null,
+    "pronunciation": "PAK-ee-SEF-ah-low-SORE-us",
+    "meaning": "thick-headed lizard",
+    "group": "Ornithischia · Pachycephalosauridae",
+    "bodyType": "pachycephalosaur",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 68,
+    "myaTo": 66,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1943,
+    "lengthM": 4.5,
+    "heightM": 1.5,
+    "weightKg": 450,
+    "speedKmh": null,
+    "description": "Pachycephalosaurus wore a dome of solid bone on its head, studded with small knobs and spikes. It may have butted heads or flank-battered rivals in displays of dominance.",
+    "funFact": "Its skull dome was more than 20 centimetres thick.",
+    "isPopular": true,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "stubborn",
+      "defense": "weapons",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Hardhead",
+      "tagline": "You have a thick skull and an even thicker commitment.",
+      "strengths": [
+        "perseverance",
+        "stubbornness",
+        "decisiveness"
+      ],
+      "quirk": "Has bumped into the same glass door three times this week.",
+      "teamRole": "breaks through the deadlock"
+    },
+    "palette": {
+      "body": "#7a3a3a",
+      "belly": "#e8d8bc",
+      "accent": "#4a5a4a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Pachycephalosaurus"
+  },
+  {
+    "id": "stegoceras",
+    "name": "Stegoceras",
+    "commonName": null,
+    "pronunciation": "steh-GOSS-er-us",
+    "meaning": "roof horn",
+    "group": "Ornithischia · Pachycephalosauridae",
+    "bodyType": "pachycephalosaur",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 77,
+    "myaTo": 74,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1902,
+    "lengthM": 2.2,
+    "heightM": 0.8,
+    "weightKg": 20,
+    "speedKmh": null,
+    "description": "Stegoceras was a goat-sized pachycephalosaur with a smooth, rounded dome. It was one of the first of its kind to be discovered and studied.",
+    "funFact": "Its dome thickened as it grew, so older animals had the biggest heads.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "herd",
+      "temperament": "bold",
+      "defense": "armor",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Bold Bumper",
+      "tagline": "You approach conflict head-on, and you wear a helmet.",
+      "strengths": [
+        "boldness",
+        "energy",
+        "teamwork"
+      ],
+      "quirk": "Greets everyone with a friendly headbutt.",
+      "teamRole": "starts the hard conversation"
+    },
+    "palette": {
+      "body": "#5a5a8a",
+      "belly": "#e6e0cc",
+      "accent": "#d8923a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Stegoceras"
+  },
+  {
+    "id": "prenocephale",
+    "name": "Prenocephale",
+    "commonName": null,
+    "pronunciation": "PREN-oh-SEF-ah-lee",
+    "meaning": "sloping head",
+    "group": "Ornithischia · Pachycephalosauridae",
+    "bodyType": "pachycephalosaur",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 70,
+    "myaTo": 68,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1974,
+    "lengthM": 2.4,
+    "heightM": null,
+    "weightKg": 40,
+    "speedKmh": null,
+    "description": "Prenocephale had a high, smooth dome ringed by a row of little knobs, giving it a crowned look. It scampered through the semi-arid scrub of ancient Mongolia.",
+    "funFact": "Its dome was ringed with small bony knobs.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Knobby Crown",
+      "tagline": "You are royalty in a very casual way.",
+      "strengths": [
+        "poise",
+        "speed",
+        "style"
+      ],
+      "quirk": "Always asks whether a hat is \"appropriate dress\".",
+      "teamRole": "looks the part"
+    },
+    "palette": {
+      "body": "#6a4a6a",
+      "belly": "#e8dcc6",
+      "accent": "#e0a43a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Prenocephale"
+  },
+  {
+    "id": "homalocephale",
+    "name": "Homalocephale",
+    "commonName": null,
+    "pronunciation": "HOM-ah-loh-SEF-ah-lee",
+    "meaning": "even head",
+    "group": "Ornithischia · Pachycephalosauridae",
+    "bodyType": "pachycephalosaur",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 70,
+    "myaTo": 68,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1974,
+    "lengthM": 1.8,
+    "heightM": null,
+    "weightKg": 40,
+    "speedKmh": null,
+    "description": "Homalocephale had a thick, flat-topped skull rather than a dome. It was a small runner that probably used its head to shove rivals in its dry Mongolian home.",
+    "funFact": "The \"even head\" has a thick but flat-topped skull rather than a dome.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "pair",
+      "temperament": "stubborn",
+      "defense": "armor",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Level-Headed One",
+      "tagline": "You keep your head flat, even when everything else is going up.",
+      "strengths": [
+        "composure",
+        "fairness",
+        "persistence"
+      ],
+      "quirk": "Lines up the pens on every desk they pass.",
+      "teamRole": "keeps things even"
+    },
+    "palette": {
+      "body": "#8a6a4a",
+      "belly": "#ece0c0",
+      "accent": "#3a5a7a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Homalocephale"
+  },
+  {
+    "id": "sphaerotholus",
+    "name": "Sphaerotholus",
+    "commonName": null,
+    "pronunciation": "SFEER-oh-THOH-lus",
+    "meaning": "spherical dome",
+    "group": "Ornithischia · Pachycephalosauridae",
+    "bodyType": "pachycephalosaur",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 67,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 2002,
+    "lengthM": 2,
+    "heightM": null,
+    "weightKg": 40,
+    "speedKmh": null,
+    "description": "Sphaerotholus had a round, bumpy dome and lived in the forests and floodplains of western North America. Its species show how widespread and varied the dome-headed dinosaurs were.",
+    "funFact": "Its species are known from New Mexico up to Alberta, covering much of western North America.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "herd",
+      "temperament": "gentle",
+      "defense": "stealth",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Round Thinker",
+      "tagline": "You see problems from all angles, usually at the same time.",
+      "strengths": [
+        "perspective",
+        "patience",
+        "balance"
+      ],
+      "quirk": "Thinks of everything as a circle, including the meeting agenda.",
+      "teamRole": "rounds out the team"
+    },
+    "palette": {
+      "body": "#4a7a7a",
+      "belly": "#e4e2c8",
+      "accent": "#c25a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Sphaerotholus"
+  },
+  {
+    "id": "wannanosaurus",
+    "name": "Wannanosaurus",
+    "commonName": null,
+    "pronunciation": "WAH-nah-no-SORE-us",
+    "meaning": "Wannan lizard",
+    "group": "Ornithischia · Pachycephalosauridae",
+    "bodyType": "pachycephalosaur",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 71,
+    "myaTo": 69,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1977,
+    "lengthM": 0.6,
+    "heightM": null,
+    "weightKg": 3,
+    "speedKmh": null,
+    "description": "One of the smallest known pachycephalosaurs, Wannanosaurus was a tiny, flat-headed plant-eater from eastern China. It is known from a very small adult, only around 60 centimetres long.",
+    "funFact": "At around 60 centimetres long, it is among the smallest dinosaurs known from an adult skeleton.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "tiny",
+      "social": "solo",
+      "temperament": "gentle",
+      "defense": "stealth",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Tiny Titan of Anhui",
+      "tagline": "You are the smallest in the room and the loudest in spirit.",
+      "strengths": [
+        "courage",
+        "agility",
+        "heart"
+      ],
+      "quirk": "Will absolutely start a staring contest with a horse.",
+      "teamRole": "brings underdog energy"
+    },
+    "palette": {
+      "body": "#6a6a3a",
+      "belly": "#eee6c4",
+      "accent": "#b8523a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Wannanosaurus"
+  },
+  {
+    "id": "spinosaurus",
+    "name": "Spinosaurus",
+    "commonName": null,
+    "pronunciation": "SPY-no-SORE-us",
+    "meaning": "spine lizard",
+    "group": "Theropoda · Spinosauridae",
+    "bodyType": "spinosaur",
+    "isDinosaur": true,
+    "diet": "piscivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 99,
+    "myaTo": 93,
+    "regions": [
+      "africa"
+    ],
+    "namedYear": 1915,
+    "lengthM": 14,
+    "heightM": 4,
+    "weightKg": 7400,
+    "speedKmh": null,
+    "description": "Spinosaurus was a giant fish-eater with a tall sail on its back, a crocodile-like snout and paddle-shaped feet. It spent much of its time in and around the rivers of North Africa.",
+    "funFact": "The original fossils were destroyed when Munich was bombed in 1944.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "swimmer",
+      "size": "large",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "size",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Riverside Showman",
+      "tagline": "You make a splash wherever you go, usually on purpose.",
+      "strengths": [
+        "showmanship",
+        "adaptability",
+        "big presence"
+      ],
+      "quirk": "Gets sunburnt on the sail and refuses to discuss it.",
+      "teamRole": "fronts the big presentation"
+    },
+    "palette": {
+      "body": "#3a6a7a",
+      "belly": "#e4dcb8",
+      "accent": "#d0803a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Spinosaurus"
+  },
+  {
+    "id": "baryonyx",
+    "name": "Baryonyx",
+    "commonName": null,
+    "pronunciation": "BAR-ee-ON-iks",
+    "meaning": "heavy claw",
+    "group": "Theropoda · Spinosauridae",
+    "bodyType": "spinosaur",
+    "isDinosaur": true,
+    "diet": "piscivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 130,
+    "myaTo": 125,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1986,
+    "lengthM": 9,
+    "heightM": 2.5,
+    "weightKg": 1500,
+    "speedKmh": null,
+    "description": "Baryonyx had a long, narrow, crocodile-like snout and a huge hooked claw on each thumb. It stalked the swamps of ancient England, snagging fish with its claws and jaws.",
+    "funFact": "The first skeleton had fish scales in its belly.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "swimmer",
+      "size": "large",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "weapons",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Patient Angler",
+      "tagline": "You can wait all morning and you do it with style.",
+      "strengths": [
+        "patience",
+        "focus",
+        "precision"
+      ],
+      "quirk": "Has been staring at the same stream \"for inspiration\".",
+      "teamRole": "waits for the right moment"
+    },
+    "palette": {
+      "body": "#5a7a4a",
+      "belly": "#e6e0b8",
+      "accent": "#b04a2f"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Baryonyx"
+  },
+  {
+    "id": "suchomimus",
+    "name": "Suchomimus",
+    "commonName": null,
+    "pronunciation": "SOO-koh-MY-mus",
+    "meaning": "crocodile mimic",
+    "group": "Theropoda · Spinosauridae",
+    "bodyType": "spinosaur",
+    "isDinosaur": true,
+    "diet": "piscivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 115,
+    "myaTo": 110,
+    "regions": [
+      "africa"
+    ],
+    "namedYear": 1998,
+    "lengthM": 10,
+    "heightM": 3,
+    "weightKg": 3000,
+    "speedKmh": null,
+    "description": "Suchomimus had a long, crocodile-like snout, a low sail on its back and powerful, clawed arms. It lived beside lakes and rivers in what is now Niger.",
+    "funFact": "It shared its Niger waterways with the giant crocodile relative Sarcosuchus, nicknamed \"SuperCroc\".",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "swimmer",
+      "size": "large",
+      "social": "pair",
+      "temperament": "calm",
+      "defense": "weapons",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The River Mimic",
+      "tagline": "You are everyone's favourite lookalike, and your own person too.",
+      "strengths": [
+        "adaptability",
+        "calm",
+        "imitation"
+      ],
+      "quirk": "Does a really good impression of the manager.",
+      "teamRole": "blends in and observes"
+    },
+    "palette": {
+      "body": "#7a5a3a",
+      "belly": "#ecdfb8",
+      "accent": "#3a6a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Suchomimus"
+  },
+  {
+    "id": "irritator",
+    "name": "Irritator",
+    "commonName": null,
+    "pronunciation": "IR-ih-TAY-tor",
+    "meaning": "the irritator",
+    "group": "Theropoda · Spinosauridae",
+    "bodyType": "spinosaur",
+    "isDinosaur": true,
+    "diet": "piscivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 113,
+    "myaTo": 110,
+    "regions": [
+      "south america"
+    ],
+    "namedYear": 1996,
+    "lengthM": 7,
+    "heightM": null,
+    "weightKg": 1000,
+    "speedKmh": null,
+    "description": "Irritator had a narrow snout with a low crest and conical teeth ideal for snatching fish. It lived by the lagoons of Early Cretaceous Brazil.",
+    "funFact": "It was named for the researchers' annoyance that its skull had been doctored with plaster to look longer.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "swimmer",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "stubborn",
+      "defense": "weapons",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Pet Peeve",
+      "tagline": "You are not irritated, you are simply very particular.",
+      "strengths": [
+        "standards",
+        "precision",
+        "focus"
+      ],
+      "quirk": "Rearranges any shelf you tidy.",
+      "teamRole": "catches the errors"
+    },
+    "palette": {
+      "body": "#a8603a",
+      "belly": "#f0dfbc",
+      "accent": "#3a5a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Irritator"
+  },
+  {
+    "id": "ichthyovenator",
+    "name": "Ichthyovenator",
+    "commonName": null,
+    "pronunciation": "ICK-thee-oh-ven-AY-tor",
+    "meaning": "fish hunter",
+    "group": "Theropoda · Spinosauridae",
+    "bodyType": "spinosaur",
+    "isDinosaur": true,
+    "diet": "piscivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 120,
+    "myaTo": 113,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 2012,
+    "lengthM": 9.5,
+    "heightM": null,
+    "weightKg": 2400,
+    "speedKmh": null,
+    "description": "Ichthyovenator was a Southeast Asian spinosaur with a back sail that was split into two parts, one over the shoulders and one over the hips. It hunted the rivers of ancient Laos.",
+    "funFact": "Its back sail was divided in two, a pattern not known in any other spinosaur.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "swimmer",
+      "size": "large",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "size",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Double Sail",
+      "tagline": "You do everything in two halves and nail both.",
+      "strengths": [
+        "balance",
+        "boldness",
+        "flair"
+      ],
+      "quirk": "Wears two hats at once and calls it \"range\".",
+      "teamRole": "covers two roles at once"
+    },
+    "palette": {
+      "body": "#5a3a6a",
+      "belly": "#e6dcc4",
+      "accent": "#d8a03a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ichthyovenator"
+  },
+  {
+    "id": "gallimimus",
+    "name": "Gallimimus",
+    "commonName": null,
+    "pronunciation": "GAL-ih-MY-mus",
+    "meaning": "chicken mimic",
+    "group": "Theropoda · Ornithomimidae",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 70,
+    "myaTo": 68,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1972,
+    "lengthM": 6,
+    "heightM": 1.9,
+    "weightKg": 440,
+    "speedKmh": 50,
+    "description": "Gallimimus was a long-legged, beaked runner with large eyes on the sides of its head. It probably ran in flocks to escape predators on the open plains of Mongolia.",
+    "funFact": "A herd of Gallimimus sprinting across a valley is one of Jurassic Park's most famous scenes.",
+    "isPopular": true,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Marathon Sprinter",
+      "tagline": "You run on enthusiasm, and a surprising amount of coffee.",
+      "strengths": [
+        "speed",
+        "stamina",
+        "team spirit"
+      ],
+      "quirk": "Has an app to track every one of their steps.",
+      "teamRole": "keeps the project moving"
+    },
+    "palette": {
+      "body": "#8a5a3a",
+      "belly": "#eee0bc",
+      "accent": "#3a5a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gallimimus"
+  },
+  {
+    "id": "ornithomimus",
+    "name": "Ornithomimus",
+    "commonName": null,
+    "pronunciation": "OR-nith-oh-MY-mus",
+    "meaning": "bird mimic",
+    "group": "Theropoda · Ornithomimidae",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 66,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1890,
+    "lengthM": 3.5,
+    "heightM": 1.4,
+    "weightKg": 170,
+    "speedKmh": null,
+    "description": "Ornithomimus was a slender, toothless, ostrich-like runner with a long neck. It spent its days picking plants, seeds and small animals off the ground.",
+    "funFact": "Fossils from Alberta preserved feathers on its arms and body.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Feathered Mimic",
+      "tagline": "You blend in, you borrow ideas, and you improve them.",
+      "strengths": [
+        "adaptability",
+        "speed",
+        "observation"
+      ],
+      "quirk": "Can do impressions of everyone but is better at original material.",
+      "teamRole": "copies the best practice"
+    },
+    "palette": {
+      "body": "#6a5a3a",
+      "belly": "#ebdfc0",
+      "accent": "#c8503a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ornithomimus"
+  },
+  {
+    "id": "struthiomimus",
+    "name": "Struthiomimus",
+    "commonName": null,
+    "pronunciation": "STROO-thee-oh-MY-mus",
+    "meaning": "ostrich mimic",
+    "group": "Theropoda · Ornithomimidae",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 76,
+    "myaTo": 75,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1917,
+    "lengthM": 4.3,
+    "heightM": 1.5,
+    "weightKg": 150,
+    "speedKmh": 50,
+    "description": "Struthiomimus was a long-necked, slender runner with a toothless beak and long, grasping fingers. It was quick enough to leave most predators in the dust.",
+    "funFact": "Its long, three-fingered hands could hook branches toward its beak.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "medium",
+      "social": "herd",
+      "temperament": "bold",
+      "defense": "speed",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Fast Talker",
+      "tagline": "You can sprint through a pitch and not drop a single word.",
+      "strengths": [
+        "speed",
+        "wit",
+        "adaptability"
+      ],
+      "quirk": "Eats lunch while walking, talking and answering email.",
+      "teamRole": "pitches the idea"
+    },
+    "palette": {
+      "body": "#3a6a5a",
+      "belly": "#e6e2c4",
+      "accent": "#d6803a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Struthiomimus"
+  },
+  {
+    "id": "deinocheirus",
+    "name": "Deinocheirus",
+    "commonName": null,
+    "pronunciation": "DIE-no-KY-rus",
+    "meaning": "terrible hand",
+    "group": "Theropoda · Ornithomimosauria",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 70,
+    "myaTo": 68,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1970,
+    "lengthM": 11,
+    "heightM": 3.5,
+    "weightKg": 6400,
+    "speedKmh": null,
+    "description": "Deinocheirus was a gigantic, sail-backed, long-armed, duck-billed omnivore, an ostrich mimic that the world only understood when complete skeletons turned up. It shuffled along Mongolian rivers, snacking on plants and fish.",
+    "funFact": "For almost fifty years scientists knew only its enormous 2.4-metre arms.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "solo",
+      "temperament": "gentle",
+      "defense": "stealth",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Mystery Guest",
+      "tagline": "People spent years wondering about you, and you turned out lovely.",
+      "strengths": [
+        "mystery",
+        "gentleness",
+        "surprise"
+      ],
+      "quirk": "Reveals a new talent at every annual party.",
+      "teamRole": "delivers the plot twist"
+    },
+    "palette": {
+      "body": "#7a5a4a",
+      "belly": "#e8dcc4",
+      "accent": "#3a6a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Deinocheirus"
+  },
+  {
+    "id": "therizinosaurus",
+    "name": "Therizinosaurus",
+    "commonName": null,
+    "pronunciation": "THER-ih-ZEEN-oh-SORE-us",
+    "meaning": "scythe lizard",
+    "group": "Theropoda · Therizinosauridae",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 70,
+    "myaTo": 68,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1954,
+    "lengthM": 10,
+    "heightM": 4,
+    "weightKg": 5000,
+    "speedKmh": null,
+    "description": "Therizinosaurus had the longest claws of any known animal, great scythes on its hands, and a big, pot-bellied body. It used them to hook branches toward a toothless beak, not to hunt.",
+    "funFact": "Its hand claws reached about half a metre, the longest of any known animal.",
+    "isPopular": true,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "large",
+      "social": "solo",
+      "temperament": "gentle",
+      "defense": "weapons",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Gentle Scythe",
+      "tagline": "You look terrifying, you are the sweetest person here.",
+      "strengths": [
+        "kindness",
+        "reach",
+        "presence"
+      ],
+      "quirk": "Has to open the cookie jar very, very carefully.",
+      "teamRole": "handles delicate tasks with big tools"
+    },
+    "palette": {
+      "body": "#6a5a7a",
+      "belly": "#e6dcc8",
+      "accent": "#c8703a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Therizinosaurus"
+  },
+  {
+    "id": "oviraptor",
+    "name": "Oviraptor",
+    "commonName": null,
+    "pronunciation": "OH-vih-RAP-tor",
+    "meaning": "egg thief",
+    "group": "Theropoda · Oviraptoridae",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 75,
+    "myaTo": 71,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1924,
+    "lengthM": 1.6,
+    "heightM": 0.9,
+    "weightKg": 35,
+    "speedKmh": null,
+    "description": "Oviraptor was a beaked, crested, long-legged dinosaur of ancient desert dunes. It got a bad name from a misunderstanding, but it was later found brooding its own eggs.",
+    "funFact": "It was named \"egg thief\" after being found near a nest, but the eggs were its own.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "small",
+      "social": "pair",
+      "temperament": "gentle",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Misunderstood Parent",
+      "tagline": "You were blamed for something you did not do, and you still make breakfast.",
+      "strengths": [
+        "loyalty",
+        "care",
+        "resilience"
+      ],
+      "quirk": "Has a nest-shaped cushion at their desk.",
+      "teamRole": "clears the record"
+    },
+    "palette": {
+      "body": "#3a7a6a",
+      "belly": "#e8e4c4",
+      "accent": "#c8553a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Oviraptor"
+  },
+  {
+    "id": "citipati",
+    "name": "Citipati",
+    "commonName": null,
+    "pronunciation": "SIT-ih-PAH-tee",
+    "meaning": "funeral pyre lord",
+    "group": "Theropoda · Oviraptoridae",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 75,
+    "myaTo": 71,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 2001,
+    "lengthM": 2.9,
+    "heightM": 1,
+    "weightKg": 90,
+    "speedKmh": null,
+    "description": "Citipati was a tall, crested, beaked dinosaur with a parrot-like face. Several specimens were found sitting on their nests in a brooding pose, with arms wrapped around the eggs.",
+    "funFact": "One fossil sits on its nest with arms spread, like a modern brooding bird.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "low",
+      "mobility": "runner",
+      "size": "small",
+      "social": "pair",
+      "temperament": "calm",
+      "defense": "stealth",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Dedicated Sitter",
+      "tagline": "You stay with it until it is done.",
+      "strengths": [
+        "dedication",
+        "patience",
+        "focus"
+      ],
+      "quirk": "Will not leave the project, even to get lunch.",
+      "teamRole": "sees it through to the end"
+    },
+    "palette": {
+      "body": "#a84a5a",
+      "belly": "#eee2c6",
+      "accent": "#3a5a7a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Citipati"
+  },
+  {
+    "id": "gigantoraptor",
+    "name": "Gigantoraptor",
+    "commonName": null,
+    "pronunciation": "jy-GAN-toe-RAP-tor",
+    "meaning": "giant thief",
+    "group": "Theropoda · Oviraptorosauria",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 95,
+    "myaTo": 80,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 2007,
+    "lengthM": 8,
+    "heightM": 3.5,
+    "weightKg": 1400,
+    "speedKmh": null,
+    "description": "Gigantoraptor was a lanky, beaked giant, many times bigger than any other oviraptorosaur. It stood on long legs with a stiff tail and a taste for plants, eggs and the occasional morsel.",
+    "funFact": "It was far larger than any other known oviraptorosaur, many times heavier than its relatives.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "speed",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Outsized Runner",
+      "tagline": "You grew way past the family and kept running.",
+      "strengths": [
+        "ambition",
+        "stride",
+        "confidence"
+      ],
+      "quirk": "Is always the tallest at the family reunion and at the conference.",
+      "teamRole": "sets the bigger goal"
+    },
+    "palette": {
+      "body": "#5a8a6a",
+      "belly": "#e8e4bc",
+      "accent": "#b8503a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gigantoraptor"
+  },
+  {
+    "id": "caudipteryx",
+    "name": "Caudipteryx",
+    "commonName": null,
+    "pronunciation": "kaw-DIP-ter-ix",
+    "meaning": "tail feather",
+    "group": "Theropoda · Oviraptorosauria",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 125,
+    "myaTo": 122,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1998,
+    "lengthM": 0.9,
+    "heightM": 0.5,
+    "weightKg": 5,
+    "speedKmh": null,
+    "description": "Caudipteryx was a turkey-sized runner with a fan of feathers at the end of its short tail and tiny teeth at the front of its beak. It stayed close to lakeshores.",
+    "funFact": "Fossils preserve stomach stones, which it swallowed to help grind its food, like modern birds.",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "tiny",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Fan Favourite",
+      "tagline": "You flourish, and the whole room turns to look.",
+      "strengths": [
+        "flair",
+        "speed",
+        "crowd appeal"
+      ],
+      "quirk": "Has been asked to stop dancing in the corridor.",
+      "teamRole": "adds sparkle"
+    },
+    "palette": {
+      "body": "#3a5a8a",
+      "belly": "#e4e0cc",
+      "accent": "#d86a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Caudipteryx"
+  },
+  {
+    "id": "beipiaosaurus",
+    "name": "Beipiaosaurus",
+    "commonName": null,
+    "pronunciation": "BAY-pyow-SORE-us",
+    "meaning": "Beipiao lizard",
+    "group": "Theropoda · Therizinosauria",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 125,
+    "myaTo": 122,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1999,
+    "lengthM": 2.2,
+    "heightM": 1,
+    "weightKg": 80,
+    "speedKmh": null,
+    "description": "Beipiaosaurus was one of the earliest therizinosaurs, a fuzzy, long-clawed plant-eater from the forests of ancient Liaoning. It has the same odd body plan as its much larger cousins.",
+    "funFact": "It was preserved with a coat of fuzzy filaments, in the oldest group of therizinosaurs known.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "small",
+      "social": "solo",
+      "temperament": "gentle",
+      "defense": "stealth",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Fuzzy Founder",
+      "tagline": "You started a movement and it has your fingerprints on it.",
+      "strengths": [
+        "kindness",
+        "originality",
+        "calm"
+      ],
+      "quirk": "Is wearing a knitted jumper in the middle of summer.",
+      "teamRole": "launches the new approach"
+    },
+    "palette": {
+      "body": "#a87a4a",
+      "belly": "#efe2c2",
+      "accent": "#4a5a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Beipiaosaurus"
+  },
+  {
+    "id": "nothronychus",
+    "name": "Nothronychus",
+    "commonName": null,
+    "pronunciation": "no-throh-NIE-kus",
+    "meaning": "sloth claw",
+    "group": "Theropoda · Therizinosauridae",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "herbivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 92,
+    "myaTo": 90,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 2001,
+    "lengthM": 5,
+    "heightM": 2,
+    "weightKg": 1000,
+    "speedKmh": null,
+    "description": "Nothronychus was a pot-bellied, long-clawed, plant-eating theropod from the American Southwest. With long arms and a toothless beak, it browsed leaves in a sluggish, sloth-like manner.",
+    "funFact": "It was the first therizinosaurid found in North America.",
+    "isPopular": false,
+    "traits": {
+      "diet": "herbivore",
+      "energy": "low",
+      "mobility": "walker",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "calm",
+      "defense": "armor",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Slow Sophisticate",
+      "tagline": "You do not rush, and you are never late.",
+      "strengths": [
+        "calm",
+        "poise",
+        "patience"
+      ],
+      "quirk": "Takes a 40-minute lunch and returns with a plan.",
+      "teamRole": "sets the pace"
+    },
+    "palette": {
+      "body": "#7a8a5a",
+      "belly": "#ece4c0",
+      "accent": "#8a4a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Nothronychus"
+  },
+  {
+    "id": "mononykus",
+    "name": "Mononykus",
+    "commonName": null,
+    "pronunciation": "MON-oh-NIE-kus",
+    "meaning": "one claw",
+    "group": "Theropoda · Alvarezsauridae",
+    "bodyType": "ornithomimid",
+    "isDinosaur": true,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 70,
+    "myaTo": 68,
+    "regions": [
+      "asia"
+    ],
+    "namedYear": 1993,
+    "lengthM": 1,
+    "heightM": 0.4,
+    "weightKg": 3.5,
+    "speedKmh": null,
+    "description": "Mononykus was a long-legged little runner with a single, thick claw on each stubby arm. It likely tore into insect nests and gobbled up the occupants.",
+    "funFact": "Its arms were short but powerful, each ending in a single big claw, probably for digging into insect nests.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "runner",
+      "size": "tiny",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "stealth",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Specialist",
+      "tagline": "You found your one thing and you do it incredibly well.",
+      "strengths": [
+        "focus",
+        "speed",
+        "specialisation"
+      ],
+      "quirk": "Has a single, perfect tool for each job and a drawer for each.",
+      "teamRole": "owns one thing completely"
+    },
+    "palette": {
+      "body": "#5a4a3a",
+      "belly": "#e0d4b8",
+      "accent": "#d89a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mononykus"
+  },
+  {
+    "id": "pteranodon",
+    "name": "Pteranodon",
+    "commonName": null,
+    "pronunciation": "teh-RAN-oh-don",
+    "meaning": "toothless wing",
+    "group": "Pterosauria · Pteranodontidae",
+    "bodyType": "pterosaur",
+    "isDinosaur": false,
+    "diet": "piscivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 88,
+    "myaTo": 78,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1876,
+    "lengthM": 5.6,
+    "heightM": null,
+    "weightKg": 30,
+    "speedKmh": null,
+    "description": "Pteranodon soared over the Western Interior Seaway on long, narrow wings, with a toothless beak and a backward-pointing head crest. It skimmed fish from the surface like a giant albatross.",
+    "funFact": "Despite its fame it was not a dinosaur, and it had no teeth at all; its name means \"toothless wing\".",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "flyer",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "flight",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Skyline Cruiser",
+      "tagline": "You catch the right wind and never flap unnecessarily.",
+      "strengths": [
+        "efficiency",
+        "vision",
+        "soaring"
+      ],
+      "quirk": "Takes the scenic route to the fridge.",
+      "teamRole": "sees the whole picture"
+    },
+    "palette": {
+      "body": "#6a4a3a",
+      "belly": "#e6dcc4",
+      "accent": "#3a6a7a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Pteranodon"
+  },
+  {
+    "id": "quetzalcoatlus",
+    "name": "Quetzalcoatlus",
+    "commonName": null,
+    "pronunciation": "ket-sal-koh-AT-lus",
+    "meaning": "feathered serpent god",
+    "group": "Pterosauria · Azhdarchidae",
+    "bodyType": "pterosaur",
+    "isDinosaur": false,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 68,
+    "myaTo": 66,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1975,
+    "lengthM": 10.5,
+    "heightM": 2.5,
+    "weightKg": 220,
+    "speedKmh": null,
+    "description": "Quetzalcoatlus was a giraffe-sized flying reptile and one of the biggest animals ever to take flight. It strode across the land on all fours and probably snapped up small prey with its long, spear-like beak.",
+    "funFact": "Its first fossils were found in 1971 in Big Bend National Park, Texas.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "flyer",
+      "size": "large",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "flight",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The High Flyer",
+      "tagline": "You run the numbers from 10,000 feet.",
+      "strengths": [
+        "perspective",
+        "independence",
+        "range"
+      ],
+      "quirk": "Offers to \"take a quick look\" from three counties over.",
+      "teamRole": "surveys the landscape"
+    },
+    "palette": {
+      "body": "#4a3a5a",
+      "belly": "#e4dcc8",
+      "accent": "#d87a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Quetzalcoatlus"
+  },
+  {
+    "id": "pterodactylus",
+    "name": "Pterodactylus",
+    "commonName": "Pterodactyl",
+    "pronunciation": "TERR-oh-DAK-til-us",
+    "meaning": "winged finger",
+    "group": "Pterosauria · Pterodactylidae",
+    "bodyType": "pterosaur",
+    "isDinosaur": false,
+    "diet": "piscivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 151,
+    "myaTo": 148,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1809,
+    "lengthM": 1,
+    "heightM": 0.25,
+    "weightKg": 1,
+    "speedKmh": null,
+    "description": "Pterodactylus was a small, sharp-snouted flying reptile of the Jurassic lagoons of Germany. It had a lightweight body, long fingers to hold its wing membrane and a hunter's eye for fish.",
+    "funFact": "Its fossil was the first pterosaur ever described, in 1784, long before the word dinosaur existed.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "flyer",
+      "size": "tiny",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "flight",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Original Flyer",
+      "tagline": "You were the first of your kind to take the idea of flying seriously.",
+      "strengths": [
+        "lightness",
+        "first-mover spirit",
+        "curiosity"
+      ],
+      "quirk": "Still has the first email they ever sent.",
+      "teamRole": "tests the unproven idea"
+    },
+    "palette": {
+      "body": "#5a7a8a",
+      "belly": "#e6e2cc",
+      "accent": "#c8563a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Pterodactylus"
+  },
+  {
+    "id": "rhamphorhynchus",
+    "name": "Rhamphorhynchus",
+    "commonName": null,
+    "pronunciation": "RAM-foh-RINK-us",
+    "meaning": "beak snout",
+    "group": "Pterosauria · Rhamphorhynchidae",
+    "bodyType": "pterosaur",
+    "isDinosaur": false,
+    "diet": "piscivore",
+    "period": "jurassic",
+    "epoch": "Late Jurassic",
+    "myaFrom": 151,
+    "myaTo": 148,
+    "regions": [
+      "europe",
+      "africa"
+    ],
+    "namedYear": 1846,
+    "lengthM": 1.8,
+    "heightM": null,
+    "weightKg": 0.5,
+    "speedKmh": null,
+    "description": "Rhamphorhynchus had a long tail with a diamond-shaped vane at the end and a mouth full of needle teeth that pointed outward. It was a skilled fish-catcher over the Solnhofen lagoons.",
+    "funFact": "Its long tail ended in a diamond-shaped vane that may have helped it steer.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "flyer",
+      "size": "small",
+      "social": "herd",
+      "temperament": "bold",
+      "defense": "flight",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Steering Specialist",
+      "tagline": "You know how to turn on a dime, and you have the tail to prove it.",
+      "strengths": [
+        "steering",
+        "precision",
+        "teamwork"
+      ],
+      "quirk": "Gives directions using only compass points.",
+      "teamRole": "steers the project"
+    },
+    "palette": {
+      "body": "#3a5a6a",
+      "belly": "#e6dfc6",
+      "accent": "#d88a3a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rhamphorhynchus"
+  },
+  {
+    "id": "dimorphodon",
+    "name": "Dimorphodon",
+    "commonName": null,
+    "pronunciation": "die-MOR-foh-don",
+    "meaning": "two-form tooth",
+    "group": "Pterosauria · Dimorphodontidae",
+    "bodyType": "pterosaur",
+    "isDinosaur": false,
+    "diet": "carnivore",
+    "period": "jurassic",
+    "epoch": "Early Jurassic",
+    "myaFrom": 201,
+    "myaTo": 191,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1859,
+    "lengthM": 1.45,
+    "heightM": 0.4,
+    "weightKg": 2,
+    "speedKmh": null,
+    "description": "Dimorphodon had a big, deep head like a puffin and two different kinds of teeth. It probably flapped awkwardly between rocks and trees, snacking on insects and small animals.",
+    "funFact": "Mary Anning found the first Dimorphodon fossil in Lyme Regis in 1828.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "flyer",
+      "size": "tiny",
+      "social": "pair",
+      "temperament": "curious",
+      "defense": "flight",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Puffin of the Jurassic",
+      "tagline": "You are all head and heart, and the audience loves it.",
+      "strengths": [
+        "expressiveness",
+        "curiosity",
+        "energy"
+      ],
+      "quirk": "Has a surprisingly big opinion for such a small desk.",
+      "teamRole": "brings the personality"
+    },
+    "palette": {
+      "body": "#a85a4a",
+      "belly": "#f0e2c6",
+      "accent": "#3a5a7a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dimorphodon"
+  },
+  {
+    "id": "tapejara",
+    "name": "Tapejara",
+    "commonName": null,
+    "pronunciation": "TAP-eh-JAR-ah",
+    "meaning": "the old being",
+    "group": "Pterosauria · Tapejaridae",
+    "bodyType": "pterosaur",
+    "isDinosaur": false,
+    "diet": "omnivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 127,
+    "myaTo": 112,
+    "regions": [
+      "south america"
+    ],
+    "namedYear": 1989,
+    "lengthM": 1.3,
+    "heightM": null,
+    "weightKg": 4,
+    "speedKmh": null,
+    "description": "Tapejara had a huge, sail-like crest on its head and a short, toothless beak. The crest, part bone and part soft tissue, was probably used to impress mates and rivals.",
+    "funFact": "Its name comes from a Tupi word meaning \"the old being\" or \"lord of the path\".",
+    "isPopular": false,
+    "traits": {
+      "diet": "omnivore",
+      "energy": "high",
+      "mobility": "flyer",
+      "size": "tiny",
+      "social": "pair",
+      "temperament": "curious",
+      "defense": "flight",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Crested Communicator",
+      "tagline": "You wear your heart on your head, and it has a good colour scheme.",
+      "strengths": [
+        "display",
+        "sociability",
+        "flair"
+      ],
+      "quirk": "Updates their hair for every video call.",
+      "teamRole": "handles the presentation"
+    },
+    "palette": {
+      "body": "#8a3a5a",
+      "belly": "#eadcc4",
+      "accent": "#3a7a6a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tapejara_(pterosaur)"
+  },
+  {
+    "id": "nyctosaurus",
+    "name": "Nyctosaurus",
+    "commonName": null,
+    "pronunciation": "NIK-toh-SORE-us",
+    "meaning": "night lizard",
+    "group": "Pterosauria · Nyctosauridae",
+    "bodyType": "pterosaur",
+    "isDinosaur": false,
+    "diet": "piscivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 86,
+    "myaTo": 84,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1876,
+    "lengthM": 2.7,
+    "heightM": null,
+    "weightKg": 1.9,
+    "speedKmh": null,
+    "description": "Nyctosaurus was a lightweight pterosaur whose wings were long and narrow, with no claws on its hands. Some specimens had a tall, antler-like crest that may have worked as a sail.",
+    "funFact": "Some specimens had an antler-shaped crest much longer than the skull itself.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "flyer",
+      "size": "small",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "flight",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Antlered Night Flyer",
+      "tagline": "You work best at the edges of the day, wings out.",
+      "strengths": [
+        "stamina",
+        "independence",
+        "originality"
+      ],
+      "quirk": "Turns up to every sunset meeting with a sail.",
+      "teamRole": "takes the late shift"
+    },
+    "palette": {
+      "body": "#3a3a5a",
+      "belly": "#dcd8c8",
+      "accent": "#d8a03a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Nyctosaurus"
+  },
+  {
+    "id": "plesiosaurus",
+    "name": "Plesiosaurus",
+    "commonName": null,
+    "pronunciation": "PLEE-see-oh-SORE-us",
+    "meaning": "near lizard",
+    "group": "Plesiosauria · Plesiosauridae",
+    "bodyType": "marine",
+    "isDinosaur": false,
+    "diet": "piscivore",
+    "period": "jurassic",
+    "epoch": "Early Jurassic",
+    "myaFrom": 199,
+    "myaTo": 193,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1821,
+    "lengthM": 3.5,
+    "heightM": null,
+    "weightKg": 400,
+    "speedKmh": null,
+    "description": "Plesiosaurus had a small head on a long neck, a plump body and four paddle-like flippers. It cruised the warm seas of ancient England in search of fish and squid.",
+    "funFact": "Mary Anning found the first complete skeleton in 1823.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "swimmer",
+      "size": "small",
+      "social": "solo",
+      "temperament": "gentle",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Lake Legend",
+      "tagline": "Everyone swears they have seen you, and you let them wonder.",
+      "strengths": [
+        "grace",
+        "mystery",
+        "calm"
+      ],
+      "quirk": "Appears briefly on boat trips and vanishes before the photo.",
+      "teamRole": "keeps the legend alive"
+    },
+    "palette": {
+      "body": "#3a6a7a",
+      "belly": "#e2e2cc",
+      "accent": "#d89a4a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Plesiosaurus"
+  },
+  {
+    "id": "elasmosaurus",
+    "name": "Elasmosaurus",
+    "commonName": null,
+    "pronunciation": "eh-LAZ-moh-SORE-us",
+    "meaning": "thin-plate lizard",
+    "group": "Plesiosauria · Elasmosauridae",
+    "bodyType": "marine",
+    "isDinosaur": false,
+    "diet": "piscivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 81,
+    "myaTo": 77,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1868,
+    "lengthM": 10.3,
+    "heightM": null,
+    "weightKg": 2000,
+    "speedKmh": null,
+    "description": "Elasmosaurus had a neck longer than the rest of its body, with 70-odd neck vertebrae. It likely stalked schools of fish from below, hiding its great body while its small head darted up.",
+    "funFact": "In the first reconstruction, scientist Edward Cope accidentally put its head on the wrong end, at the tail.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "swimmer",
+      "size": "large",
+      "social": "solo",
+      "temperament": "curious",
+      "defense": "stealth",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Long-Distance Communicator",
+      "tagline": "You can reach anyone, even from the other end of the project.",
+      "strengths": [
+        "reach",
+        "patience",
+        "stealth"
+      ],
+      "quirk": "Whispers to someone three desks away, and they hear it.",
+      "teamRole": "follows up with everyone"
+    },
+    "palette": {
+      "body": "#4a6a8a",
+      "belly": "#dde4e0",
+      "accent": "#c8664a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Elasmosaurus"
+  },
+  {
+    "id": "liopleurodon",
+    "name": "Liopleurodon",
+    "commonName": null,
+    "pronunciation": "LY-oh-PLOOR-oh-don",
+    "meaning": "smooth-sided teeth",
+    "group": "Plesiosauria · Pliosauridae",
+    "bodyType": "marine",
+    "isDinosaur": false,
+    "diet": "carnivore",
+    "period": "jurassic",
+    "epoch": "Middle Jurassic",
+    "myaFrom": 166,
+    "myaTo": 155,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1873,
+    "lengthM": 6.4,
+    "heightM": null,
+    "weightKg": 1700,
+    "speedKmh": null,
+    "description": "Liopleurodon was a short-necked pliosaur with a huge head and four powerful flippers. It was a top predator of Jurassic seas, with an excellent sense of smell.",
+    "funFact": "TV documentaries inflated its size, but real adults were about 6 to 7 metres long.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "swimmer",
+      "size": "medium",
+      "social": "solo",
+      "temperament": "fierce",
+      "defense": "weapons",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Deep Sea Executive",
+      "tagline": "You operate three levels below where anyone can see.",
+      "strengths": [
+        "power",
+        "focus",
+        "instinct"
+      ],
+      "quirk": "Is somehow always in the meeting nobody invited them to.",
+      "teamRole": "works behind the scenes"
+    },
+    "palette": {
+      "body": "#2f4a5a",
+      "belly": "#d8d8c8",
+      "accent": "#c8503a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Liopleurodon"
+  },
+  {
+    "id": "kronosaurus",
+    "name": "Kronosaurus",
+    "commonName": null,
+    "pronunciation": "KROH-noh-SORE-us",
+    "meaning": "Cronus lizard",
+    "group": "Plesiosauria · Pliosauridae",
+    "bodyType": "marine",
+    "isDinosaur": false,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Early Cretaceous",
+    "myaFrom": 125,
+    "myaTo": 100,
+    "regions": [
+      "australia"
+    ],
+    "namedYear": 1924,
+    "lengthM": 10.5,
+    "heightM": null,
+    "weightKg": 11000,
+    "speedKmh": null,
+    "description": "Kronosaurus was a huge, short-necked marine reptile with a massive crocodile-like skull and conical teeth. It hunted in the shallow inland seas that once covered northern Australia.",
+    "funFact": "Its skull was about 2.5 metres long, big enough to crush most prey.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "swimmer",
+      "size": "large",
+      "social": "solo",
+      "temperament": "bold",
+      "defense": "size",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Titan of the Inland Sea",
+      "tagline": "You were born to run the pool and you know it.",
+      "strengths": [
+        "size",
+        "command",
+        "instinct"
+      ],
+      "quirk": "Has a seat at the water cooler reserved for them.",
+      "teamRole": "owns the big account"
+    },
+    "palette": {
+      "body": "#4a5a6a",
+      "belly": "#dad8c6",
+      "accent": "#c8793a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kronosaurus"
+  },
+  {
+    "id": "mosasaurus",
+    "name": "Mosasaurus",
+    "commonName": null,
+    "pronunciation": "MOH-zah-SORE-us",
+    "meaning": "Meuse lizard",
+    "group": "Squamata · Mosasauridae",
+    "bodyType": "marine",
+    "isDinosaur": false,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 82,
+    "myaTo": 66,
+    "regions": [
+      "north america",
+      "south america",
+      "europe",
+      "africa",
+      "antarctica"
+    ],
+    "namedYear": 1822,
+    "lengthM": 12,
+    "heightM": null,
+    "weightKg": 10000,
+    "speedKmh": null,
+    "description": "Mosasaurus was a giant, lizard-like sea hunter with a tail fin and two sets of teeth on its palate. It ruled the oceans in the last chapter of the dinosaurs' world.",
+    "funFact": "The famous Maastricht skull was carried off to Paris as war booty in 1795.",
+    "isPopular": true,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "swimmer",
+      "size": "large",
+      "social": "solo",
+      "temperament": "fierce",
+      "defense": "weapons",
+      "chronotype": "dusk"
+    },
+    "personality": {
+      "archetype": "The Ocean CEO",
+      "tagline": "You say \"let us dive in\" and mean it.",
+      "strengths": [
+        "power",
+        "dominance",
+        "swim speed"
+      ],
+      "quirk": "Has a corner office and a corner of the sea.",
+      "teamRole": "runs the show"
+    },
+    "palette": {
+      "body": "#3a5a4a",
+      "belly": "#dad8c0",
+      "accent": "#c8603a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mosasaurus"
+  },
+  {
+    "id": "tylosaurus",
+    "name": "Tylosaurus",
+    "commonName": null,
+    "pronunciation": "TIE-loh-SORE-us",
+    "meaning": "knob lizard",
+    "group": "Squamata · Mosasauridae",
+    "bodyType": "marine",
+    "isDinosaur": false,
+    "diet": "carnivore",
+    "period": "cretaceous",
+    "epoch": "Late Cretaceous",
+    "myaFrom": 92,
+    "myaTo": 66,
+    "regions": [
+      "north america",
+      "europe",
+      "africa"
+    ],
+    "namedYear": 1872,
+    "lengthM": 12,
+    "heightM": null,
+    "weightKg": 7000,
+    "speedKmh": null,
+    "description": "Tylosaurus was a long, streamlined mosasaur with a bony knob at the tip of its snout. It was a top hunter in the shallow seas that covered the American Midwest.",
+    "funFact": "Fossilised stomach contents include fish, seabirds and even other, smaller mosasaurs.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "swimmer",
+      "size": "large",
+      "social": "solo",
+      "temperament": "fierce",
+      "defense": "speed",
+      "chronotype": "dawn"
+    },
+    "personality": {
+      "archetype": "The Torpedo",
+      "tagline": "You get where you are going in a straight line.",
+      "strengths": [
+        "speed",
+        "straight talk",
+        "drive"
+      ],
+      "quirk": "Treats every hallway as a lap pool.",
+      "teamRole": "delivers it, fast"
+    },
+    "palette": {
+      "body": "#4a6a7a",
+      "belly": "#e0e0cc",
+      "accent": "#b8453a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tylosaurus"
+  },
+  {
+    "id": "ichthyosaurus",
+    "name": "Ichthyosaurus",
+    "commonName": null,
+    "pronunciation": "ICK-thee-oh-SORE-us",
+    "meaning": "fish lizard",
+    "group": "Ichthyosauria · Ichthyosauridae",
+    "bodyType": "marine",
+    "isDinosaur": false,
+    "diet": "piscivore",
+    "period": "jurassic",
+    "epoch": "Early Jurassic",
+    "myaFrom": 201,
+    "myaTo": 183,
+    "regions": [
+      "europe"
+    ],
+    "namedYear": 1821,
+    "lengthM": 2,
+    "heightM": null,
+    "weightKg": 90,
+    "speedKmh": null,
+    "description": "Ichthyosaurus looked like a dolphin, with a long beak, big eyes, a paddle-like set of flippers and a crescent tail. It was a fast, agile swimmer that hunted fish and squid.",
+    "funFact": "Some fossils show females giving birth to live young, tail first.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "high",
+      "mobility": "swimmer",
+      "size": "small",
+      "social": "herd",
+      "temperament": "curious",
+      "defense": "speed",
+      "chronotype": "day"
+    },
+    "personality": {
+      "archetype": "The Dolphin Doppelganger",
+      "tagline": "You look like a dolphin and act like one too.",
+      "strengths": [
+        "playfulness",
+        "speed",
+        "teamwork"
+      ],
+      "quirk": "Is always up for a synchronised swimming break.",
+      "teamRole": "lightens the mood"
+    },
+    "palette": {
+      "body": "#3a6a8a",
+      "belly": "#e4e8e2",
+      "accent": "#e0923a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ichthyosaurus"
+  },
+  {
+    "id": "shonisaurus",
+    "name": "Shonisaurus",
+    "commonName": null,
+    "pronunciation": "SHOH-nee-SORE-us",
+    "meaning": "Shoshone lizard",
+    "group": "Ichthyosauria · Shastasauridae",
+    "bodyType": "marine",
+    "isDinosaur": false,
+    "diet": "carnivore",
+    "period": "triassic",
+    "epoch": "Late Triassic",
+    "myaFrom": 227,
+    "myaTo": 210,
+    "regions": [
+      "north america"
+    ],
+    "namedYear": 1976,
+    "lengthM": 15,
+    "heightM": null,
+    "weightKg": 25000,
+    "speedKmh": null,
+    "description": "Shonisaurus was a giant, long-snouted ichthyosaur that cruised the Triassic ocean off what is now Nevada. It was among the biggest marine reptiles of its time.",
+    "funFact": "It is the official state fossil of Nevada.",
+    "isPopular": false,
+    "traits": {
+      "diet": "carnivore",
+      "energy": "low",
+      "mobility": "swimmer",
+      "size": "large",
+      "social": "herd",
+      "temperament": "calm",
+      "defense": "size",
+      "chronotype": "night"
+    },
+    "personality": {
+      "archetype": "The Desert Whale",
+      "tagline": "You turned up in the wrong century for a swim, and the desert noticed.",
+      "strengths": [
+        "size",
+        "calm",
+        "long memory"
+      ],
+      "quirk": "Brings a snorkel to every desert-themed party.",
+      "teamRole": "brings a sense of scale"
+    },
+    "palette": {
+      "body": "#3a5a6a",
+      "belly": "#dad8c8",
+      "accent": "#c07a4a"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Shonisaurus"
+  }
+]

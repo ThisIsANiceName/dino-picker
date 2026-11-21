@@ -1,42 +1,272 @@
+/*
+ * Dino Selector global styles: "Specimen Sticker" design system.
+ * Tokens live here as CSS variables (RGB triplets) and are exposed to
+ * Tailwind in tailwind.config.js. See docs/ux-spec.md for usage rules.
+ */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Tokens ──────────────────────────────────────────────────────────── */
 @layer base {
+  :root,
+  .theme-paper {
+    /* surfaces */
+    --c-bg: 228 231 216;            /* lichen paper */
+    --c-surface: 247 248 241;       /* bone card */
+    --c-surface-sunken: 238 240 229;
+    --c-surface-raised: 255 255 255;
+    /* text */
+    --c-ink: 30 36 32;              /* 13.9:1 on bg */
+    --c-ink-muted: 67 75 64;        /* 7.0:1 on bg */
+    --c-ink-subtle: 93 102 87;      /* 4.7:1 on bg (min for body text) */
+    --c-ink-inverse: 247 248 241;
+    /* lines */
+    --c-line: 205 210 190;          /* decorative dividers only */
+    --c-line-strong: 115 124 105;   /* 3.4:1, input borders and UI edges */
+    /* brand */
+    --c-primary: 245 174 54;        /* resin amber; text on it = ink */
+    --c-primary-hover: 251 196 88;
+    --c-primary-strong: 196 116 16;
+    --c-primary-soft: 255 235 194;
+    --c-on-primary: 30 36 32;
+    --c-accent: 210 51 95;          /* magma; text on it = white (5.2:1) */
+    --c-accent-soft: 250 211 222;
+    --c-on-accent: 255 255 255;
+    --c-focus: 176 35 77;
+    /* status */
+    --c-success: 49 111 45;
+    --c-success-soft: 212 236 207;
+    --c-warning: 154 87 16;
+    --c-warning-soft: 255 235 194;
+    --c-danger: 184 50 42;
+    --c-danger-soft: 248 217 213;
+    --c-info: 31 95 126;
+    --c-info-soft: 203 230 242;
+    /* sticker physics */
+    --c-shadow: 11 43 40;
+    --c-keyline: 255 255 255;
+
+    /* motion */
+    --dur-instant: 80ms;
+    --dur-fast: 140ms;
+    --dur-base: 220ms;
+    --dur-slow: 360ms;
+    --dur-reveal: 700ms;
+    --dur-hatch: 1600ms;
+    --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* type */
+    --font-display: 'Caprasimo', 'Schibsted Grotesk', Georgia, serif;
+    --font-ui: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-varsity: 'Graduate', serif;
+    --font-rounded: 'Fredoka', sans-serif;
+    --font-condensed: 'Big Shoulders Display', sans-serif;
+
+    /* layout */
+    --nav-h: 64px;
+    --tabbar-h: 64px;
+
+    color-scheme: light;
+  }
+
+  /* Dark scope: nav bar, studio stage, quiz reveal, hero bands */
+  .theme-jungle {
+    --c-bg: 15 57 52;
+    --c-surface: 18 70 63;
+    --c-surface-sunken: 11 43 40;
+    --c-surface-raised: 23 87 76;
+    --c-ink: 242 244 234;
+    --c-ink-muted: 201 227 218;
+    --c-ink-subtle: 151 200 184;
+    --c-ink-inverse: 30 36 32;
+    --c-line: 31 107 92;
+    --c-line-strong: 95 168 147;
+    --c-primary-strong: 251 196 88;
+    --c-primary-soft: 79 44 14;
+    --c-accent: 236 115 148;
+    --c-accent-soft: 102 22 48;
+    --c-on-accent: 30 36 32;
+    --c-focus: 251 196 88;
+    --c-success: 123 191 112;
+    --c-success-soft: 31 66 31;
+    --c-warning: 251 196 88;
+    --c-warning-soft: 79 44 14;
+    --c-danger: 240 138 128;
+    --c-danger-soft: 92 30 26;
+    --c-info: 95 173 209;
+    --c-info-soft: 21 58 76;
+    --c-shadow: 7 29 27;
+    --c-keyline: 247 248 241;
+    color-scheme: dark;
+    color: rgb(var(--c-ink));
+  }
+
+  /* ─── Base ─────────────────────────────────────────────────────────── */
   html {
-    font-family: 'DM Sans', system-ui, sans-serif;
-    background-color: #1a1208;
-    color: #f5f0e8;
+    font-family: var(--font-ui);
+    background-color: rgb(var(--c-bg));
+    color: rgb(var(--c-ink));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-synthesis-weight: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    min-height: 100dvh;
+    font-feature-settings: 'ss01' on;
   }
 
   h1, h2, h3 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-wrap: balance;
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-ui);
+    font-weight: 700;
+  }
+
+  p { text-wrap: pretty; }
+
+  ::selection {
+    background: rgb(var(--c-primary) / 0.55);
+    color: rgb(var(--c-ink));
+  }
+
+  /* Focus: always visible for keyboard, never for mouse */
+  :focus { outline: none; }
+  :focus-visible {
+    outline: 3px solid rgb(var(--c-focus));
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  /* inputs draw their own ring (see .ui-control) */
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline-offset: 1px;
+  }
+
+  [hidden] { display: none !important; }
+
+  /* Thin, tinted scrollbars */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--c-line-strong) / 0.6) transparent;
   }
 }
 
+/* ─── Component classes (non-Vue building blocks) ─────────────────────── */
 @layer components {
+  /* Legacy classes: keep until all old views are rewritten */
   .card-hover {
-    @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-xl;
+    @apply transition-transform duration-base ease-out hover:-translate-y-1;
+  }
+  .diet-badge-herbivore { background: #D4ECCF; color: #1F421F; border: 1px solid #7BBF70; }
+  .diet-badge-carnivore { background: #FAD3DE; color: #661630; border: 1px solid #EC7394; }
+  .diet-badge-omnivore  { background: #FFEBC2; color: #743F12; border: 1px solid #F5AE36; }
+  .diet-badge-piscivore { background: #CBE6F2; color: #153A4C; border: 1px solid #5FADD1; }
+  .diet-badge-insectivore { background: #DEDAF2; color: #2D284E; border: 1px solid #9A8ED2; }
+  .period-badge { background: #E2E5D6; color: #2D342C; border: 1px solid #A9B09B; }
+
+  /* Display type helper; Caprasimo has one weight, never fake-bold it */
+  .font-display { font-weight: 400 !important; }
+
+  /* Sticker: die-cut keyline + hard shadow + optional tilt via --tilt */
+  .sticker {
+    border-radius: theme('borderRadius.xl');
+    box-shadow: theme('boxShadow.diecut');
+    transform: rotate(var(--tilt, 0deg));
   }
 
-  .diet-badge-herbivore {
-    @apply bg-green-900 text-green-300 border border-green-700;
+  /* Paper card: the default content container */
+  .paper-card {
+    background: rgb(var(--c-surface));
+    border: 1.5px solid rgb(var(--c-ink) / 0.9);
+    border-radius: theme('borderRadius.lg');
+    box-shadow: theme('boxShadow.sticker');
   }
 
-  .diet-badge-carnivore {
-    @apply bg-red-900 text-red-300 border border-red-700;
+  /* Specimen dot-grid: studio stage, empty areas, poster */
+  .bg-specimen {
+    background-color: rgb(var(--c-surface-sunken));
+    background-image: radial-gradient(rgb(var(--c-ink) / 0.14) 1.2px, transparent 1.3px);
+    background-size: 18px 18px;
+  }
+  .bg-checker {
+    background-color: #fff;
+    background-image:
+      linear-gradient(45deg, #e5e7de 25%, transparent 25%),
+      linear-gradient(-45deg, #e5e7de 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #e5e7de 75%),
+      linear-gradient(-45deg, transparent 75%, #e5e7de 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0;
   }
 
-  .diet-badge-omnivore {
-    @apply bg-amber-900 text-amber-300 border border-amber-700;
+  .link {
+    color: rgb(var(--c-ink));
+    text-decoration: underline;
+    text-decoration-color: rgb(var(--c-primary));
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+    transition: text-decoration-color var(--dur-fast) var(--ease-out);
+  }
+  .link:hover { text-decoration-color: rgb(var(--c-accent)); }
+
+  .kbd {
+    display: inline-flex;
+    align-items: center;
+    min-width: 1.5em;
+    height: 1.5em;
+    padding: 0 0.35em;
+    font: 600 0.75rem/1 var(--font-ui);
+    color: rgb(var(--c-ink-muted));
+    background: rgb(var(--c-surface-raised));
+    border: 1px solid rgb(var(--c-line-strong) / 0.7);
+    border-bottom-width: 2px;
+    border-radius: 5px;
   }
 
-  .period-badge {
-    @apply bg-stone-800 text-stone-300 border border-stone-600;
+  /* Shared form control skin (UiInput, UiTextarea, UiSelect) */
+  .ui-control {
+    width: 100%;
+    background: rgb(var(--c-surface-raised));
+    color: rgb(var(--c-ink));
+    border: 1.5px solid rgb(var(--c-line-strong));
+    border-radius: theme('borderRadius.md');
+    padding: 0.625rem 0.875rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
   }
+  .ui-control::placeholder { color: rgb(var(--c-ink-subtle)); opacity: 1; }
+  .ui-control:hover { border-color: rgb(var(--c-ink-muted)); }
+  .ui-control:focus-visible {
+    outline: none;
+    border-color: rgb(var(--c-ink));
+    box-shadow: 0 0 0 3px rgb(var(--c-focus) / 0.9);
+  }
+  .ui-control[aria-invalid='true'] { border-color: rgb(var(--c-danger)); }
+  .ui-control:disabled { opacity: 0.55; cursor: not-allowed; }
+
+  .tabular { font-variant-numeric: tabular-nums; }
 }
 
-/* Dino card texture overlay */
+@layer utilities {
+  .tilt-l { --tilt: -3deg; }
+  .tilt-r { --tilt: 2.5deg; }
+  .text-balance { text-wrap: balance; }
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+}
+
+/* Dino card texture overlay (legacy, still handy for fact cards) */
 .dino-card-texture::after {
   content: '';
   position: absolute;
@@ -46,9 +276,56 @@
   pointer-events: none;
 }
 
+/* ─── Reduced motion ──────────────────────────────────────────────────── */
+/* OS setting OR in-app toggle (<html data-motion="reduce">, persisted in
+   localStorage 'dino:motion'). Delight moments must also branch in JS:
+   see src/components/ui/motion.js -> prefersReducedMotion(). */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
+}
+html[data-motion='reduce'] *,
+html[data-motion='reduce'] *::before,
+html[data-motion='reduce'] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* ─── Print scaffold ──────────────────────────────────────────────────── */
+@page { margin: 12mm; }
+@page poster { size: A3 landscape; margin: 10mm; }
+@page cards { size: A4 portrait; margin: 10mm; }
+
+@media print {
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    box-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  /* Anything app-chrome: add data-print-hide (nav, tab bar, toasts, buttons) */
+  /* The app shell paints the paper colour; in print it shows as a hairline at page seams. */
+  .bg-bg { background-color: #fff !important; }
+  [data-print-hide],
+  nav,
+  .ui-toast-region { display: none !important; }
+
+  .print-poster { page: poster; break-inside: avoid; }
+  .print-cards { page: cards; }
+  .print-card { break-inside: avoid; }
+  .print-break { break-after: page; }
+  /* keep stickers crisp: swap the shadow for a plain hairline */
+  .sticker, .paper-card { box-shadow: none !important; border: 1px solid #000; }
+  a[href]::after { content: none !important; }
 }

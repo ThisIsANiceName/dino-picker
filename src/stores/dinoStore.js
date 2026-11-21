@@ -15,6 +15,18 @@ export const useDinoStore = defineStore('dinos', {
     dinosByPeriod: (state) => (period) =>
       state.dinos.filter((d) => d.period?.toLowerCase() === period.toLowerCase()),
 
+    /** Bundled curated catalog entries (rich fields: personality, palette, ...). */
+    catalogDinos: (state) => state.dinos.filter((d) => d.source === 'catalog'),
+
+    byBodyType: (state) => (bodyType) => state.dinos.filter((d) => d.bodyType === bodyType),
+
+    /** Case-insensitive lookup by genus; accepts a display name as well. */
+    getDinoByName: (state) => (name) => {
+      if (!name) return null
+      const n = String(name).toLowerCase()
+      return state.dinos.find((d) => d.name.toLowerCase() === n) ?? null
+    },
+
     popularDinos: (state) => state.dinos.filter((d) => d.isPopular),
 
     dietOptions: (state) =>
@@ -39,11 +51,6 @@ export const useDinoStore = defineStore('dinos', {
       } finally {
         this.loading = false
       }
-    },
-
-    getDinoByName(name) {
-      if (!name) return null
-      return this.dinos.find((d) => d.name.toLowerCase() === name.toLowerCase()) ?? null
     },
 
     async updateDino(id, patch) {

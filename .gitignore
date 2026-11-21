@@ -31,6 +31,8 @@ Thumbs.db
 data/*.db
 data/*.db-shm
 data/*.db-wal
+# Uploaded photos (live next to the database)
+data/uploads/
 
 # Logs
 *.log

@@ -1,153 +1,253 @@
+<!--
+  Quiz view (/quiz, ?for=<personId>): intro -> one question per screen -> reveal.
+  State machine: stage 'intro' | 'question' | 'reveal'. In-progress state lives in
+  sessionStorage so an accidental reload resumes where you were.
+-->
 <script setup>
-import { ref, computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { computed, onMounted, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { useDinoStore } from '../stores/dinoStore.js'
 import { usePersonStore } from '../stores/personStore.js'
-import QuizQuestion from '../components/QuizQuestion.vue'
-import AvatarFallback from '../components/AvatarFallback.vue'
-import { useQuiz } from '../composables/useDinoQuiz.js'
+import { useTeamStore } from '../stores/teamStore.js'
+import { useToast } from '../composables/useToast.js'
+import { useAppData } from '../components/layout/useAppData.js'
+import ErrorState from '../components/layout/ErrorState.vue'
+import { UiButton, UiModal, UiSkeleton } from '../components/ui/index.js'
+import { QUESTIONS, dinoKey, dinoLabel, scoreQuiz, userProfile } from '../lib/quiz/index.js'
+import { downloadBlob, slugify } from '../lib/art/index.js'
+import QuizIntro from '../components/quiz/QuizIntro.vue'
+import QuizQuestionScreen from '../components/quiz/QuizQuestionScreen.vue'
+import QuizReveal from '../components/quiz/QuizReveal.vue'
+import { clearSession, loadSession, saveSession } from '../components/quiz/session.js'
+import { renderResultCard } from '../components/quiz/resultCard.js'
 
+const route = useRoute()
 const router = useRouter()
+const dinoStore = useDinoStore()
 const personStore = usePersonStore()
+const teamStore = useTeamStore()
+const toast = useToast()
+const data = useAppData()
+data.load()
 
-const { questions, computeResult } = useQuiz()
+const stage = ref('intro')
+const forId = ref('')
+const cursor = ref(0)
+const picked = ref({}) // questionId -> optionId
+const chosenId = ref('')
+const animateReveal = ref(true)
+const applied = ref({ dinoId: '', personId: '' })
+const saving = ref(false)
+const downloading = ref(false)
+const confirm = ref({ open: false, personId: '' })
 
-const currentIndex = ref(0)
-const answers = ref([])
-const result = ref(null)
-const assignTarget = ref('')
-const assignSuccess = ref(false)
+const persons = computed(() => personStore.persons)
+const traitDinos = computed(() => dinoStore.catalogDinos.filter((d) => d.traits))
+const answerList = computed(() => QUESTIONS.filter((q) => picked.value[q.id]).map((q) => ({ q: q.id, a: picked.value[q.id] })))
+const ranked = computed(() => (stage.value === 'reveal' ? scoreQuiz(answerList.value, traitDinos.value) : []))
+const picks = computed(() => ranked.value.slice(0, 3))
+const you = computed(() => userProfile(answerList.value))
+const question = computed(() => QUESTIONS[cursor.value])
+const appliedFor = computed(() => (applied.value.dinoId === chosenId.value ? applied.value.personId : ''))
+const ready = computed(() => data.ready.value)
 
-const currentQuestion = computed(() => questions[currentIndex.value])
+function persist() {
+  saveSession({ stage: stage.value, forId: forId.value, cursor: cursor.value, picked: picked.value, chosenId: chosenId.value })
+}
 
-function onAnswer(option) {
-  answers.value.push(option)
-  if (currentIndex.value < questions.length - 1) {
-    currentIndex.value++
+function resetAll(nextStage = 'intro') {
+  stage.value = nextStage
+  cursor.value = 0
+  picked.value = {}
+  chosenId.value = ''
+  applied.value = { dinoId: '', personId: '' }
+  animateReveal.value = true
+  if (nextStage === 'intro') clearSession()
+}
+
+// ── Boot: resume, or start fresh from ?for= ─────────────────────────────────────────────
+onMounted(async () => {
+  await data.load()
+  const queryFor = typeof route.query.for === 'string' ? route.query.for : ''
+  const saved = loadSession()
+  const known = (id) => !id || personStore.persons.some((p) => p.id === id)
+  if (saved && (!queryFor || queryFor === saved.forId)) {
+    // Only resume if the stored answers still make sense.
+    const valid = Object.entries(saved.picked).every(([q, a]) => QUESTIONS.find((x) => x.id === q)?.options.some((o) => o.id === a))
+    if (valid) {
+      forId.value = known(saved.forId) ? saved.forId : ''
+      picked.value = saved.picked
+      cursor.value = Math.min(Math.max(saved.cursor, 0), QUESTIONS.length - 1)
+      if (saved.stage === 'reveal' && Object.keys(saved.picked).length === QUESTIONS.length) {
+        chosenId.value = saved.chosenId
+        animateReveal.value = false
+        stage.value = 'reveal'
+      } else {
+        stage.value = 'question'
+      }
+      return
+    }
+  }
+  if (queryFor && known(queryFor)) forId.value = queryFor
+})
+watch([stage, forId, cursor, picked, chosenId], persist, { deep: true })
+
+// ── Flow ────────────────────────────────────────────────────────────────────────────────
+function start() {
+  picked.value = {}
+  cursor.value = 0
+  chosenId.value = ''
+  applied.value = { dinoId: '', personId: '' }
+  stage.value = 'question'
+}
+
+function onAnswer(optionId) {
+  picked.value = { ...picked.value, [question.value.id]: optionId }
+  if (cursor.value < QUESTIONS.length - 1) {
+    cursor.value++
   } else {
-    result.value = computeResult(answers.value)
+    chosenId.value = ''
+    animateReveal.value = true
+    stage.value = 'reveal'
+  }
+}
+const back = () => { if (cursor.value > 0) cursor.value-- }
+function quit() { resetAll('intro') }
+function retake() {
+  const keep = forId.value
+  resetAll('intro')
+  forId.value = keep
+  window.scrollTo?.({ top: 0 })
+}
+
+// If the chosen dino is not in the ranking (catalog changed), fall back to the best.
+watch(picks, (p) => { if (p.length && !p.some((x) => dinoKey(x.dino) === chosenId.value)) chosenId.value = dinoKey(p[0].dino) }, { immediate: true })
+
+// ── Apply to a person ───────────────────────────────────────────────────────────────────
+const chosenPick = computed(() => picks.value.find((p) => dinoKey(p.dino) === chosenId.value) ?? picks.value[0])
+const aOrAn = (name) => (/^[aeio]|^ou/i.test(name) ? 'an' : 'a')
+
+function requestApply(personId) {
+  const person = personStore.getPersonById(personId)
+  if (!person || !chosenPick.value) return
+  const current = person.dinoName
+  if (current && current.toLowerCase() !== dinoKey(chosenPick.value.dino)) {
+    confirm.value = { open: true, personId }
+  } else {
+    doApply(personId)
   }
 }
 
-function retake() {
-  currentIndex.value = 0
-  answers.value = []
-  result.value = null
-  assignTarget.value = ''
-  assignSuccess.value = false
+async function doApply(personId) {
+  const person = personStore.getPersonById(personId)
+  const pick = chosenPick.value
+  if (!person || !pick) return
+  confirm.value.open = false
+  saving.value = true
+  try {
+    await personStore.assignDino(personId, dinoKey(pick.dino))
+    await personStore.saveQuiz(personId, {
+      v: 1,
+      answers: answerList.value,
+      traits: you.value,
+      matches: picks.value.map((p) => ({ dinoId: dinoKey(p.dino), name: dinoLabel(p.dino), score: p.score })),
+      picked: dinoKey(pick.dino),
+      takenAt: new Date().toISOString(),
+    })
+    applied.value = { dinoId: dinoKey(pick.dino), personId }
+    toast.success(`${person.name.split(/\s+/)[0]} is now ${aOrAn(dinoLabel(pick.dino))} ${dinoLabel(pick.dino)}`)
+  } catch (err) {
+    toast.error('Could not save the result', err?.message ?? 'Check the connection and try again.')
+  } finally {
+    saving.value = false
+  }
 }
 
-function assignToMe() {
-  if (!assignTarget.value || !result.value) return
-  personStore.assignDino(assignTarget.value, result.value.name)
-  assignSuccess.value = true
+// ── Result card ─────────────────────────────────────────────────────────────────────────
+async function download() {
+  const pick = chosenPick.value
+  if (!pick || downloading.value) return
+  downloading.value = true
+  try {
+    const person = personStore.getPersonById(forId.value)
+    const blob = await renderResultCard(pick.dino, { personName: person?.name ?? '', teamName: teamStore.loaded ? teamStore.name : '' })
+    downloadBlob(blob, `${slugify(person?.name ?? 'my')}-${slugify(dinoLabel(pick.dino))}-result.png`)
+    toast.success('Result card saved')
+  } catch (err) {
+    toast.error('Could not make the card', err?.message ?? 'Try again in a moment.')
+  } finally {
+    downloading.value = false
+  }
 }
 
-const FALLBACK_SVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%233d2c14'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='100'%3E🦕%3C/text%3E%3C/svg%3E`
-const imgError = ref(false)
+const confirmPerson = computed(() => personStore.getPersonById(confirm.value.personId))
+const confirmCurrent = computed(() => (confirmPerson.value?.dinoName ? dinoStore.getDinoByName(confirmPerson.value.dinoName) : null))
 </script>
 
 <template>
-  <div class="max-w-2xl mx-auto">
-    <!-- Quiz in progress -->
-    <Transition name="slide" mode="out-in">
-      <div v-if="!result" :key="currentIndex">
-        <QuizQuestion
-          :question="currentQuestion"
-          :index="currentIndex"
-          :total="questions.length"
-          @answer="onAnswer"
-        />
+  <div>
+    <div v-if="data.failed.value" class="max-w-3xl mx-auto px-4 py-10">
+      <ErrorState @retry="data.retry()" />
+    </div>
+
+    <div v-else-if="!ready" class="max-w-2xl mx-auto px-4 py-10 space-y-4" aria-busy="true" aria-label="Loading the quiz">
+      <UiSkeleton shape="rect" height="48px" width="75%" />
+      <UiSkeleton shape="rect" height="24px" width="50%" />
+      <UiSkeleton shape="rect" height="176px" />
+    </div>
+
+    <template v-else>
+      <QuizIntro
+        v-if="stage === 'intro'"
+        v-model="forId"
+        :persons="persons"
+        :dino-for="data.dinoFor"
+        :count="QUESTIONS.length"
+        @start="start"
+      />
+
+      <QuizQuestionScreen
+        v-else-if="stage === 'question'"
+        :question="question"
+        :index="cursor"
+        :total="QUESTIONS.length"
+        :selected="picked[question.id] ?? ''"
+        :can-back="cursor > 0"
+        @answer="onAnswer"
+        @back="back"
+        @quit="quit"
+      />
+
+      <QuizReveal
+        v-else-if="picks.length"
+        :picks="picks"
+        :chosen-id="chosenId"
+        :you="you"
+        :animate="animateReveal"
+        :for-id="forId"
+        :persons="persons"
+        :applied-for="appliedFor"
+        :saving="saving"
+        :downloading="downloading"
+        @choose="chosenId = $event"
+        @apply="requestApply"
+        @download="download"
+        @retake="retake"
+      />
+      <div v-else class="max-w-3xl mx-auto px-4 py-10">
+        <ErrorState title="No dinos to match" text="The catalog has not loaded. Try again." @retry="data.retry()" />
       </div>
+    </template>
 
-      <!-- Result screen -->
-      <div v-else key="result" class="space-y-6 text-center">
-        <h1 class="font-display text-3xl text-fossil-50 leading-snug">
-          Your spirit dinosaur is…
-          <span class="text-amber-400 capitalize block">{{ result.name }}!</span>
-        </h1>
-
-        <!-- Dino image -->
-        <div class="rounded-2xl overflow-hidden bg-earth-800 border border-earth-700 aspect-video max-w-md mx-auto">
-          <img
-            v-if="result.image && !imgError"
-            :src="result.image"
-            :alt="result.name"
-            class="w-full h-full object-cover"
-            @error="imgError = true"
-          />
-          <img v-else :src="FALLBACK_SVG" :alt="result.name" class="w-full h-full object-contain p-8 opacity-30" />
-        </div>
-
-        <!-- Stats ribbon -->
-        <div class="flex flex-wrap justify-center gap-3 text-sm">
-          <span v-if="result.diet" class="px-3 py-1 rounded-full bg-earth-800 border border-earth-600 capitalize">{{ result.diet }}</span>
-          <span v-if="result.period" class="px-3 py-1 rounded-full bg-earth-800 border border-earth-600 capitalize">{{ result.period }}</span>
-          <span v-if="result.region" class="px-3 py-1 rounded-full bg-earth-800 border border-earth-600 capitalize">{{ result.region }}</span>
-        </div>
-
-        <!-- Description excerpt -->
-        <p v-if="result.description" class="text-fossil-200 text-sm leading-relaxed max-w-lg mx-auto line-clamp-4">
-          {{ result.description }}
-        </p>
-
-        <!-- Assign to person -->
-        <div class="bg-earth-800 border border-earth-700 rounded-xl p-4 max-w-sm mx-auto space-y-3 text-left">
-          <label for="assign-person" class="block text-sm text-fossil-200 font-medium">Assign to a person</label>
-          <div v-if="assignSuccess" class="text-sm text-green-400" role="status">
-            ✓ Assigned to {{ personStore.persons.find(p => p.id === assignTarget)?.name }}!
-          </div>
-          <div v-else class="flex gap-2">
-            <select
-              id="assign-person"
-              v-model="assignTarget"
-              class="flex-1 bg-earth-900 border border-earth-600 rounded-lg px-3 py-2 text-sm text-fossil-50 focus:outline-none focus:border-amber-500"
-              aria-label="Select person to assign dino to"
-            >
-              <option value="" disabled>Select person…</option>
-              <option v-for="p in personStore.persons" :key="p.id" :value="p.id">{{ p.name }}</option>
-            </select>
-            <button
-              class="px-3 py-2 rounded-lg bg-amber-600 hover:bg-amber-500 text-earth-950 text-sm font-semibold transition-colors disabled:opacity-40"
-              :disabled="!assignTarget"
-              aria-label="Assign dino to selected person"
-              @click="assignToMe"
-            >
-              Assign
-            </button>
-          </div>
-        </div>
-
-        <!-- CTAs -->
-        <div class="flex flex-wrap justify-center gap-3 pt-2">
-          <button
-            class="px-5 py-2.5 rounded-lg bg-earth-800 border border-earth-600 hover:border-amber-500 text-fossil-200 text-sm font-medium transition-colors"
-            @click="retake"
-          >
-            Retake Quiz
-          </button>
-          <RouterLink
-            to="/"
-            class="px-5 py-2.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-earth-950 text-sm font-semibold transition-colors"
-          >
-            Back to Roster
-          </RouterLink>
-        </div>
-      </div>
-    </Transition>
+    <UiModal v-model="confirm.open" role="alertdialog" size="sm" :title="`Swap ${confirmPerson?.name.split(/\s+/)[0] ?? ''}'s dino?`">
+      <p>
+        Swap {{ confirmPerson?.name.split(/\s+/)[0] }}'s {{ confirmCurrent ? dinoLabel(confirmCurrent) : confirmPerson?.dinoName }}
+        for {{ chosenPick ? `${aOrAn(dinoLabel(chosenPick.dino))} ${dinoLabel(chosenPick.dino)}` : 'this dino' }}? The avatar keeps its colours until you change it in the studio.
+      </p>
+      <template #footer>
+        <UiButton variant="ghost" @click="confirm.open = false">Keep {{ confirmCurrent ? dinoLabel(confirmCurrent) : 'current' }}</UiButton>
+        <UiButton data-autofocus @click="doApply(confirm.personId)">Swap it</UiButton>
+      </template>
+    </UiModal>
   </div>
 </template>
-
-<style scoped>
-.slide-enter-active,
-.slide-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-.slide-enter-from {
-  opacity: 0;
-  transform: translateX(30px);
-}
-.slide-leave-to {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-</style>

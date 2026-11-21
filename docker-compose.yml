@@ -9,4 +9,5 @@ services:
       NODE_ENV: production
       PORT: 8091
       DATA_DIR: /data
+      # DINO_REMOTE_SEED: "off"   # disable optional RESTasaurus enrichment
     restart: unless-stopped

@@ -14,13 +14,15 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev
 COPY server/ ./server/
-COPY src/data/dinoFallback.js ./src/data/dinoFallback.js
+# The server imports the bundled catalog at runtime
+COPY src/data/catalog/ ./src/data/catalog/
 COPY --from=build /app/dist ./dist
 
 ENV NODE_ENV=production
 ENV PORT=3001
 ENV DATA_DIR=/data
 
+# DB (persons.db) and uploads/ both live under the mounted data volume
 VOLUME /data
 
 EXPOSE 3001
